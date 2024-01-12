@@ -1,0 +1,36 @@
+.socials {
+  position: fixed;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 16px;
+  top: 96px;
+  left: 50%;
+  -webkit-transform: translateX(631px);
+  -ms-transform: translateX(631px);
+  transform: translateX(631px);
+
+  svg {
+    -webkit-backdrop-filter: blur(4.1049365997px);
+    backdrop-filter: blur(4.1049365997px);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: url('../img/cursor.png'), pointer;
+
+    &:hover {
+      fill: #9E9DFE;
+    }
+  }
+}
