@@ -141,17 +141,6 @@ header {
       }
     }
 
-    .gridBg {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-image: url(../img/bg/grid.svg);
-      background-repeat: repeat;
-      z-index: 3;
-      opacity: 0.7;
-    }
   }
   .menu_mob {
     display: none;

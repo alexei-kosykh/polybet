@@ -1,5 +1,6 @@
 @import 'common/media_breakpoints';
-@import 'common/fonts', 'common/normalize', 'blocks/header', 'blocks/socials';
+@import 'common/fonts', 'common/normalize', 'blocks/header', 'blocks/socials',
+  'blocks/sections', 'blocks/main_section', 'blocks/buttons';
 
 .page {
   background-color: #000;
@@ -7,16 +8,6 @@
   overflow: hidden;
   position: relative;
   color: #ffffff;
-}
-
-.section {
-  position: relative;
-  padding: 0 40px;
-  overflow: hidden;
-}
-
-.section_experience {
-  background-color: #6868a1;
 }
 
 .bgWrapper {
@@ -52,68 +43,6 @@
 .firstBg,
 .thirdBg {
   z-index: 2;
-}
-
-.container {
-  position: relative;
-  z-index: 5;
-  max-width: 1232px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.title {
-  font-size: 90px;
-  font-family: 'InterB', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: -5.4px;
-}
-
-.title span {
-  color: #9e9dfe;
-}
-
-.description {
-  font-size: 16px;
-  font-family: 'PoppinsR', sans-serif;
-  line-height: 23px;
-}
-
-.join,
-.demo {
-  min-width: 184px;
-  height: 62px;
-  border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  text-transform: uppercase;
-  font-family: 'InterS', sans-serif;
-  background: rgba(255, 255, 255, 0.01);
-  font-size: 14px;
-  letter-spacing: 0.28px;
-}
-
-.join {
-  color: #000;
-  background-color: #fff;
-  display: inline-block;
-}
-
-.demo {
-  display: inline-block;
-  border: 1px solid #fff;
-  background: rgba(0, 0, 0, 0.2);
-  color: #fff;
-  margin-left: 24px;
 }
 
 .h3 {
@@ -166,10 +95,6 @@
   text-transform: uppercase;
 }
 
-.mainSection {
-  background-color: #2b2b2b;
-}
-
 .mainOne,
 .mainTwo {
   position: absolute;
@@ -186,51 +111,6 @@
 .mainTwo {
   z-index: 3;
   bottom: 0;
-}
-
-.main {
-  padding-top: 162px;
-  padding-bottom: 252px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 164px;
-  padding-right: 50px;
-}
-
-.main > div:first-child {
-  max-width: 580px;
-}
-
-.main > div:last-child {
-  max-width: 396px;
-}
-
-.decentralized {
-  font-size: 50px;
-  font-family: 'InterS', sans-serif;
-  line-height: 60px;
-  letter-spacing: -3px;
-  text-transform: uppercase;
-}
-
-.mainDescription {
-  font-size: 24px;
-  line-height: 33px;
-  font-family: 'PoppinsS', sans-serif;
-  display: none;
-}
-
-.main .title {
-  margin-bottom: 32px;
-}
-
-.main .description {
-  margin-bottom: 12px;
-}
-
-.main .join {
-  margin-top: 28px;
 }
 
 .experienceBetting {
@@ -366,10 +246,6 @@
   margin-bottom: 30px;
 }
 
-.caseSection {
-  background-color: #1d8d63;
-}
-
 .case {
   padding-top: 122px;
   padding-bottom: 55px;
@@ -391,12 +267,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 -27vw;
-  padding: 0 27vw 35px;
-  gap: 32px;
-  overflow-y: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
 }
 
 .events::-webkit-scrollbar {
@@ -597,10 +472,6 @@
   margin-top: 20px;
 }
 
-.stakeSection {
-  background-color: #1d8d63;
-}
-
 .stake {
   padding-top: 162px;
   display: -webkit-box;
@@ -754,10 +625,6 @@ textarea::placeholder {
   margin-top: 24px;
 }
 
-.tokenomicsSection {
-  background-color: #2b2b2b;
-}
-
 .tokenomics {
   padding-top: 162px;
   display: -webkit-box;
@@ -809,10 +676,6 @@ textarea::placeholder {
   border-radius: 50%;
   left: 10px;
   top: 9px;
-}
-
-.roadmapSection {
-  background-color: #2b2b2b;
 }
 
 .roadmapSection .container {
@@ -1130,7 +993,6 @@ textarea {
     padding-right: 30px;
   }
 
-  .main,
   .tokenomics {
     gap: 0;
     -webkit-box-pack: justify;
@@ -1244,14 +1106,6 @@ textarea {
 }
 
 @media (max-width: 1050px) {
-  .decentralized {
-    display: none;
-  }
-
-  .mainDescription {
-    display: block;
-  }
-
   .main {
     padding-top: 159px;
     padding-bottom: 159px;
@@ -1489,12 +1343,12 @@ textarea {
     margin-top: 0;
   }
 
-  .main .buttons,
-  .experienceBetting .buttons {
+  .main .section__button-group,
+  .experienceBetting .section__button-group {
     margin-top: 32px;
   }
 
-  .buttons {
+  .section__button-group {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1829,13 +1683,13 @@ textarea {
     text-align: center;
   }
 
-  .buttons {
+  .section__button-group {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
   }
 
-  .buttons button {
+  .section__button-group button {
     min-width: 120px;
   }
 

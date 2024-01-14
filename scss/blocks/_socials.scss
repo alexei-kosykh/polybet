@@ -30,7 +30,9 @@
     cursor: url('../img/cursor.png'), pointer;
 
     &:hover {
-      fill: #9E9DFE;
+      path {
+        fill: #9e9dfe;
+      }
     }
   }
 }

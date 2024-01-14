@@ -252,17 +252,6 @@ header .menu__item_dropdown .dropdown-content a:hover {
 header .menu__item_dropdown .dropdown-content.show {
   display: block;
 }
-header .menu .gridBg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-image: url(../img/bg/grid.svg);
-  background-repeat: repeat;
-  z-index: 3;
-  opacity: 0.7;
-}
 header .menu_mob {
   display: none;
 }
@@ -414,8 +403,141 @@ header .menu_mob {
   border-radius: 50%;
   cursor: url("../img/cursor.png"), pointer;
 }
-.socials svg:hover {
-  fill: #9E9DFE;
+.socials svg:hover path {
+  fill: #9e9dfe;
+}
+
+.section {
+  position: relative;
+  padding: 0 40px;
+  overflow: hidden;
+}
+.section_black {
+  background-color: #2b2b2b;
+}
+.section_violet {
+  background-color: #6868a1;
+}
+.section_green {
+  background-color: #1d8d63;
+}
+.section__container {
+  position: relative;
+  z-index: 5;
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 164px;
+}
+.section__block:first-child {
+  max-width: 580px;
+}
+.section__block:last-child {
+  max-width: 396px;
+}
+.section__title {
+  font-size: 90px;
+  font-family: "InterB", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -5.4px;
+  margin-bottom: 32px;
+}
+.section__description {
+  font-size: 16px;
+  font-family: "PoppinsR", sans-serif;
+  line-height: 23px;
+  margin-bottom: 12px;
+}
+.section__subtitle {
+  font-size: 50px;
+  font-family: "InterS", sans-serif;
+  line-height: 60px;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.gridBg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../img/bg/grid.svg);
+  background-repeat: repeat;
+  z-index: 3;
+  opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  section__subtitle {
+    display: none;
+  }
+}
+.section__description_main {
+  font-size: 24px;
+  line-height: 33px;
+  font-family: "PoppinsS", sans-serif;
+  display: none;
+}
+
+.section__container_main {
+  padding: 162px 50px 70px 0;
+}
+
+.section__event_main {
+  padding-bottom: 35px;
+}
+.section__event_main > div {
+  display: flex;
+  gap: 0 30px;
+  padding: 0 15px;
+  animation: move 50s linear infinite backwards;
+}
+@keyframes move {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .section__description_main {
+    display: block;
+  }
+}
+.button {
+  min-width: 184px;
+  height: 62px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  text-transform: uppercase;
+  font-family: "InterS", sans-serif;
+  background: rgba(255, 255, 255, 0.01);
+  font-size: 14px;
+  letter-spacing: 0.28px;
+}
+
+.section__button_white {
+  color: #000;
+  background-color: #fff;
+  display: inline-block;
+}
+
+.section__button_transparent {
+  display: inline-block;
+  border: 1px solid #fff;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  margin-left: 24px;
 }
 
 .page {
@@ -424,16 +546,6 @@ header .menu_mob {
   overflow: hidden;
   position: relative;
   color: #ffffff;
-}
-
-.section {
-  position: relative;
-  padding: 0 40px;
-  overflow: hidden;
-}
-
-.section_experience {
-  background-color: #6868a1;
 }
 
 .bgWrapper {
@@ -469,62 +581,6 @@ header .menu_mob {
 .firstBg,
 .thirdBg {
   z-index: 2;
-}
-
-.container {
-  position: relative;
-  z-index: 5;
-  max-width: 1232px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.title {
-  font-size: 90px;
-  font-family: "InterB", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: -5.4px;
-}
-
-.title span {
-  color: #9e9dfe;
-}
-
-.description {
-  font-size: 16px;
-  font-family: "PoppinsR", sans-serif;
-  line-height: 23px;
-}
-
-.join,
-.demo {
-  min-width: 184px;
-  height: 62px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  text-transform: uppercase;
-  font-family: "InterS", sans-serif;
-  background: rgba(255, 255, 255, 0.01);
-  font-size: 14px;
-  letter-spacing: 0.28px;
-}
-
-.join {
-  color: #000;
-  background-color: #fff;
-  display: inline-block;
-}
-
-.demo {
-  display: inline-block;
-  border: 1px solid #fff;
-  background: rgba(0, 0, 0, 0.2);
-  color: #fff;
-  margin-left: 24px;
 }
 
 .h3 {
@@ -577,10 +633,6 @@ header .menu_mob {
   text-transform: uppercase;
 }
 
-.mainSection {
-  background-color: #2b2b2b;
-}
-
 .mainOne,
 .mainTwo {
   position: absolute;
@@ -597,49 +649,6 @@ header .menu_mob {
 .mainTwo {
   z-index: 3;
   bottom: 0;
-}
-
-.main {
-  padding-top: 162px;
-  padding-bottom: 252px;
-  display: flex;
-  gap: 164px;
-  padding-right: 50px;
-}
-
-.main > div:first-child {
-  max-width: 580px;
-}
-
-.main > div:last-child {
-  max-width: 396px;
-}
-
-.decentralized {
-  font-size: 50px;
-  font-family: "InterS", sans-serif;
-  line-height: 60px;
-  letter-spacing: -3px;
-  text-transform: uppercase;
-}
-
-.mainDescription {
-  font-size: 24px;
-  line-height: 33px;
-  font-family: "PoppinsS", sans-serif;
-  display: none;
-}
-
-.main .title {
-  margin-bottom: 32px;
-}
-
-.main .description {
-  margin-bottom: 12px;
-}
-
-.main .join {
-  margin-top: 28px;
 }
 
 .experienceBetting {
@@ -766,10 +775,6 @@ header .menu_mob {
   margin-bottom: 30px;
 }
 
-.caseSection {
-  background-color: #1d8d63;
-}
-
 .case {
   padding-top: 122px;
   padding-bottom: 55px;
@@ -789,12 +794,11 @@ header .menu_mob {
 
 .events {
   display: flex;
-  margin: 0 -27vw;
-  padding: 0 27vw 35px;
-  gap: 32px;
-  overflow-y: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
 }
 
 .events::-webkit-scrollbar {
@@ -969,10 +973,6 @@ header .menu_mob {
   margin-top: 20px;
 }
 
-.stakeSection {
-  background-color: #1d8d63;
-}
-
 .stake {
   padding-top: 162px;
   display: flex;
@@ -1081,10 +1081,6 @@ textarea::placeholder {
   margin-top: 24px;
 }
 
-.tokenomicsSection {
-  background-color: #2b2b2b;
-}
-
 .tokenomics {
   padding-top: 162px;
   display: flex;
@@ -1134,10 +1130,6 @@ textarea::placeholder {
   border-radius: 50%;
   left: 10px;
   top: 9px;
-}
-
-.roadmapSection {
-  background-color: #2b2b2b;
 }
 
 .roadmapSection .container {
@@ -1410,7 +1402,6 @@ textarea {
     justify-content: space-between;
     padding-right: 30px;
   }
-  .main,
   .tokenomics {
     gap: 0;
     justify-content: space-between;
@@ -1491,12 +1482,6 @@ textarea {
   }
 }
 @media (max-width: 1050px) {
-  .decentralized {
-    display: none;
-  }
-  .mainDescription {
-    display: block;
-  }
   .main {
     padding-top: 159px;
     padding-bottom: 159px;
@@ -1681,11 +1666,11 @@ textarea {
   .experienceBetting .join {
     margin-top: 0;
   }
-  .main .buttons,
-  .experienceBetting .buttons {
+  .main .section__button-group,
+  .experienceBetting .section__button-group {
     margin-top: 32px;
   }
-  .buttons {
+  .section__button-group {
     display: flex;
     width: 100%;
     gap: 24px;
@@ -1928,10 +1913,10 @@ textarea {
   .section {
     text-align: center;
   }
-  .buttons {
+  .section__button-group {
     justify-content: center;
   }
-  .buttons button {
+  .section__button-group button {
     min-width: 120px;
   }
   .main {
