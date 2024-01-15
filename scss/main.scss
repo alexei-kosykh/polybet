@@ -1,6 +1,7 @@
 @import 'common/media_breakpoints';
 @import 'common/fonts', 'common/normalize', 'blocks/header', 'blocks/socials',
-  'blocks/sections', 'blocks/main_section', 'blocks/buttons';
+  'blocks/sections', 'blocks/bet_section', 'blocks/main_section',
+  'blocks/buttons', 'blocks/bet_section', 'blocks/features_section';
 
 .page {
   background-color: #000;
@@ -45,18 +46,20 @@
   z-index: 2;
 }
 
-.h3 {
+h3 {
   font-size: 48px;
   font-family: 'PoppinsE', sans-serif;
   text-transform: uppercase;
 }
 
-.h4 {
+h4 {
   font-size: 40px;
   font-family: 'PoppinsB', sans-serif;
   line-height: 46px;
   text-transform: uppercase;
 }
+
+
 
 .bigDescription {
   font-size: 18px;
@@ -64,35 +67,10 @@
   line-height: 25px;
 }
 
-.boldDescription {
-  font-family: 'PoppinsM', sans-serif;
-  text-transform: uppercase;
-}
-
 .smallDescription {
   font-size: 14px;
   font-family: 'PoppinsR', sans-serif;
   line-height: 23px;
-}
-
-.smallBoldDescription {
-  font-size: 14px;
-  font-family: 'PoppinsM', sans-serif;
-  line-height: 23px;
-  text-transform: uppercase;
-}
-
-.smallDescriptionItalic {
-  font-size: 14px;
-  font-family: 'PoppinsMI', sans-serif;
-  line-height: 27px;
-}
-
-.smallBoldDescriptionItalic {
-  font-size: 14px;
-  font-family: 'PoppinsMI', sans-serif;
-  line-height: 23px;
-  text-transform: uppercase;
 }
 
 .mainOne,
@@ -113,138 +91,6 @@
   bottom: 0;
 }
 
-.experienceBetting {
-  padding-top: 162px;
-  padding-bottom: 215px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 182px;
-  padding-right: 20px;
-}
-
-.experienceBetting > div:first-child {
-  max-width: 585px;
-}
-
-.experienceBetting > div:last-child > div:first-child {
-  max-width: 362px;
-}
-
-.experienceBetting .title {
-  margin-bottom: 32px;
-}
-
-.experienceBetting .description {
-  margin-bottom: 27px;
-}
-
-.experienceBetting .h4 {
-  margin-bottom: 20px;
-}
-
-.experienceBetting .join {
-  margin-top: 40px;
-}
-
-.firstBgWrapper {
-  position: absolute;
-  top: 0;
-  bottom: 50%;
-  left: 0;
-  right: 50%;
-}
-
-.firstBgWrapper .bg {
-  background-color: #2b2b2b;
-}
-
-.secondBgWrapper {
-  position: absolute;
-  top: 0;
-  bottom: 50%;
-  left: 50%;
-  right: 0;
-}
-
-.secondBgWrapper .bg {
-  background-color: #25255b;
-}
-
-.functionalitySection {
-  z-index: 10;
-  height: 1024px;
-}
-
-.thirdBgWrapper {
-  position: absolute;
-  top: 50%;
-  bottom: 0;
-  left: 0;
-  right: 50%;
-}
-
-.thirdBgWrapper .bg {
-  background-color: #6868a1;
-}
-
-.fourthBgWrapper {
-  position: absolute;
-  top: 50%;
-  bottom: 0;
-  left: 50%;
-  right: 0;
-}
-
-.fourthBgWrapper .bg {
-  background-color: #2b2b2b;
-}
-
-.functionality {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  bottom: 0;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  max-width: 1272px;
-  padding: 0 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  z-index: 3;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.functionality li {
-  width: 560px;
-  height: 50%;
-}
-
-.functionality li > div {
-  display: none;
-}
-
-.functionality li:first-child,
-.functionality li:nth-child(2) {
-  padding-top: 112px;
-}
-
-.functionality li:nth-child(3),
-.functionality li:nth-child(4) {
-  padding-top: 76px;
-}
-
-.functionality .h4,
-.functionality p {
-  margin-bottom: 30px;
-}
 
 .case {
   padding-top: 122px;
@@ -267,11 +113,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1440px;
+  width: 100%;
   margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  z-index: 100;
+}
+
+.section__event_cases {
+  max-width: 1340px;
+  gap: 32px;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .events::-webkit-scrollbar {
@@ -939,7 +790,7 @@ textarea {
   display: none;
 }
 
-@media (max-width: 1440px) {
+@include desktop-only() {
   .threePartSection .second {
     width: 34vw;
   }
@@ -975,16 +826,7 @@ textarea {
   }
 }
 
-@media (max-width: 1280px) {
-  .experienceBetting {
-    gap: 0;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-}
-
-@media (max-width: 1240px) {
+@include desktop() {
   .partners {
     gap: 0;
     -webkit-box-pack: justify;
@@ -1005,32 +847,11 @@ textarea {
     left: -200px;
   }
 
-  .functionality li {
-    width: 43vw;
-  }
-
-  .functionality li:first-child,
-  .functionality li:nth-child(2),
-  .functionality li:nth-child(3),
-  .functionality li:nth-child(4) {
-    padding-top: 50px;
-  }
-
   .stake {
     gap: 20px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-  }
-}
-
-@media (max-width: 1100px) {
-  .experienceBetting {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 123px;
   }
 }
 
@@ -1105,7 +926,7 @@ textarea {
   }
 }
 
-@media (max-width: 1050px) {
+@include laptop() {
   .main {
     padding-top: 159px;
     padding-bottom: 159px;
@@ -1166,72 +987,10 @@ textarea {
   }
 }
 
-@media (max-width: 769px) {
+@include tablet() {
   .gridBg,
   .links {
     display: none;
-  }
-
-  .experienceBetting {
-    padding-right: 0;
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
-  .functionalitySection {
-    height: auto;
-  }
-
-  .functionality {
-    position: relative;
-    padding: 70px 0 70px 0;
-    gap: 140px;
-    width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  .functionality li:first-child,
-  .functionality li:nth-child(2),
-  .functionality li:nth-child(3),
-  .functionality li:nth-child(4) {
-    padding-top: 0;
-  }
-
-  .functionality .h4,
-  .functionality p {
-    margin-bottom: 16px;
-  }
-
-  .functionality p:last-child {
-    margin-bottom: 0;
-  }
-
-  .functionalityBg {
-    display: none;
-  }
-
-  .functionality li {
-    position: relative;
-    width: 100%;
-  }
-
-  .functionality li > div {
-    display: block;
-  }
-
-  .firstBgWrapper,
-  .secondBgWrapper,
-  .thirdBgWrapper,
-  .fourthBgWrapper {
-    position: absolute;
-    top: -70px;
-    bottom: -70px;
-    left: -50px;
-    right: -50px;
-    z-index: -1;
   }
 
   .case {
@@ -1291,7 +1050,7 @@ textarea {
   }
 }
 
-@media (max-width: 600px) {
+@include mobile() {
   .mainOne {
     display: none;
   }
@@ -1321,79 +1080,14 @@ textarea {
     font-size: 14px;
   }
 
-  .h4,
-  .h3 {
+  h4,
+  h3 {
     font-size: 32px;
     line-height: 40px;
   }
 
-  .join,
-  .demo {
-    min-width: 167px;
-    height: 48px;
-    font-size: 12px;
-  }
-
-  .demo {
-    background: rgba(0, 0, 0, 0.2);
-  }
-
-  .main .join,
-  .experienceBetting .join {
-    margin-top: 0;
-  }
-
-  .main .section__button-group,
-  .experienceBetting .section__button-group {
-    margin-top: 32px;
-  }
-
-  .section__button-group {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    gap: 24px;
-  }
-
-  .demo {
-    margin-left: 0;
-  }
-
-  .experienceBetting {
-    padding-top: 0;
-    padding-bottom: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 5px;
-  }
-
   .br1 {
     display: none;
-  }
-
-  .experienceBetting .h4 + .h4 {
-    margin-top: 16px;
-    margin-bottom: 16px;
-  }
-
-  .experienceBetting > div:last-child > div:first-child {
-    max-width: 100%;
-  }
-
-  .functionality {
-    padding: 0;
-    gap: 80px;
-  }
-
-  .firstBgWrapper,
-  .secondBgWrapper,
-  .thirdBgWrapper,
-  .fourthBgWrapper {
-    top: -40px;
-    bottom: -40px;
   }
 
   .case {
@@ -1678,28 +1372,13 @@ textarea {
   }
 }
 
-@media (max-width: 390px) {
-  .section {
-    text-align: center;
-  }
-
-  .section__button-group {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
-  .section__button-group button {
-    min-width: 120px;
-  }
-
+@include mobile-only() {
   .main {
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
-  .main .title,
-  .experienceBetting .title {
+  .main .title {
     margin-bottom: 16px;
   }
 

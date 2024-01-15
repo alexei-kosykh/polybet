@@ -51,7 +51,7 @@
   font-family: "PoppinsMI";
   font-display: swap;
   src: url("../fonts/Poppins-MediumItalic.woff") format("woff"), url("../fonts/Poppins-MediumItalic.woff2") format("woff2");
-  font-weight: 500;
+  font-weight: 400;
   font-style: italic;
 }
 @font-face {
@@ -172,7 +172,7 @@ header.header_bg-grey {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 250;
   background: var(--crypto-white-linear, linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.02) 100%));
   -webkit-backdrop-filter: blur(4.1049365997px);
   backdrop-filter: blur(4.1049365997px);
@@ -385,7 +385,7 @@ header .menu_mob {
 }
 .socials {
   position: fixed;
-  z-index: 100;
+  z-index: 200;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -450,6 +450,16 @@ header .menu_mob {
   line-height: 23px;
   margin-bottom: 12px;
 }
+.section__description_uppercase {
+  text-transform: uppercase;
+}
+.section__description_small {
+  font-size: 14px;
+  font-family: "PoppinsM", sans-serif;
+}
+.section__description_italic {
+  font-family: "PoppinsMI", sans-serif;
+}
 .section__subtitle {
   font-size: 50px;
   font-family: "InterS", sans-serif;
@@ -476,6 +486,86 @@ header .menu_mob {
     display: none;
   }
 }
+@media (max-width: 576px) {
+  .section__title {
+    font-size: 40px;
+    font-family: "InterE", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    margin-bottom: 32px;
+  }
+  .section__description {
+    font-size: 14px;
+  }
+  .section__description_uppercase {
+    text-transform: none;
+  }
+}
+.section__bet {
+  padding-top: 170px;
+  padding-bottom: 120px;
+  display: flex;
+  gap: 182px;
+  padding-right: 20px;
+}
+.section__bet > div:first-child {
+  max-width: 585px;
+}
+.section__bet > div:last-child > div:first-child {
+  max-width: 362px;
+  margin-bottom: 20px;
+}
+.section__bet .section__description {
+  margin-bottom: 20px;
+}
+.section__bet h4 {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1240px) {
+  .section__bet {
+    padding-bottom: 170px;
+    gap: 5vw;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 1024px) {
+  .section__bet {
+    flex-direction: column;
+    gap: 0;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    padding: 100px 0;
+  }
+  .section__bet div {
+    max-width: 100vw;
+    width: 100%;
+  }
+  .section__bet > div:first-child {
+    margin-bottom: 10px;
+  }
+  .section__bet > div:last-child > div:first-child {
+    margin-bottom: 40px;
+  }
+  .section__bet > div:first-child, .section__bet > div:last-child > div:first-child {
+    max-width: 100vw;
+    width: 100%;
+  }
+  .section__bet .section__description {
+    margin-bottom: 30px;
+  }
+  .section__bet h4 {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .section__bet {
+    padding: 30px 0;
+  }
+  .section__bet h4 {
+    font-size: 32px;
+  }
+}
 .section__description_main {
   font-size: 24px;
   line-height: 33px;
@@ -489,6 +579,10 @@ header .menu_mob {
 
 .section__event_main {
   padding-bottom: 35px;
+  max-width: 1440px;
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
 }
 .section__event_main > div {
   display: flex;
@@ -526,6 +620,12 @@ header .menu_mob {
   letter-spacing: 0.28px;
 }
 
+.section__button-group {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
 .section__button_white {
   color: #000;
   background-color: #fff;
@@ -540,6 +640,223 @@ header .menu_mob {
   margin-left: 24px;
 }
 
+@media (max-width: 768px) {
+  .button {
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .button {
+    min-width: 30px;
+    width: 100%;
+    height: 55px;
+  }
+}
+.section__bet {
+  padding-top: 170px;
+  padding-bottom: 120px;
+  display: flex;
+  gap: 182px;
+  padding-right: 20px;
+}
+.section__bet > div:first-child {
+  max-width: 585px;
+}
+.section__bet > div:last-child > div:first-child {
+  max-width: 362px;
+  margin-bottom: 20px;
+}
+.section__bet .section__description {
+  margin-bottom: 20px;
+}
+.section__bet h4 {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1240px) {
+  .section__bet {
+    padding-bottom: 170px;
+    gap: 5vw;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 1024px) {
+  .section__bet {
+    flex-direction: column;
+    gap: 0;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    padding: 100px 0;
+  }
+  .section__bet div {
+    max-width: 100vw;
+    width: 100%;
+  }
+  .section__bet > div:first-child {
+    margin-bottom: 10px;
+  }
+  .section__bet > div:last-child > div:first-child {
+    margin-bottom: 40px;
+  }
+  .section__bet > div:first-child, .section__bet > div:last-child > div:first-child {
+    max-width: 100vw;
+    width: 100%;
+  }
+  .section__bet .section__description {
+    margin-bottom: 30px;
+  }
+  .section__bet h4 {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .section__bet {
+    padding: 30px 0;
+  }
+  .section__bet h4 {
+    font-size: 32px;
+  }
+}
+.section__features {
+  z-index: 10;
+}
+.section__features_block {
+  height: 1120px;
+  max-width: 1300px;
+  display: grid;
+  grid-template: 1fr 1fr/1fr 1fr;
+  margin: 0 auto;
+  gap: 100px;
+  width: 100%;
+}
+.section__features_block-text {
+  padding: 130px 0 0 0;
+  width: 100%;
+  max-width: 510px;
+  position: relative;
+  z-index: 3;
+}
+.section__features_block-text h4,
+.section__features_block-text p {
+  margin-bottom: 30px;
+}
+.section__features_p-t-30 {
+  padding-top: 30px;
+}
+.section__features_p-l-40 {
+  padding-left: 40px;
+}
+.section__features_bg-black-first {
+  position: absolute;
+  top: 0;
+  bottom: 50%;
+  left: 0;
+  right: 50%;
+}
+.section__features_bg-black-first .bg {
+  background-color: #413f3f;
+}
+.section__features_bg-dark-violet {
+  position: absolute;
+  top: 0;
+  bottom: 50%;
+  left: 50%;
+  right: 0;
+}
+.section__features_bg-dark-violet .bg {
+  background-color: #25255b;
+}
+.section__features_bg-light-violet {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+}
+.section__features_bg-light-violet .bg {
+  background-color: #6868a1;
+}
+.section__features_bg-black-second {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+}
+.section__features_bg-black-second .bg {
+  background-color: #2b2b2b;
+}
+
+@media (max-width: 1240px) {
+  .section__features_block {
+    height: 1366px;
+  }
+  .section__features_p-t-30 {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .section__features_block {
+    height: auto;
+    grid-template: 1fr 1fr 1fr 400px/1fr;
+    gap: 0;
+    padding-top: 60px;
+  }
+  .section__features_block > div {
+    position: relative;
+    height: 35vh;
+  }
+  .section__features_block-text {
+    height: auto;
+    padding: 0 5px 10px 0;
+    margin: 10px;
+    max-width: 100%;
+  }
+  .section__features_block-text h4,
+  .section__features_block-text p {
+    margin-bottom: 16px;
+  }
+  .section__features_block-text h4 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .section__features_block-text p {
+    font-size: 14px;
+  }
+  .section__features_block-text p:last-child {
+    margin-bottom: 0;
+  }
+  .section__features_p-l-40 {
+    padding-left: 0;
+  }
+  .section__features .features_bg {
+    display: none;
+  }
+  .section__features_bg-black-first, .section__features_bg-dark-violet, .section__features_bg-light-violet, .section__features_bg-black-second {
+    position: absolute;
+    height: auto;
+    top: -70px;
+    bottom: -70px;
+    left: -50px;
+    right: -50px;
+    z-index: -1;
+  }
+}
+@media (max-width: 576px) {
+  .section__features_block {
+    padding-top: 0;
+    grid-template: 550px 1fr 600px 400px/1fr;
+  }
+  .section__features_bg-black-first, .section__features_bg-dark-violet, .section__features_bg-light-violet, .section__features_bg-black-second {
+    top: -100px;
+    bottom: -40px;
+  }
+}
+@media (max-width: 576px) {
+  .section__features_block > div {
+    min-height: 500px;
+  }
+}
 .page {
   background-color: #000;
   max-width: 100%;
@@ -583,13 +900,13 @@ header .menu_mob {
   z-index: 2;
 }
 
-.h3 {
+h3 {
   font-size: 48px;
   font-family: "PoppinsE", sans-serif;
   text-transform: uppercase;
 }
 
-.h4 {
+h4 {
   font-size: 40px;
   font-family: "PoppinsB", sans-serif;
   line-height: 46px;
@@ -602,35 +919,10 @@ header .menu_mob {
   line-height: 25px;
 }
 
-.boldDescription {
-  font-family: "PoppinsM", sans-serif;
-  text-transform: uppercase;
-}
-
 .smallDescription {
   font-size: 14px;
   font-family: "PoppinsR", sans-serif;
   line-height: 23px;
-}
-
-.smallBoldDescription {
-  font-size: 14px;
-  font-family: "PoppinsM", sans-serif;
-  line-height: 23px;
-  text-transform: uppercase;
-}
-
-.smallDescriptionItalic {
-  font-size: 14px;
-  font-family: "PoppinsMI", sans-serif;
-  line-height: 27px;
-}
-
-.smallBoldDescriptionItalic {
-  font-size: 14px;
-  font-family: "PoppinsMI", sans-serif;
-  line-height: 23px;
-  text-transform: uppercase;
 }
 
 .mainOne,
@@ -649,130 +941,6 @@ header .menu_mob {
 .mainTwo {
   z-index: 3;
   bottom: 0;
-}
-
-.experienceBetting {
-  padding-top: 162px;
-  padding-bottom: 215px;
-  display: flex;
-  gap: 182px;
-  padding-right: 20px;
-}
-
-.experienceBetting > div:first-child {
-  max-width: 585px;
-}
-
-.experienceBetting > div:last-child > div:first-child {
-  max-width: 362px;
-}
-
-.experienceBetting .title {
-  margin-bottom: 32px;
-}
-
-.experienceBetting .description {
-  margin-bottom: 27px;
-}
-
-.experienceBetting .h4 {
-  margin-bottom: 20px;
-}
-
-.experienceBetting .join {
-  margin-top: 40px;
-}
-
-.firstBgWrapper {
-  position: absolute;
-  top: 0;
-  bottom: 50%;
-  left: 0;
-  right: 50%;
-}
-
-.firstBgWrapper .bg {
-  background-color: #2b2b2b;
-}
-
-.secondBgWrapper {
-  position: absolute;
-  top: 0;
-  bottom: 50%;
-  left: 50%;
-  right: 0;
-}
-
-.secondBgWrapper .bg {
-  background-color: #25255b;
-}
-
-.functionalitySection {
-  z-index: 10;
-  height: 1024px;
-}
-
-.thirdBgWrapper {
-  position: absolute;
-  top: 50%;
-  bottom: 0;
-  left: 0;
-  right: 50%;
-}
-
-.thirdBgWrapper .bg {
-  background-color: #6868a1;
-}
-
-.fourthBgWrapper {
-  position: absolute;
-  top: 50%;
-  bottom: 0;
-  left: 50%;
-  right: 0;
-}
-
-.fourthBgWrapper .bg {
-  background-color: #2b2b2b;
-}
-
-.functionality {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  max-width: 1272px;
-  padding: 0 40px;
-  display: flex;
-  justify-content: space-between;
-  z-index: 3;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.functionality li {
-  width: 560px;
-  height: 50%;
-}
-
-.functionality li > div {
-  display: none;
-}
-
-.functionality li:first-child,
-.functionality li:nth-child(2) {
-  padding-top: 112px;
-}
-
-.functionality li:nth-child(3),
-.functionality li:nth-child(4) {
-  padding-top: 76px;
-}
-
-.functionality .h4,
-.functionality p {
-  margin-bottom: 30px;
 }
 
 .case {
@@ -794,11 +962,16 @@ header .menu_mob {
 
 .events {
   display: flex;
-  width: 1440px;
+  width: 100%;
   margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  z-index: 100;
+}
+
+.section__event_cases {
+  max-width: 1340px;
+  gap: 32px;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .events::-webkit-scrollbar {
@@ -1390,12 +1563,6 @@ textarea {
     transform: translateX(0);
   }
 }
-@media (max-width: 1280px) {
-  .experienceBetting {
-    gap: 0;
-    justify-content: space-between;
-  }
-}
 @media (max-width: 1240px) {
   .partners {
     gap: 0;
@@ -1410,24 +1577,9 @@ textarea {
   .mainTwo {
     left: -200px;
   }
-  .functionality li {
-    width: 43vw;
-  }
-  .functionality li:first-child,
-  .functionality li:nth-child(2),
-  .functionality li:nth-child(3),
-  .functionality li:nth-child(4) {
-    padding-top: 50px;
-  }
   .stake {
     gap: 20px;
     justify-content: space-between;
-  }
-}
-@media (max-width: 1100px) {
-  .experienceBetting {
-    flex-direction: column;
-    gap: 123px;
   }
 }
 @media (max-width: 1080px) {
@@ -1481,7 +1633,7 @@ textarea {
     max-width: 664px;
   }
 }
-@media (max-width: 1050px) {
+@media (max-width: 1024px) {
   .main {
     padding-top: 159px;
     padding-bottom: 159px;
@@ -1529,59 +1681,10 @@ textarea {
     display: none;
   }
 }
-@media (max-width: 769px) {
+@media (max-width: 768px) {
   .gridBg,
   .links {
     display: none;
-  }
-  .experienceBetting {
-    padding-right: 0;
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-  .functionalitySection {
-    height: auto;
-  }
-  .functionality {
-    position: relative;
-    padding: 70px 0 70px 0;
-    gap: 140px;
-    width: 100%;
-    flex-direction: column;
-  }
-  .functionality li:first-child,
-  .functionality li:nth-child(2),
-  .functionality li:nth-child(3),
-  .functionality li:nth-child(4) {
-    padding-top: 0;
-  }
-  .functionality .h4,
-  .functionality p {
-    margin-bottom: 16px;
-  }
-  .functionality p:last-child {
-    margin-bottom: 0;
-  }
-  .functionalityBg {
-    display: none;
-  }
-  .functionality li {
-    position: relative;
-    width: 100%;
-  }
-  .functionality li > div {
-    display: block;
-  }
-  .firstBgWrapper,
-  .secondBgWrapper,
-  .thirdBgWrapper,
-  .fourthBgWrapper {
-    position: absolute;
-    top: -70px;
-    bottom: -70px;
-    left: -50px;
-    right: -50px;
-    z-index: -1;
   }
   .case {
     padding-top: 80px;
@@ -1624,7 +1727,7 @@ textarea {
     align-items: start;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 576px) {
   .mainOne {
     display: none;
   }
@@ -1648,62 +1751,13 @@ textarea {
   .description {
     font-size: 14px;
   }
-  .h4,
-  .h3 {
+  h4,
+  h3 {
     font-size: 32px;
     line-height: 40px;
   }
-  .join,
-  .demo {
-    min-width: 167px;
-    height: 48px;
-    font-size: 12px;
-  }
-  .demo {
-    background: rgba(0, 0, 0, 0.2);
-  }
-  .main .join,
-  .experienceBetting .join {
-    margin-top: 0;
-  }
-  .main .section__button-group,
-  .experienceBetting .section__button-group {
-    margin-top: 32px;
-  }
-  .section__button-group {
-    display: flex;
-    width: 100%;
-    gap: 24px;
-  }
-  .demo {
-    margin-left: 0;
-  }
-  .experienceBetting {
-    padding-top: 0;
-    padding-bottom: 0;
-    flex-direction: column;
-    gap: 5px;
-  }
   .br1 {
     display: none;
-  }
-  .experienceBetting .h4 + .h4 {
-    margin-top: 16px;
-    margin-bottom: 16px;
-  }
-  .experienceBetting > div:last-child > div:first-child {
-    max-width: 100%;
-  }
-  .functionality {
-    padding: 0;
-    gap: 80px;
-  }
-  .firstBgWrapper,
-  .secondBgWrapper,
-  .thirdBgWrapper,
-  .fourthBgWrapper {
-    top: -40px;
-    bottom: -40px;
   }
   .case {
     padding-bottom: 0;
@@ -1909,22 +1963,12 @@ textarea {
     width: 250px;
   }
 }
-@media (max-width: 390px) {
-  .section {
-    text-align: center;
-  }
-  .section__button-group {
-    justify-content: center;
-  }
-  .section__button-group button {
-    min-width: 120px;
-  }
+@media (max-width: 393px) {
   .main {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  .main .title,
-  .experienceBetting .title {
+  .main .title {
     margin-bottom: 16px;
   }
   .description,
