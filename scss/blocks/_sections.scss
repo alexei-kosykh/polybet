@@ -118,3 +118,8 @@
     }
   }
 }
+@include mobile-only() {
+  .section {
+    padding: 30px 15px;
+  }
+}

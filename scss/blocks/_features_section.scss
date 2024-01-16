@@ -159,7 +159,9 @@
       padding-top: 0;
       grid-template: 550px 1fr 600px 400px / 1fr;
 
-
+      & > div {
+        min-height: 500px;
+      }
     }
     &_bg-black-first,
     &_bg-dark-violet,
@@ -171,13 +173,15 @@
   }
 }
 
-@include mobile() {
+@include mobile-only() {
   .section__features {
-    &_block {
 
-      & > div {
-        min-height: 500px;
-      }
-
-    }}
+    &_bg-black-first,
+    &_bg-dark-violet,
+    &_bg-light-violet,
+    &_bg-black-second {
+      top: -40px;
+      bottom: -100px;
+    }
+  }
 }
