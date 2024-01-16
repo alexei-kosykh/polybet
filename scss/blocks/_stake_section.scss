@@ -1,0 +1,142 @@
+.section__stake {
+  padding-top: 162px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 92px;
+  padding-bottom: 147px;
+
+  & > button {
+    display: none;
+  }
+
+  & > div:first-child {
+    max-width: 580px;
+    padding-left: 50px;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: 'PoppinsM', sans-serif;
+    line-height: 23px;
+    margin-bottom: 20px;
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+  }
+
+  &_img {
+    position: relative;
+
+    img {
+      margin-top: 86px;
+      width: 540px;
+      height: auto;
+    }
+
+    & > picture:last-child {
+      position: absolute;
+      top: 0;
+      left: 18px;
+
+      img {
+        width: 510px;
+      }
+    }
+  }
+}
+
+@include desktop() {
+  .section__stake {
+    gap: 30px;
+  }
+}
+
+@include laptop() {
+  .section__stake {
+    padding-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-bottom: 147px;
+
+    & > div:first-child {
+      padding-left: 20px;
+      max-width: 80%;
+    }
+    &_img {
+      margin: 0 auto;
+      img {
+        margin-top: 30px;
+        width: 92vw;
+        height: auto;
+      }
+
+      & > picture:last-child {
+        left: 25px;
+        top: 5px;
+        img {
+          width: 96%;
+        }
+      }
+    }
+  }
+}
+
+@include tablet() {
+  .section__stake {
+    & > div:first-child {
+      padding-left: 15px;
+    }
+
+    &_img {
+      img {
+        width: 90vw;
+      }
+    }
+  }
+}
+
+@include mobile() {
+  .section__stake {
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+    & > button {
+      display: block;
+      width: 87vw;
+      margin: 0 auto;
+    }
+
+    & > div:first-child {
+      padding-left: 15px;
+
+      button {
+        display: none;
+      }
+    }
+    &_img {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@include mobile-only() {
+  .section__stake {
+    padding-bottom: 20px;
+
+    p:last-of-type {
+      margin-bottom: 10px;
+    }
+
+    & > div:first-child {
+      padding-left: 10px;
+    }
+
+    &_img {
+      margin-bottom: 20px;
+    }
+  }
+}

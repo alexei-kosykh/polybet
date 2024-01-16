@@ -1,7 +1,7 @@
 @import 'common/media_breakpoints';
 @import 'common/fonts', 'common/normalize', 'blocks/header', 'blocks/socials',
   'blocks/sections', 'blocks/bet_section', 'blocks/main_section',
-  'blocks/buttons', 'blocks/case_section', 'blocks/features_section', 'blocks/columns_section';
+  'blocks/buttons', 'blocks/case_section', 'blocks/features_section', 'blocks/columns_section','blocks/stake_section';
 
 .page {
   background-color: #000;
@@ -258,41 +258,7 @@ h5 {
   margin-top: 20px;
 }
 
-.stake {
-  padding-top: 162px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 92px;
-  padding-bottom: 147px;
-}
 
-.stake > div:first-child {
-  max-width: 580px;
-}
-
-.stake > div:first-child > .join {
-  display: none;
-}
-
-.stake div:last-child img {
-  margin-top: 86px;
-  width: 540px;
-  height: auto;
-  -webkit-box-shadow: 12.13px 29.111px 16.981px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 12.13px 29.111px 16.981px 0px rgba(0, 0, 0, 0.25);
-}
-
-.stake .title {
-  margin-bottom: 32px;
-}
-
-.stakeDescription {
-  font-size: 16px;
-  font-family: 'PoppinsB', sans-serif;
-  line-height: 23px;
-  margin-bottom: 48px;
-}
 
 .writeEmail {
   width: 100%;
@@ -877,7 +843,7 @@ textarea {
 }
 
 @media (max-width: 930px) {
- 
+
 
   .oracleApproved {
     display: none;

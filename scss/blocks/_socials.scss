@@ -1,12 +1,15 @@
 .socials {
   position: fixed;
+  max-width: 1460px;
+  width: 100%;
+  margin: 0 auto;
   z-index: 200;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -16,10 +19,9 @@
   flex-direction: column;
   gap: 16px;
   top: 96px;
-  left: 50%;
-  -webkit-transform: translateX(631px);
-  -ms-transform: translateX(631px);
-  transform: translateX(631px);
+  left: 0;
+  right: 0;
+padding-right: 30px;
 
   svg {
     -webkit-backdrop-filter: blur(4.1049365997px);
