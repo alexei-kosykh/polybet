@@ -1,0 +1,160 @@
+.section__roadmap {
+  min-height: 1024px;
+  padding-top: 162px;
+  max-width: 1240px;
+
+  h2 {
+    margin-bottom: 235px;
+  }
+
+  &_plan {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin: 0 -27vw;
+    padding: 0 27vw 112px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    cursor: -webkit-grab;
+    cursor: grab;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    & > li {
+      width: 100%;
+      white-space: nowrap;
+
+      h4 {
+        margin-bottom: 70px;
+      }
+
+      &:last-child > span {
+        display: none;
+      }
+    }
+  }
+  &_block {
+    position: relative;
+  }
+
+  &_line {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: calc(100% * 6 + 100px);
+    height: 2px;
+    background-color: rgba(29, 141, 99, 1);
+  }
+
+  &_point {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: rgba(29, 141, 99, 1);
+  }
+
+  &_items {
+    margin-top: 40px;
+    position: relative;
+
+    p {
+      font-size: 13px;
+      position: relative;
+      display: inline-block;
+      padding-left: 20px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 50%;
+        top: 10px;
+        left: 10px;
+      }
+    }
+  }
+}
+
+@include desktop-only() {
+  .section__roadmap {
+    max-width: 1024px;
+  }
+}
+@include desktop() {
+  .section__roadmap {
+    max-width: 768px;
+  }
+}
+@include laptop() {
+  .section__roadmap {
+    max-width: 576px;
+  }
+}
+
+@include tablet() {
+  .section__roadmap {
+    padding-top: 80px;
+
+    h2 {
+      margin-bottom: 150px;
+    }
+
+    &_plan {
+      padding-bottom: 70px;
+    }
+  }
+}
+
+@include mobile() {
+  .section__roadmap {
+    min-height: auto;
+    padding-top: 20px;
+    padding-left: 30px;
+    max-width: 353px;
+
+    h2 {
+      margin-bottom: 70px;
+    }
+
+    &_plan {
+      padding: 0 30px 20px;
+      margin: 0 -20px;
+      overflow-x: auto;
+
+      & > li {
+        min-width: calc(100vw - 45px);
+        max-width: calc(100vw - 45px);
+        white-space: normal;
+        height: auto;
+
+        & > span::before {
+          bottom: -7px;
+        }
+        & > span::after {
+          bottom: -13px;
+        }
+        &::before {
+          bottom: -10px;
+        }
+      }
+    }
+    &_point {
+      top: -34px;
+    }
+
+    &_items {
+      margin-top: 16px;
+    }
+  }
+}

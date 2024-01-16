@@ -1,8 +1,6 @@
 @import 'common/media_breakpoints';
 @import 'common/fonts', 'common/normalize', 'blocks/header', 'blocks/socials',
-  'blocks/sections', 'blocks/bet_section', 'blocks/main_section',
-  'blocks/buttons', 'blocks/case_section', 'blocks/features_section',
-  'blocks/columns_section', 'blocks/stake_section', 'blocks/tokenomics_section';
+  'blocks/sections/sections', 'blocks/buttons';
 
 .page {
   background-color: #000;
@@ -372,10 +370,6 @@ textarea::placeholder {
   z-index: 11;
 }
 
-.roadmap {
-  padding-top: 162px;
-}
-
 .bgText {
   position: absolute;
   color: rgba(255, 255, 255, 0.4);
@@ -393,59 +387,6 @@ textarea::placeholder {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.roadmap .title {
-  margin-bottom: 235px;
-}
-
-.plan {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 40px;
-  overflow-x: auto;
-  margin: 0 -27vw;
-  padding: 0 27vw 112px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-}
-
-.plan::-webkit-scrollbar {
-  display: none;
-}
-
-.plan > li {
-  width: 100%;
-  white-space: nowrap;
-}
-
-.roadmap__plan {
-  margin-top: 40px;
-}
-
-.roadmap__plan .description {
-  font-size: 13px;
-  position: relative;
-  display: inline-block;
-  padding-left: 20px;
-}
-
-.roadmap__plan .description::before {
-  content: '';
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background-color: #fff;
-  border-radius: 50%;
-  top: 10px;
-  left: 10px;
-}
-
-.plan > li:last-child > span {
-  display: none;
 }
 
 .partnersSection {
@@ -625,29 +566,7 @@ textarea {
   display: none;
 }
 
-.stake > .join {
-  display: none;
-}
-
 @include desktop-only() {
-  // .section__columns_three .second {
-  //   // width: 34vw;
-  // }
-
-  // .left {
-  //   right: 66%;
-  //   -webkit-transform: translateX(0);
-  //   -ms-transform: translateX(0);
-  //   transform: translateX(0);
-  // }
-
-  // .right {
-  //   left: 66.5%;
-  //   -webkit-transform: translateX(0);
-  //   -ms-transform: translateX(0);
-  //   transform: translateX(0);
-  // }
-
   .mainOne,
   .mainTwo {
     left: 0;
@@ -674,62 +593,13 @@ textarea {
     padding-right: 30px;
   }
 
-  .tokenomics {
-    gap: 0;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-
   .mainOne,
   .mainTwo {
     left: -200px;
   }
-
-  .stake {
-    gap: 20px;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
 }
 
 @media (max-width: 1080px) {
-  .stake {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding-top: 80px;
-    padding-bottom: 70px;
-    gap: 63px;
-    max-width: 655px;
-  }
-
-  .stake > div:last-child img {
-    width: 100%;
-    margin-top: 0;
-  }
-
-  .tokenomics {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 70px;
-    padding-top: 80px;
-    padding-bottom: 70px;
-    padding-right: 0;
-  }
-
-  .tokenomics > div:last-child {
-    max-width: 100%;
-  }
-
-  .tokenomics .title {
-    margin-bottom: 60px;
-  }
-
   .partners {
     padding-right: 0;
     -webkit-box-orient: vertical;
@@ -787,7 +657,8 @@ textarea {
 }
 
 @include tablet() {
-  .gridBg,
+
+ 
   .links {
     display: none;
   }
@@ -795,18 +666,6 @@ textarea {
   .bgText,
   .partnersBgText {
     display: none;
-  }
-
-  .roadmap {
-    padding-top: 80px;
-  }
-
-  .roadmap .title {
-    margin-bottom: 120px;
-  }
-
-  .plan {
-    padding-bottom: 70px;
   }
 }
 
@@ -844,13 +703,6 @@ textarea {
     display: none;
   }
 
-  .section {
-    max-height: 100%;
-    height: 100%;
-    min-height: 0;
-    padding: 40px 20px;
-  }
-
   .main {
     padding-top: 56px;
     padding-bottom: 87px;
@@ -858,15 +710,6 @@ textarea {
 
   .mainDescription {
     font-size: 16px;
-  }
-
-  .title {
-    font-size: 40px;
-    letter-spacing: -2.4px;
-  }
-
-  .description {
-    font-size: 14px;
   }
 
   h4,
@@ -886,166 +729,6 @@ textarea {
 
   .events + .h5 {
     margin-top: 24px;
-  }
-
-  .threePart {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 80px;
-    padding: 0;
-  }
-
-  .section__columns_three .threePart .first,
-  .section__columns_three .threePart .second,
-  .section__columns_three .threePart .third {
-    top: -40px;
-    bottom: -40px;
-  }
-
-  .threePart li {
-    width: 100%;
-    position: relative;
-  }
-
-  .threePart .h4 {
-    margin-bottom: 16px;
-  }
-
-  .descriptionWrapper p + p {
-    margin-top: 16px;
-  }
-
-  .section__columns_three .first,
-  .section__columns_three .second,
-  .section__columns_three .third {
-    display: none;
-    top: -40px;
-    bottom: -40px;
-    left: -20px;
-    right: -20px;
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-  }
-
-  .threePart li > div:first-child {
-    display: block;
-    z-index: -1;
-  }
-
-  .section__columns_three .second {
-    width: auto;
-  }
-
-  .stake {
-    width: 100%;
-    padding: 0;
-  }
-
-  .stake > div:last-child {
-    display: none;
-  }
-
-  .stake .title {
-    margin-bottom: 24px;
-  }
-
-  .stakeDescription {
-    font-family: 'PoppinsR', sans-serif;
-    margin-bottom: 40px;
-  }
-
-  .stake > div:first-child > .join {
-    display: block;
-    width: 100%;
-  }
-
-  .stake .writeEmail {
-    width: 100%;
-    height: 48px;
-    padding-left: 15px;
-    margin-bottom: 16px;
-  }
-
-  .stake .writeEmail .join {
-    display: none;
-  }
-
-  .tokenomics {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding-top: 0;
-    gap: 40px;
-    padding-bottom: 0;
-  }
-
-  .tokenomics .title {
-    margin-bottom: 24px;
-    text-align: center;
-  }
-
-  .tokenomics img {
-    width: 100%;
-  }
-
-  .tokenomics > div:first-child {
-    text-align: left;
-  }
-
-  .tokenomics > div:last-child {
-    max-width: 100%;
-  }
-
-  .tokenomics h3 {
-    margin-bottom: 16px;
-  }
-
-  .tokenomics .description {
-    font-size: 16px;
-  }
-
-  .tokenomics > div:last-child li:last-child .description {
-    margin-bottom: 0;
-  }
-
-  .roadmap .title {
-    margin-bottom: 40px;
-  }
-
-  .roadmap {
-    padding-top: 0;
-  }
-
-  .plan {
-    padding: 0 20px 20px;
-    margin: 0 -20px;
-  }
-
-  .plan > li {
-    min-width: calc(100vw - 45px);
-    max-width: calc(100vw - 45px);
-    white-space: normal;
-    height: auto;
-  }
-
-  .plan > li > span::before {
-    bottom: -7px;
-  }
-
-  .plan > li > span::after {
-    bottom: -13px;
-  }
-
-  .plan > li::before {
-    bottom: -10px;
-  }
-
-  .roadmap__plan {
-    margin-top: 16px;
   }
 
   .partners {
@@ -1160,18 +843,7 @@ textarea {
     margin-bottom: 16px;
   }
 
-  .description,
-  .smallDescriptionItalic {
-    line-height: 23px;
-  }
-
-  .experienceBetting .description {
-    margin-bottom: 12px;
-  }
-
   .descriptionWrapper,
-  .tokenomics ul,
-  .roadmap__plan,
   .footer {
     text-align: left;
   }
