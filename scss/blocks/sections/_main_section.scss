@@ -1,44 +1,106 @@
 .section {
-  &__description_main {
-    font-size: 24px;
-    line-height: 33px;
-    font-family: 'PoppinsS', sans-serif;
-    display: none;
-  }
-}
+  &__description {
+    &_mobile {
+      font-size: 32px;
+      line-height: 60px;
+      text-transform: uppercase;
+      font-family: 'InterS', sans-serif;
 
-.section__container_main {
-  padding: 162px 50px 70px 0;
-}
-
-.section__event_main {
-  padding-bottom: 35px;
-  max-width: 1440px;
-  overflow: hidden;
-  position: relative;
-  z-index: 100;
-
-  & > div {
-    display: flex;
-    gap: 0 30px;
-    padding: 0 15px;
-    animation: move 50s linear infinite backwards;
-  }
-
-  @keyframes move {
-    0% {
-      transform: translateX(0%);
+      display: none;
     }
-    100% {
-      transform: translateX(-100%);
+  }
+
+  &__container_main {
+    padding: 162px 50px 70px 0;
+  }
+
+  &__event_main {
+    padding-bottom: 60px;
+    max-width: 1440px;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+
+    & > div {
+      display: flex;
+      gap: 0 30px;
+      padding: 0 15px;
+      animation: move 50s linear infinite backwards;
+    }
+
+    @keyframes move {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
     }
   }
 }
 
 @include laptop() {
   .section {
-    &__description_main {
+    & > &__container_main {
+      flex-direction: column;
+      gap: 20px;
+
+      .section__subtitle {
+        display: none;
+      }
+
+      .section__description {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__description_mobile {
       display: block;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@include mobile() {
+  .section {
+    & > &__container_main {
+      padding: 56px 0 87px;
+
+      .section__block:last-child {
+        max-width: 100%;
+      }
+
+      .section__title {
+        margin-bottom: 20px;
+      }
+
+      .section__description {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__description_mobile {
+      font-size: 16px;
+      line-height: 33px;
+      text-transform: none;
+      font-family: 'PoppinsS', sans-serif;
+    }
+
+    &__button-group {
+      width: 100%;
+    }
+  }
+}
+
+@include mobile-only() {
+  .section {
+    &__container_main {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    h2 {
+      margin-bottom: 16px;
     }
   }
 }
