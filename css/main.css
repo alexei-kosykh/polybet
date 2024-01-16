@@ -1212,6 +1212,103 @@ header .menu_mob {
     margin-bottom: 20px;
   }
 }
+.section__tokenomics {
+  padding: 162px 50px 190px 0;
+  display: flex;
+  gap: 182px;
+}
+.section__tokenomics > div:first-child {
+  max-width: 580px;
+}
+.section__tokenomics > div:last-child {
+  max-width: 360px;
+}
+.section__tokenomics h2 {
+  margin-bottom: 118px;
+}
+.section__tokenomics h2 + p {
+  display: none;
+}
+.section__tokenomics h3 {
+  margin-bottom: 24px;
+}
+.section__tokenomics img {
+  display: inline-block;
+  width: 560px;
+  height: auto;
+}
+.section__tokenomics .section__description {
+  margin-bottom: 24px;
+}
+.section__tokenomics li {
+  padding-left: 24px;
+  position: relative;
+}
+.section__tokenomics li::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  left: 10px;
+  top: 9px;
+}
+
+@media (max-width: 1240px) {
+  .section__tokenomics {
+    gap: 0;
+    padding-right: 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .section__tokenomics > div:first-child {
+    max-width: 500px;
+  }
+  .section__tokenomics img {
+    width: 500px;
+  }
+}
+@media (max-width: 1024px) {
+  .section__tokenomics {
+    flex-direction: column;
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+  .section__tokenomics > div:first-child {
+    max-width: 90vw;
+  }
+  .section__tokenomics h2 {
+    margin-bottom: 90px;
+  }
+  .section__tokenomics img {
+    width: 100%;
+    padding: 0 20px 60px;
+  }
+  .section__tokenomics > div:last-child {
+    max-width: 90vw;
+  }
+}
+@media (max-width: 768px) {
+  .section__tokenomics {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  .section__tokenomics h2 {
+    font-size: 70px;
+    margin-bottom: 70px;
+  }
+}
+@media (max-width: 576px) {
+  .section__tokenomics h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  .section__tokenomics h2 + .section__description {
+    margin-bottom: 30px;
+    display: block;
+  }
+}
 .page {
   background-color: #000;
   max-width: 100%;
@@ -1496,57 +1593,6 @@ textarea::placeholder {
   text-transform: uppercase;
 }
 
-.tokenomics {
-  padding-top: 162px;
-  display: flex;
-  gap: 182px;
-  padding-bottom: 190px;
-  padding-right: 50px;
-}
-
-.tokenomics > div:first-child {
-  max-width: 580px;
-  text-align: center;
-}
-
-.tokenomics > div:last-child {
-  max-width: 360px;
-}
-
-.tokenomics .title {
-  margin-bottom: 118px;
-}
-
-.tokenomics img {
-  display: inline-block;
-  width: 560px;
-  height: auto;
-}
-
-.tokenomics .h3 {
-  margin-bottom: 24px;
-}
-
-.tokenomics .description {
-  margin-bottom: 24px;
-}
-
-.tokenomics li {
-  padding-left: 24px;
-  position: relative;
-}
-
-.tokenomics li::before {
-  content: "";
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background-color: #fff;
-  border-radius: 50%;
-  left: 10px;
-  top: 9px;
-}
-
 .roadmapSection .container {
   z-index: 11;
 }
@@ -1692,7 +1738,7 @@ textarea::placeholder {
   width: 133px;
 }
 
-.partners .h3 {
+.partners h3 {
   margin-bottom: 48px;
 }
 
@@ -2043,7 +2089,7 @@ textarea {
   .tokenomics > div:last-child {
     max-width: 100%;
   }
-  .tokenomics .h3 {
+  .tokenomics h3 {
     margin-bottom: 16px;
   }
   .tokenomics .description {
@@ -2102,7 +2148,7 @@ textarea {
   .partners ul li {
     height: 60px;
   }
-  .partners .h3 {
+  .partners h3 {
     margin-bottom: 40px;
     font-size: 40px;
     line-height: 40px;
@@ -2143,7 +2189,7 @@ textarea {
   }
 }
 @media (max-width: 410px) {
-  .partners .h3 {
+  .partners h3 {
     width: 250px;
   }
 }
