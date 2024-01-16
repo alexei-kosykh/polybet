@@ -1,5 +1,44 @@
-@include tablet() {
-  .footer {
+footer {
+  position: absolute;
+  bottom: 19px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  z-index: 11;
+  padding: 0 20px;
+
+  p {
+    font-size: 16px;
+    line-height: 27px;
+    opacity: 0.5;
+    letter-spacing: -0.32px;
+    font-family: 'InterR', sans-serif;
+    text-transform: uppercase;
+  }
+
+  & > div,
+  & > div a {
+    font-size: 14px;
+    font-family: 'InterR', sans-serif;
+    line-height: 32px;
+    color: #fff;
+    text-transform: capitalize;
+  }
+
+  & > div a span {
+    display: inline-block;
+    height: 24px;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+@include laptop() {
+  footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
@@ -7,5 +46,41 @@
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: start;
+    bottom: 50px;
+    padding: 0 40px;
+
+    div {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@include mobile() {
+  footer {
+    bottom: 20px;
+    padding: 0 20px;
+
+    p {
+      font-size: 12px;
+      letter-spacing: -0.24px;
+    }
+
+    & > div,
+    & > div a {
+      font-size: 15px;
+      letter-spacing: -0.3px;
+    }
+  }
+}
+
+@include mobile-only() {
+  footer {
+    bottom: 10px;
+    padding: 0 20px;
+&>div {
+  margin-bottom: 10px;
+}
+
+
   }
 }
