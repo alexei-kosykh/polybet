@@ -1,5 +1,6 @@
 @import 'bet_section', 'main_section', 'case_section', 'features_section',
-  'columns_section', 'stake_section', 'tokenomics_section', 'roadmap_section';
+  'columns_section', 'stake_section', 'tokenomics_section', 'roadmap_section',
+  'partners_section';
 .section {
   position: relative;
   padding: 0 40px;
@@ -8,7 +9,6 @@
   &_black {
     background-color: #2b2b2b;
     z-index: 2;
-
   }
 
   &_violet {
@@ -81,6 +81,8 @@
     text-transform: uppercase;
     margin-bottom: 40px;
   }
+
+  
 }
 
 .gridBg {

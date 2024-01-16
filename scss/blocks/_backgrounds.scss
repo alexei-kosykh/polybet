@@ -1,0 +1,110 @@
+.bgWrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.bg {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+
+  .bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    mix-blend-mode: overlay;
+  }
+}
+
+.bgText {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: right;
+  font-family: 'PoppinsB', sans-serif;
+  font-size: 200px;
+  line-height: 165px;
+  text-transform: uppercase;
+  opacity: 0.1;
+  z-index: 10;
+  right: 104px;
+  top: 112px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.firstBg,
+.thirdBg {
+  z-index: 2;
+}
+
+.mainOne,
+.mainTwo {
+  position: absolute;
+  right: 0;
+  width: 1440px;
+  height: 1024px;
+}
+
+.mainOne {
+  z-index: 1;
+  top: 0;
+}
+
+.mainTwo {
+  z-index: 3;
+  bottom: 0;
+}
+
+.menu__bg,
+.menu__grid {
+  display: none;
+}
+
+@include desktop-only() {
+  .mainOne,
+  .mainTwo {
+    left: 0;
+    right: initial;
+  }
+}
+
+@include desktop() {
+  .mainOne,
+  .mainTwo {
+    left: -200px;
+  }
+}
+
+@include laptop() {
+  .mainOne,
+  .mainTwo {
+    left: -350px;
+  }
+}
+
+@include tablet() {
+  .bgText {
+    display: none;
+  }
+}
+
+@include mobile() {
+  .mainOne {
+    display: none;
+  }
+}
