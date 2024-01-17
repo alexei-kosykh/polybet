@@ -21,7 +21,7 @@
       position: absolute;
       right: 0;
       top: -40px;
-      cursor: url("../img/cursor.png"), pointer;
+      cursor: url('../img/cursor.png'), pointer;
     }
 
     .modal__wrap > div {
@@ -69,5 +69,17 @@
   &--show {
     pointer-events: auto;
     opacity: 0.6;
+  }
+}
+
+@include laptop() {
+  .modal {
+    &--active {
+      div:not([data-close]) > img {
+        height: auto;
+        width: 100%;
+        padding: 10px;
+      }
+    }
   }
 }

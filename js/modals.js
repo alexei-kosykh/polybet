@@ -1,7 +1,7 @@
 class Modal {
   constructor(props) {
     let defaultConfig = {
-      linkAttributeName: 'data-modal',
+      linkAttributeName: 'modal',
     };
     this.config = Object.assign(defaultConfig, props);
 
@@ -126,5 +126,9 @@ class Modal {
 }
 
 const modalDemo = new Modal({
-  linkAttributeName: 'data-modal',
+  linkAttributeName: 'modal-demo',
+});
+
+const modalJoin = new Modal({
+  linkAttributeName: 'modal-join',
 });
