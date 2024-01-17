@@ -448,6 +448,112 @@ header .menu_mob {
     display: none;
   }
 }
+.section {
+  position: relative;
+  padding: 0 40px;
+  overflow: hidden;
+}
+.section_black {
+  background-color: #2b2b2b;
+  z-index: 2;
+}
+.section_violet {
+  background-color: #6868a1;
+}
+.section_green {
+  background-color: #1d8d63;
+}
+.section__container {
+  position: relative;
+  z-index: 5;
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 164px;
+}
+.section__block:first-child {
+  max-width: 580px;
+}
+.section__block:last-child {
+  max-width: 396px;
+}
+.section__title {
+  font-size: 90px;
+  font-family: "InterB", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -5.4px;
+  margin-bottom: 32px;
+}
+.section__description {
+  font-size: 16px;
+  font-family: "PoppinsR", sans-serif;
+  line-height: 23px;
+  margin-bottom: 12px;
+}
+.section__description_uppercase {
+  text-transform: uppercase;
+}
+.section__description_small {
+  font-size: 14px;
+  font-family: "PoppinsM", sans-serif;
+}
+.section__description_italic {
+  font-family: "PoppinsMI", sans-serif;
+}
+.section__subtitle {
+  font-size: 50px;
+  font-family: "InterS", sans-serif;
+  line-height: 60px;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.gridBg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../img/bg/grid.svg);
+  background-repeat: repeat;
+  z-index: 2;
+  opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  section__subtitle {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .section {
+    max-height: 100%;
+    height: 100%;
+    min-height: 0;
+    padding: 40px 20px;
+  }
+  .section__title {
+    font-size: 40px;
+    font-family: "InterE", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    margin-bottom: 32px;
+  }
+  .section__description {
+    font-size: 14px;
+  }
+  .section__description_uppercase {
+    text-transform: none;
+  }
+}
+@media (max-width: 393px) {
+  .section {
+    padding: 30px 15px;
+  }
+}
 .section__bet {
   padding-top: 170px;
   padding-bottom: 120px;
@@ -1034,6 +1140,8 @@ header .menu_mob {
   }
 }
 .section__tokenomics {
+  position: relative;
+  z-index: 3;
   padding: 162px 50px 190px 0;
   display: flex;
   gap: 182px;
@@ -1131,6 +1239,8 @@ header .menu_mob {
   }
 }
 .section__roadmap {
+  position: relative;
+  z-index: 3;
   min-height: 1024px;
   padding-top: 162px;
   max-width: 1240px;
@@ -1271,12 +1381,12 @@ header .menu_mob {
   background-color: #828282;
 }
 .section__partners_container {
-  position: relative;
-  z-index: 5;
   max-width: 1240px;
   margin: 0 auto;
 }
 .section__partners_block {
+  position: relative;
+  z-index: 5;
   padding-top: 150px;
   padding-bottom: 320px;
   display: flex;
@@ -1454,112 +1564,6 @@ header .menu_mob {
   }
   .section__partners_block ul li {
     height: 60px;
-  }
-}
-.section {
-  position: relative;
-  padding: 0 40px;
-  overflow: hidden;
-}
-.section_black {
-  background-color: #2b2b2b;
-  z-index: 2;
-}
-.section_violet {
-  background-color: #6868a1;
-}
-.section_green {
-  background-color: #1d8d63;
-}
-.section__container {
-  position: relative;
-  z-index: 5;
-  max-width: 1240px;
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  gap: 164px;
-}
-.section__block:first-child {
-  max-width: 580px;
-}
-.section__block:last-child {
-  max-width: 396px;
-}
-.section__title {
-  font-size: 90px;
-  font-family: "InterB", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: -5.4px;
-  margin-bottom: 32px;
-}
-.section__description {
-  font-size: 16px;
-  font-family: "PoppinsR", sans-serif;
-  line-height: 23px;
-  margin-bottom: 12px;
-}
-.section__description_uppercase {
-  text-transform: uppercase;
-}
-.section__description_small {
-  font-size: 14px;
-  font-family: "PoppinsM", sans-serif;
-}
-.section__description_italic {
-  font-family: "PoppinsMI", sans-serif;
-}
-.section__subtitle {
-  font-size: 50px;
-  font-family: "InterS", sans-serif;
-  line-height: 60px;
-  letter-spacing: -3px;
-  text-transform: uppercase;
-  margin-bottom: 40px;
-}
-
-.gridBg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-image: url(../img/bg/grid.svg);
-  background-repeat: repeat;
-  z-index: 2;
-  opacity: 0.7;
-}
-
-@media (max-width: 1024px) {
-  section__subtitle {
-    display: none;
-  }
-}
-@media (max-width: 576px) {
-  .section {
-    max-height: 100%;
-    height: 100%;
-    min-height: 0;
-    padding: 40px 20px;
-  }
-  .section__title {
-    font-size: 40px;
-    font-family: "InterE", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0px;
-    margin-bottom: 32px;
-  }
-  .section__description {
-    font-size: 14px;
-  }
-  .section__description_uppercase {
-    text-transform: none;
-  }
-}
-@media (max-width: 393px) {
-  .section {
-    padding: 30px 15px;
   }
 }
 .button {
@@ -1833,6 +1837,76 @@ footer > div a span {
     margin-bottom: 10px;
   }
 }
+.modal {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 300;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+.modal--active {
+  visibility: visible;
+}
+.modal--active div[data-close] {
+  position: absolute;
+  right: 0;
+  top: -40px;
+  cursor: url("../img/cursor.png"), pointer;
+}
+.modal--active .modal__wrap > div {
+  transform: scale(1);
+  opacity: 1;
+}
+.modal__wrap {
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 100%;
+  min-height: 100%;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__opened {
+  position: fixed;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.modal__shadow {
+  position: fixed;
+  border: none;
+  display: block;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 98;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  background-color: black;
+}
+.modal__shadow--show {
+  pointer-events: auto;
+  opacity: 0.6;
+}
+
 .page {
   background-color: #000;
   max-width: 100%;

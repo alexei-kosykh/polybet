@@ -233,9 +233,26 @@
 			</div>
 		</div>
 
-		<div class="gridBg"></div>
+		<div class="modal" id="modalDemo" aria-hidden="true">
+			<div class="modal__wrap">
+				<div aria-modal="true">
+					<div data-close class="modal__close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path d="M18 6L6 18" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M6 6L18 18" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</div>
+					<img src="img/video-default.png" alt="Изображение в окне" />
+				</div>
+			</div>
+
+			<div class="modal__join">
+
+			</div>
+		</div>
 
 		<section class="section section_black">
+			<div class="gridBg"></div>
 			<div class="section__container section__container_main">
 				<div class="section__block">
 					<h2 class="section__title">Take a bold
@@ -261,7 +278,7 @@
 					</div>
 					<div class="section__button-group">
 						<button class="button section__button_white">join whitelist</button>
-						<button class="button section__button_transparent">demo</button>
+						<button class="button section__button_transparent" data-modal="#modalDemo">demo</button>
 					</div>
 				</div>
 			</div>
@@ -1584,7 +1601,7 @@
 						</div>
 						<div class="section__button-group">
 							<button class="button section__button_white">join whitelist</button>
-							<button class="button section__button_transparent">demo</button>
+							<button class="button section__button_transparent" data-modal="#modalDemo">demo</button>
 						</div>
 					</div>
 				</div>
@@ -3090,6 +3107,7 @@
 
 		<section class="section section_black">
 			<div class="section__container">
+				<div class="gridBg"></div>
 				<div class="section__tokenomics">
 					<div>
 						<h2 class="section__title">tokenomics</h2>
@@ -3146,6 +3164,7 @@
 
 		<section class="section section_black goto-roadmap">
 			<div class="section__container">
+				<div class="gridBg"></div>
 				<div class="section__roadmap">
 					<h2 class="section__title">roadmap</h2>
 					<ul class="section__roadmap_plan" id="plan">
@@ -3312,6 +3331,7 @@
 
 		<section class="section section__partners">
 			<div class="section__partners_container">
+				<div class="gridBg"></div>
 				<div class="section__partners_block">
 					<div>
 						<h2 class="section__title">our <br /> partner</h2>
@@ -3395,7 +3415,9 @@
 		</footer>
 	</div>
 
+	<div class="modal__shadow"></div>
 	<script src="js/script.js"></script>
+	<script src="js/modals.js"></script>
 </body>
 
 </html>

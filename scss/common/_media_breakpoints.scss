@@ -1,5 +1,3 @@
-@import 'variables';
-
 @mixin desktop-only() {
   @media (max-width: $breakpoint_xxl) {
     @content;

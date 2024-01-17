@@ -1,7 +1,5 @@
-@import 'common/media_breakpoints';
-@import 'common/fonts', 'common/normalize', 'blocks/header', 'blocks/socials',
-  'blocks/sections/sections', 'blocks/buttons', 'blocks/backgrounds',
-  'blocks/input', 'blocks/footer';
+@import 'common';
+@import 'blocks';
 
 .page {
   background-color: #000;
@@ -179,122 +177,6 @@ h5 {
   }
 }
 
-// .event {
-//   min-width: 350px;
-//   height: 250px;
-//   border-radius: 8px;
-//   overflow: hidden;
-//   background: #1c1c1c;
-//   -webkit-box-shadow: 15px 19px 20px 0px rgba(0, 0, 0, 0.3);
-//   box-shadow: 15px 19px 20px 0px rgba(0, 0, 0, 0.3);
-//   -webkit-transition: all 0.2s linear;
-//   -o-transition: all 0.2s linear;
-//   transition: all 0.2s linear;
-//   font-family: 'PoppinsM', sans-serif;
-//   cursor: url('../img/cursor.png'), pointer;
-//   position: relative;
-// }
-
-// .event .fourthBg {
-//   width: 600px;
-//   height: 350px;
-//   max-width: initial;
-//   max-height: initial;
-// }
-
-// .events .bgWrapper {
-//   top: 150px;
-// }
-
-// .event__button {
-//   margin-left: auto;
-//   width: 108px;
-//   height: 32px;
-//   border-radius: 8px;
-//   background-color: #fff;
-//   color: #000;
-//   display: -webkit-box;
-//   display: -ms-flexbox;
-//   display: flex;
-//   -webkit-box-pack: center;
-//   -ms-flex-pack: center;
-//   justify-content: center;
-//   -webkit-box-align: center;
-//   -ms-flex-align: center;
-//   align-items: center;
-//   font-family: 'InterS', sans-serif;
-//   font-size: 10px;
-//   line-height: 12px;
-//   letter-spacing: 0.2px;
-//   text-transform: uppercase;
-//   opacity: 0;
-//   -webkit-transition: opacity 0.2s linear;
-//   -o-transition: opacity 0.2s linear;
-//   transition: opacity 0.2s linear;
-// }
-
-// .events .firstBg {
-//   z-index: 0;
-//   max-width: initial;
-//   max-height: initial;
-// }
-
-// .event:hover {
-//   background: #272727;
-//   -webkit-box-shadow: 15px 19px 20px 0px rgba(0, 0, 0, 0.5);
-//   box-shadow: 15px 19px 20px 0px rgba(0, 0, 0, 0.5);
-// }
-
-// .event .event__image {
-//   max-height: 150px;
-//   width: 100%;
-//   -o-object-fit: cover;
-//   object-fit: cover;
-//   position: relative;
-//   z-index: 10;
-// }
-
-// .event__description {
-//   font-size: 14px;
-//   line-height: 18px;
-//   margin: 12px 16px 4px;
-// }
-
-// .tags {
-//   display: -webkit-box;
-//   display: -ms-flexbox;
-//   display: flex;
-//   margin: 0 16px;
-//   gap: 3px;
-//   -webkit-box-align: end;
-//   -ms-flex-align: end;
-//   align-items: end;
-// }
-
-// .tag {
-//   display: -webkit-box;
-//   display: -ms-flexbox;
-//   display: flex;
-//   padding: 0 6px;
-//   height: 21px;
-//   -webkit-box-align: center;
-//   -ms-flex-align: center;
-//   align-items: center;
-//   border-radius: 5.192px;
-//   border: 0.5px solid #464646;
-//   background: rgba(255, 255, 255, 0.07);
-//   -webkit-backdrop-filter: blur(2.5961077213px);
-//   backdrop-filter: blur(2.5961077213px);
-//   font-size: 8px;
-//   line-height: 20px;
-//   text-transform: capitalize;
-//   opacity: 0.5;
-// }
-
-// .event:hover .event__button {
-//   opacity: 1;
-// }
-
 .descriptionWrapper p {
   position: relative;
 }
@@ -319,6 +201,8 @@ h5 {
 .descriptionWrapper p + p {
   margin-top: 20px;
 }
+
+
 
 @media (max-width: 930px) {
   .oracleApproved {
