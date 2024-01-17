@@ -64,10 +64,6 @@ const plan = document.getElementById('plan');
 const one = document.getElementById('case-one');
 const two = document.getElementById('case-two');
 
-func(plan);
-func(one);
-func(two);
-
 const func = (box) => {
   let isDown = false;
   let startX;
@@ -129,3 +125,7 @@ window.onclick = function (event) {
     }
   }
 };
+
+func(plan);
+func(one);
+func(two);

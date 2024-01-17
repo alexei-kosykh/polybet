@@ -191,7 +191,7 @@ header.header_bg-grey {
   -webkit-backdrop-filter: blur(4.1049365997px);
   backdrop-filter: blur(4.1049365997px);
 }
-header .logo {
+header svg {
   width: 140px;
   height: auto;
   cursor: url("../img/cursor.png"), pointer;
@@ -205,7 +205,8 @@ header .menu {
 header .menu__item {
   cursor: url("../img/cursor.png"), pointer;
 }
-header .menu__item a {
+header .menu__item a,
+header .menu__item div[data-goto] {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -247,20 +248,23 @@ header .menu__item_dropdown .dropdown-content {
   position: absolute;
   top: 39px;
   right: 10px;
-  background: var(--crypto-white-linear, linear-gradient(135deg, rgba(255, 255, 255, 0.15) -20%, rgba(255, 255, 255, 0.02) 50%));
+  background: var(--crypto-white-linear, linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.02) 100%));
+  -webkit-backdrop-filter: blur(4.1049365997px);
+  backdrop-filter: blur(4.1049365997px);
   min-width: 100px;
   box-shadow: 0px 8px 16px 0px rgba(27, 27, 27, 0.2);
   z-index: 1;
 }
-header .menu__item_dropdown .dropdown-content a {
+header .menu__item_dropdown .dropdown-content a,
+header .menu__item_dropdown .dropdown-content div {
   cursor: inherit;
   color: #ffffff;
   padding: 7px 10px;
   text-decoration: none;
   display: block;
 }
-header .menu__item_dropdown .dropdown-content a:hover {
-  background-color: #2a2a2a;
+header .menu__item_dropdown .dropdown-content a:hover,
+header .menu__item_dropdown .dropdown-content div:hover {
   text-decoration: underline;
 }
 header .menu__item_dropdown .dropdown-content.show {
@@ -271,6 +275,9 @@ header .menu_mob {
 }
 
 @media (max-width: 1024px) {
+  header.header_bg-grey {
+    background: none;
+  }
   header .menu {
     gap: 15px;
   }
@@ -293,7 +300,13 @@ header .menu_mob {
   .open .menu_mob::after {
     transform: rotate(45deg) translate(5px, 6px);
   }
-  header .logo {
+  header {
+    height: 100px;
+  }
+  header.header_bg-grey {
+    position: absolute;
+  }
+  header svg {
     position: relative;
     z-index: 100;
   }
@@ -392,24 +405,29 @@ header .menu_mob {
   }
 }
 @media (max-width: 768px) and (max-width: 576px) {
-  header .logo {
+  header svg {
     width: 100px;
     height: auto;
   }
 }
 .socials {
-  position: fixed;
-  max-width: 1460px;
+  max-width: 1490px;
   width: 100%;
   margin: 0 auto;
+  position: fixed;
+  top: 96px;
+  right: 0;
+  left: 0;
   z-index: 200;
   display: flex;
-  align-items: end;
-  justify-content: center;
+  justify-content: space-between;
+}
+.socials div:not(:empty) {
+  position: absolute;
+  display: flex;
   flex-direction: column;
   gap: 16px;
-  top: 96px;
-  left: 0;
+  top: 0;
   right: 0;
   padding-right: 30px;
 }
@@ -425,6 +443,11 @@ header .menu_mob {
   fill: #9e9dfe;
 }
 
+@media (max-width: 768px) {
+  .socials {
+    display: none;
+  }
+}
 .section__bet {
   padding-top: 170px;
   padding-bottom: 120px;
@@ -511,7 +534,7 @@ header .menu_mob {
   display: flex;
   gap: 0 30px;
   padding: 0 15px;
-  animation: move 50s linear infinite backwards;
+  animation: move 160s linear infinite backwards;
 }
 @keyframes move {
   0% {
@@ -587,110 +610,6 @@ header .menu_mob {
   overflow-y: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-.section__event_cases .card {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  z-index: 20;
-  min-width: 350px;
-  height: 250px;
-  background: #151515;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 15px 19px 20px 0px rgba(0, 0, 0, 0.3);
-  transition: all 0.2s linear;
-  font-family: "PoppinsM", sans-serif;
-  cursor: url("../img/cursor.png"), pointer;
-}
-.section__event_cases .card:hover {
-  background: #1b1b1b;
-  box-shadow: 15px 19px 20px 0px rgba(0, 0, 0, 0.5);
-}
-.section__event_cases .card > picture img {
-  max-height: 150px;
-  width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  position: relative;
-  z-index: 9;
-}
-.section__event_cases .card__title {
-  position: absolute;
-  bottom: 45%;
-  left: 15px;
-  z-index: 10;
-  font-size: 14px;
-  padding: 0 10px;
-  line-height: 18px;
-}
-.section__event_cases .card__socials {
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 10;
-}
-.section__event_cases .card__socials a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  background-color: rgba(28, 28, 28, 0.7803921569);
-  border-radius: 10px;
-  cursor: url("../img/cursor.png"), pointer;
-}
-.section__event_cases .card__socials a svg {
-  opacity: 1;
-}
-.section__event_cases .card__info {
-  font-size: 15px;
-  font-family: "HalveticaN", sans-serif;
-}
-.section__event_cases .card__info_status {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 15px 0 0 30px;
-  margin-bottom: 10px;
-}
-.section__event_cases .card__info_status-active, .section__event_cases .card__info_status-price, .section__event_cases .card__info_status-author {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.section__event_cases .card__info_status-active {
-  width: 60px;
-  height: 31px;
-  border-radius: 99px;
-  background-color: rgba(203, 252, 2, 0.15);
-  color: rgb(203, 252, 2);
-}
-.section__event_cases .card__info_status-price {
-  font-family: "HalveticaM", sans-serif;
-  width: 80px;
-  height: 31px;
-  border-radius: 99px;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.section__event_cases .card__info_status-author {
-  gap: 5px;
-  width: 120px;
-  height: 31px;
-  border-radius: 99px;
-  background-color: #1b1b1b;
-  color: rgb(135, 135, 135);
-  position: relative;
-}
-.section__event_cases .card__info_status-author svg {
-  margin-bottom: 4px;
-}
-.section__event_cases .card__info_tags {
-  padding-left: 30px;
-  color: #007aff;
 }
 .section__event_cases .bg img {
   background: #000;
@@ -1434,7 +1353,7 @@ header .menu_mob {
   line-height: 165px;
   text-transform: uppercase;
   opacity: 0.1;
-  z-index: 10;
+  z-index: 1;
   left: 104px;
   bottom: 112px;
   -webkit-touch-callout: none;
@@ -1951,6 +1870,120 @@ h5 {
 
 .events::-webkit-scrollbar {
   display: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 20;
+  min-width: 350px;
+  height: 250px;
+  background: #151515;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 15px 19px 20px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s linear;
+  font-family: "PoppinsM", sans-serif;
+  cursor: url("../img/cursor.png"), pointer;
+}
+.card:hover {
+  background: #1b1b1b;
+  box-shadow: 15px 19px 20px 0px rgba(0, 0, 0, 0.5);
+}
+.card > picture img {
+  height: 150px;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: relative;
+  z-index: 9;
+  filter: brightness(0.5);
+}
+.card__title {
+  position: absolute;
+  bottom: 45%;
+  left: 15px;
+  z-index: 10;
+  font-size: 14px;
+  padding: 0 10px;
+  line-height: 18px;
+}
+.card__socials {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+.card__socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(28, 28, 28, 0.7803921569);
+  border-radius: 10px;
+  cursor: url("../img/cursor.png"), pointer;
+}
+.card__socials a svg {
+  opacity: 1;
+}
+.card__info {
+  font-size: 15px;
+  font-family: "HalveticaN", sans-serif;
+}
+.card__info_status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 15px 0 0 30px;
+  margin-bottom: 10px;
+}
+.card__info_status-active, .card__info_status-price, .card__info_status-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__info_status-active {
+  width: 60px;
+  height: 31px;
+  border-radius: 99px;
+  background-color: rgba(203, 252, 2, 0.15);
+  color: rgb(203, 252, 2);
+}
+.card__info_status-price {
+  font-family: "HalveticaM", sans-serif;
+  width: 80px;
+  height: 31px;
+  border-radius: 99px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.card__info_status-author {
+  gap: 5px;
+  width: 120px;
+  height: 31px;
+  border-radius: 99px;
+  background-color: #1b1b1b;
+  color: rgb(135, 135, 135);
+  position: relative;
+}
+.card__info_status-author svg {
+  margin-bottom: 4px;
+}
+.card__info_tags {
+  padding-left: 30px;
+  color: #007aff;
+}
+.card__info_button {
+  position: absolute;
+  right: 25px;
+  bottom: 40px;
+  height: 40px;
+  min-width: 108px;
+  font-size: 10px;
 }
 
 .descriptionWrapper p {

@@ -25,7 +25,7 @@
       display: flex;
       gap: 0 30px;
       padding: 0 15px;
-      animation: move 50s linear infinite backwards;
+      animation: move calc(16s * 10) linear infinite backwards;
     }
 
     @keyframes move {
