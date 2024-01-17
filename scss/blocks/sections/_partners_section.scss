@@ -112,6 +112,20 @@
 
   &_name {
     gap: 13px;
+
+    input:invalid {
+      & + span {
+        left: 114px;
+      }
+    }
+  }
+
+  &_email {
+    input:invalid {
+      & + span {
+        right: 94px;
+      }
+    }
   }
 
   &_bg-text {
@@ -225,7 +239,6 @@
         width: 21vw;
       }
     }
-
   }
 }
 

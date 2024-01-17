@@ -22,6 +22,15 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  position: relative;
+
+  input:invalid {
+    & + span {
+      position: absolute;
+      font-size: 14px;
+      color: rgba(255, 115, 123, 1);
+    }
+  }
 
   input::-webkit-input-placeholder,
   textarea::-webkit-input-placeholder {
@@ -67,7 +76,6 @@
     letter-spacing: 0.28px;
     text-transform: uppercase;
   }
-
 }
 
 textarea {

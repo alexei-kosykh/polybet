@@ -1454,6 +1454,12 @@ header .menu_mob {
 .section__partners_name {
   gap: 13px;
 }
+.section__partners_name input:invalid + span {
+  left: 114px;
+}
+.section__partners_email input:invalid + span {
+  right: 94px;
+}
 .section__partners_bg-text {
   position: absolute;
   color: rgba(255, 255, 255, 0.8);
@@ -1726,6 +1732,12 @@ header .menu_mob {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+}
+.input input:invalid + span {
+  position: absolute;
+  font-size: 14px;
+  color: rgb(255, 115, 123);
 }
 .input input::-moz-placeholder,
 .input textarea::-moz-placeholder {
@@ -1940,6 +1952,17 @@ footer > div a span {
 .modal__join form {
   text-align: center;
 }
+.modal__join form .modal_name {
+  gap: 13px;
+}
+.modal__join form .modal_name input:invalid + span {
+  left: 114px;
+  top: 25px;
+}
+.modal__join form .modal_email input:invalid + span {
+  right: 90px;
+  top: 25px;
+}
 .modal__join h5 {
   margin-bottom: 8px;
 }
@@ -1967,9 +1990,6 @@ footer > div a span {
   color: rgb(255, 255, 255);
   letter-spacing: 0.28px;
   line-height: 17px;
-}
-.modal__join .name {
-  gap: 13px;
 }
 .modal__join button {
   width: 100%;

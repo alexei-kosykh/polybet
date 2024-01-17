@@ -27,6 +27,26 @@
 
   form {
     text-align: center;
+
+    .modal_name {
+      gap: 13px;
+
+      input:invalid {
+        & + span {
+          left: 114px;
+          top: 25px;
+        }
+      }
+    }
+
+    .modal_email {
+      input:invalid {
+        & + span {
+          right: 90px;
+          top: 25px;
+        }
+      }
+    }
   }
 
   h5 {
@@ -64,10 +84,6 @@
       letter-spacing: 0.28px;
       line-height: 17px;
     }
-  }
-
-  .name {
-    gap: 13px;
   }
 
   button {
