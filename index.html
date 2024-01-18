@@ -266,26 +266,34 @@
 						</svg>
 					</div>
 					<div>
-						<form action="php/send.php" method="post" id="data-send">
+						<form class="form" action="#" method="post" id="data-send">
 							<h5>Join whitelist</h5>
 							<p>The best betting platform is coming soon</p>
 							<div class="input modal_name">
 								<picture>
 									<source srcset="img/user.svg" type="image/webp"><img src="img/user.svg" alt="">
 								</picture>
-								<input type="text" name="name" placeholder="name" form="data-send" required>
+								<input type="text" name="name" id="name-modal" placeholder="name" form="data-send" required>
 								<span>*</span>
 							</div>
 							<div class="input modal_email">
 								<picture>
 									<source srcset="img/email.svg" type="image/webp"><img src="img/email.svg" alt="">
 								</picture>
-								<input type="email" name='email' placeholder="Email or phone number" form="data-send" required>
+								<input type="email" name='email' id="email-modal" placeholder="Email or phone number" form="data-send"
+									required>
 								<span>*</span>
 							</div>
 							<button type="submit" class="button modal__button_white">join</button>
 						</form>
-						<div>
+						<div class="form_ok" id="data-ok">
+							<h5>We're glad you've
+								joined US!</h5>
+							<p>The best betting platform is coming soon</p>
+
+							<button data-close type="button" class="button modal__button_white">ok</button>
+						</div>
+						<div class="modal__join_motivation">
 							<p>Join us on social and get rewards</p>
 						</div>
 						<div class="modal__socials">
@@ -451,6 +459,7 @@
 							</a>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>
@@ -481,8 +490,8 @@
 							Revolutionary</div>
 					</div>
 					<div class="section__button-group">
-						<button class="button section__button_white" modal-join="#modalJoin">join whitelist</button>
-						<button class="button section__button_transparent" modal-demo="#modalDemo">demo</button>
+						<button class="button section__button_white" modal_join="#modalJoin">join whitelist</button>
+						<button class="button section__button_transparent" modal_demo="#modalDemo">demo</button>
 					</div>
 				</div>
 			</div>
@@ -1746,7 +1755,7 @@
 						<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					</div>
+				</div>
 			</div>
 		</section>
 
@@ -1783,8 +1792,8 @@
 							<p class="section__description section__description_uppercase">Just think of the possibilities!</p>
 						</div>
 						<div class="section__button-group">
-							<button class="button section__button_white" modal-join="#modalJoin">join whitelist</button>
-							<button class="button section__button_transparent" modal-demo="#modalDemo">demo</button>
+							<button class="button section__button_white" modal_join="#modalJoin">join whitelist</button>
+							<button class="button section__button_transparent" modal_demo="#modalDemo">demo</button>
 						</div>
 					</div>
 				</div>
@@ -1795,7 +1804,7 @@
 						<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					</div>
+				</div>
 			</div>
 		</section>
 
@@ -1901,7 +1910,7 @@
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					</div>
+				</div>
 			</div>
 			<div class="section__features_bg-dark-violet features_bg">
 				<div class="bg">
@@ -1909,15 +1918,15 @@
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					</div>
+				</div>
 			</div>
 			<div class="section__features_bg-light-violet features_bg">
 				<div class="bg">
-				<picture>
+					<picture>
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-						</div>
+				</div>
 			</div>
 			<div class="section__features_bg-black-second features_bg">
 				<div class="bg">
@@ -1925,7 +1934,7 @@
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					</div>
+				</div>
 			</div>
 		</section>
 
@@ -1970,7 +1979,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2011,7 +2020,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2051,7 +2060,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2091,7 +2100,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2131,7 +2140,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2173,7 +2182,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2214,7 +2223,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2254,7 +2263,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2294,7 +2303,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2334,7 +2343,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2376,7 +2385,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2416,7 +2425,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2458,7 +2467,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2498,7 +2507,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2538,7 +2547,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2578,7 +2587,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2621,7 +2630,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2661,7 +2670,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2703,7 +2712,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2743,7 +2752,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2783,7 +2792,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2823,7 +2832,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2863,7 +2872,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2903,7 +2912,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2943,7 +2952,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2983,7 +2992,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_button button section__button_white" modal_join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2999,7 +3008,7 @@
 						<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					</div>
+				</div>
 			</div>
 		</section>
 
@@ -3012,7 +3021,7 @@
 								<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 									class="firstBg bgImage">
 							</picture>
-							</div>
+						</div>
 					</div>
 					<h4>Public Event
 						Oracle
@@ -3069,7 +3078,7 @@
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					</div>
+				</div>
 			</div>
 			<div class="section__columns_bg-violet section__columns_central">
 				<div class="bg">
@@ -3085,7 +3094,7 @@
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					</div>
+				</div>
 			</div>
 		</section>
 
@@ -3102,7 +3111,7 @@
 						</p>
 						<p>
 							We distribute 100% of rewards from commissions between users. </p>
-						<button class="button section__button_white" modal-join="#modalJoin">join whitelist</button>
+						<button class="button section__button_white" modal_join="#modalJoin">join whitelist</button>
 					</div>
 					<div class="section__stake_img">
 						<picture>
@@ -3112,7 +3121,7 @@
 							<source srcset="img/schema-transparent.png" type="image/png"><img src="img/schema-transparent.png" alt="">
 						</picture>
 					</div>
-					<button class="button section__button_white" modal-join="#modalJoin">join whitelist</button>
+					<button class="button section__button_white" modal_join="#modalJoin">join whitelist</button>
 
 				</div>
 			</div>
@@ -3122,7 +3131,7 @@
 						<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					</div>
+				</div>
 			</div>
 		</section>
 
@@ -3135,7 +3144,7 @@
 								<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 									class="firstBg bgImage">
 							</picture>
-				</div>
+						</div>
 					</div>
 					<h4>Vote
 						and Earn</h4>
@@ -3197,7 +3206,7 @@
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					</div>
+				</div>
 			</div>
 			<div class="section__columns_bg-violet section__columns_central">
 				<div class="bg">
@@ -3205,7 +3214,7 @@
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					</div>
+				</div>
 			</div>
 			<div class="section__columns_bg-black section__columns_right">
 				<div class="bg">
@@ -3213,7 +3222,7 @@
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					</div>
+				</div>
 			</div>
 		</section>
 
@@ -3271,7 +3280,7 @@
 						<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-						</div>
+				</div>
 			</div>
 		</section>
 
@@ -3468,7 +3477,7 @@
 						<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					</div>
+				</div>
 			</div>
 		</section>
 
@@ -3504,25 +3513,27 @@
 					</div>
 					<div>
 						<h3>contact with us</h3>
-						<form action="/php/send.php" method="post" id="full-data-send">
+						<form action="#" method="post" id="full-data-send">
 							<div class="input section__partners_input section__partners_name">
 								<picture>
 									<source srcset="img/user.svg" type="image/webp"><img src="img/user.svg" alt="">
 								</picture>
-								<input type="text" name="name" placeholder="name" form="full-data-send" required>
+								<input type="text" name="name" id="name" placeholder="name" form="full-data-send" required>
 								<span>*</span>
 							</div>
 							<div class="input section__partners_input section__partners_email">
 								<picture>
 									<source srcset="img/email.svg" type="image/webp"><img src="img/email.svg" alt="">
 								</picture>
-								<input type="email" name="email" placeholder="Email or phone number" form="full-data-send" required>
+								<input type="email" name="email" id="email" placeholder="Email or phone number" form="full-data-send"
+									required>
 								<span>*</span>
 							</div>
 							<div class="input section__partners_input section__partners_textarea ">
-								<textarea type="text" name="message" placeholder="Type your message" form="full-data-send"></textarea>
+								<textarea type="text" name="text" id="text" placeholder="Type your message"
+									form="full-data-send"></textarea>
 							</div>
-							<button type="submit" class="button section__button_white">send</button>
+							<button type="submit" name="submit" id="submit" class="button section__button_white">send</button>
 						</form>
 					</div>
 				</div>
@@ -3557,9 +3568,13 @@
 		</footer>
 	</div>
 
+
+
 	<div class="modal__shadow"></div>
 	<script src="js/script.js"></script>
 	<script src="js/modals.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script src="js/send.js"></script>
 </body>
 
 </html>

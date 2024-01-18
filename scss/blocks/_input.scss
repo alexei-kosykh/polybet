@@ -24,6 +24,19 @@
   justify-content: space-between;
   position: relative;
 
+  &:focus-within {
+    background: -o-linear-gradient(
+      315deg,
+      rgba(255, 255, 255, 0.29) 0%,
+      rgba(255, 255, 255, 0.163) 100%
+    );
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.29) 0%,
+      rgba(255, 255, 255, 0.163) 100%
+    );
+  }
+
   input:invalid {
     & + span {
       display: block;

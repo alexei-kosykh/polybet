@@ -126,9 +126,9 @@ class Modal {
 }
 
 const modalDemo = new Modal({
-  linkAttributeName: 'modal-demo',
+  linkAttributeName: 'modal_demo',
 });
 
 const modalJoin = new Modal({
-  linkAttributeName: 'modal-join',
+  linkAttributeName: 'modal_join',
 });

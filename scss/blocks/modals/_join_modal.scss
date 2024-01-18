@@ -6,6 +6,16 @@
   border-radius: 12px;
   position: relative;
 
+  .form_ok {
+    display: none;
+    text-align: center;
+    padding-top: 50px;
+
+    p {
+      margin-bottom: 40px;
+    }
+  }
+
   .bgWrapper {
     img {
       backdrop-filter: blur(50px);
@@ -93,9 +103,14 @@
     background-color: rgba(255, 255, 255, 1);
     display: inline-block;
     margin-bottom: 50px;
+
+    &:hover {
+      color: #212121;
+      background-color: rgb(234, 234, 234);
+    }
   }
 
-  form + div {
+  &_motivation {
     font-family: 'PoppinsB', sans-serif;
     font-size: 16px;
     text-transform: uppercase;
@@ -155,7 +170,7 @@
 
     form + div {
       font-size: 14px;
-      
+
       p {
         padding: 0 20px;
       }
