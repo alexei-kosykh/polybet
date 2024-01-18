@@ -3587,7 +3587,7 @@
 					</div>
 					<div>
 						<h3>contact with us</h3>
-						<form action="/php/send.php" method="post" id="full-data-send">
+						<form action="/php/send.php" method="post" id="full-data-send" target="_blank">
 							<div class="input section__partners_input section__partners_name">
 								<picture>
 									<source srcset="img/user.svg" type="image/webp"><img src="img/user.svg" alt="">
@@ -3644,6 +3644,7 @@
 	</div>
 
 	<div class="modal__shadow"></div>
+
 	<script src="js/script.js"></script>
 	<script src="js/modals.js"></script>
 </body>
