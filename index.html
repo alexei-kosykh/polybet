@@ -12,7 +12,8 @@
 <body>
 	<div class="page">
 		<header class="header_bg-grey">
-			<svg width="1030" height="360" viewBox="0 0 1030 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<svg onclick="window.location.reload()" width="1030" height="360" viewBox="0 0 1030 360" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
 				<path
 					d="M237.542 107.033C257.441 107.033 274.254 119.679 274.254 134.655C274.254 149.631 257.441 162.273 237.542 162.273H208.56L192.422 193.3H237.537C252.315 193.3 266.002 189.179 277.121 182.196C294.152 171.539 305.251 154.193 305.251 134.645C305.281 102.313 274.893 76 237.542 76H163.262L147.118 107.033H237.542Z"
 					fill="#9E9DFE" />
@@ -31,11 +32,11 @@
 				<li class="menu__item" data-goto=".goto-features">features</li>
 				<li class="menu__item" data-goto=".goto-cases">use cases</li>
 				<li class="menu__item" data-goto=".goto-stake">plbt token</li>
-				<li class="menu__item">news</li>
+				<li class="menu__item"><a href="https://twitter.com/polybet_app">news</a></li>
 				<li class="menu__item menu__item_dropdown" onclick="openDropdown()">docs <span id="docsRotate"
 						class="rotate"></span>
 					<div id="docsDropdown" class="dropdown-content">
-						<a href="">Whitpaper</a>
+						<a href="">Whitepaper</a>
 						<div data-goto=".goto-roadmap">Roadmap</div>
 						<a href="">FAQ</a>
 					</div>
@@ -52,9 +53,6 @@
 								<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 									class="firstBg bgImage">
 							</picture>
-							<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-								<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-								<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
 						</div>
 					</div>
 				</li>
@@ -70,7 +68,7 @@
 		<div class="socials">
 			<div></div>
 			<div>
-				<a href="#">
+				<a href="https://twitter.com/polybet_app">
 					<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g filter="url(#filter0_b_177_1859)">
 							<rect width="32" height="32" rx="16" fill="url(#paint0_linear_177_1859)" />
@@ -255,10 +253,6 @@
 								<source srcset="img/bg/modalJoinBg.png" type="image/png"><img src="img/bg/modalJoinBg.png" alt=""
 									class="firstBg bgImage">
 							</picture>
-							<!-- <picture>
-								<source srcset="img/bg/modalJoinBg.png" type="image/png"><img src="img/bg/modalJoinBg.png" alt=""
-									class="firstBg bgImage">
-							</picture> -->
 							<picture>
 								<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 									class="firstBg bgImage">
@@ -272,7 +266,6 @@
 						</svg>
 					</div>
 					<div>
-
 						<form action="php/send.php" method="post" id="data-send">
 							<h5>Join whitelist</h5>
 							<p>The best betting platform is coming soon</p>
@@ -290,15 +283,13 @@
 								<input type="email" name='email' placeholder="Email or phone number" form="data-send" required>
 								<span>*</span>
 							</div>
-
 							<button type="submit" class="button modal__button_white">join</button>
-
 						</form>
 						<div>
 							<p>Join us on social and get rewards</p>
 						</div>
 						<div class="modal__socials">
-							<a href="#">
+							<a href="https://twitter.com/polybet_app">
 								<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<g filter="url(#filter0_b_177_1859)">
 										<rect width="32" height="32" rx="16" fill="url(#paint0_linear_177_1859)" />
@@ -461,7 +452,6 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 
@@ -533,7 +523,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -562,7 +551,21 @@
 							</a>
 						</div>
 						<div class="card__info">
-							<button class="button section__button_white card__info_button">join whitelist</button>
+							<div class="card__info_status">
+								<div class="card__info_status-active">Active</div>
+								<div class="card__info_status-price">$1.1mill</div>
+								<div class="card__info_status-author"><svg width="12" height="14" viewBox="0 0 12 14" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M7.88 1.99996H10.6667C11.4 1.99996 12 2.59996 12 3.33329V12.6666C12 13.4 11.4 14 10.6667 14H1.33333C0.6 14 0 13.4 0 12.6666V3.33329C0 2.59996 0.6 1.99996 1.33333 1.99996H4.12C4.4 1.22663 5.13333 0.666626 6 0.666626C6.86667 0.666626 7.6 1.22663 7.88 1.99996ZM6.66634 2.66679C6.66634 2.30012 6.36634 2.00012 5.99967 2.00012C5.63301 2.00012 5.33301 2.30012 5.33301 2.66679C5.33301 3.03346 5.63301 3.33346 5.99967 3.33346C6.36634 3.33346 6.66634 3.03346 6.66634 2.66679ZM6 4.66663C7.10667 4.66663 8 5.55996 8 6.66663C8 7.77329 7.10667 8.66663 6 8.66663C4.89333 8.66663 4 7.77329 4 6.66663C4 5.55996 4.89333 4.66663 6 4.66663ZM2 11.7333V12.6666H10V11.7333C10 10.4 7.33333 9.66663 6 9.66663C4.66667 9.66663 2 10.4 2 11.7333Z"
+											fill="#878787" />
+									</svg>
+									<p>User01322</p>
+								</div>
+							</div>
+							<div class="card__info_tags">
+								#sports #football #europe
+							</div>
 						</div>
 					</div>
 					<div class="card">
@@ -599,7 +602,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -639,7 +641,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -679,7 +680,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -721,7 +721,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -762,7 +761,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -802,7 +800,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -842,7 +839,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -882,7 +878,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -923,7 +918,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -963,7 +957,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1004,7 +997,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1044,7 +1036,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1084,7 +1075,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1124,7 +1114,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1167,7 +1156,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1233,7 +1221,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1273,7 +1260,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1313,7 +1299,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1355,7 +1340,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1396,7 +1380,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1436,7 +1419,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1476,7 +1458,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1516,7 +1497,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1557,7 +1537,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1597,7 +1576,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1638,7 +1616,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1678,7 +1655,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1718,7 +1694,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1758,7 +1733,6 @@
 									<p>User01322</p>
 								</div>
 							</div>
-							<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
 							<div class="card__info_tags">
 								#sports #football #europe
 							</div>
@@ -1768,20 +1742,11 @@
 			</div>
 			<div class="bgWrapper">
 				<div class="bg">
-					<!-- <picture>
-						<source srcset="img/bg/mainOne.webp" type="image/webp"><img src="img/bg/mainOne.png" class="mainOne" alt="">
-					</picture> -->
-					<!-- <picture>
-						<source srcset="img/bg/mainTwo.webp" type="image/webp"><img src="img/bg/mainTwo.png" class="mainTwo" alt="">
-					</picture> -->
 					<picture>
 						<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-					<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-					<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-				</div>
+					</div>
 			</div>
 		</section>
 
@@ -1830,10 +1795,7 @@
 						<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-					<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-					<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-				</div>
+					</div>
 			</div>
 		</section>
 
@@ -1846,23 +1808,17 @@
 								<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 									class="firstBg bgImage">
 							</picture>
-							<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-							<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-							<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-							<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
 						</div>
 					</div>
 					<div class="section__features_block-text">
-						<h4>Public Bets</h4>
+						<h4>Public events</h4>
 						<p class="section__description">The Public Betting feature covers sports, entertainment, technology,
 							cultural
 							phenomena and even political events arena on a worldwide community scale.</p>
-						<p class="section__description section__description_italic">Barcelona or Manchester United?
-							<br>
-							I say, score 1:3.
-							<br>
-							Next Marvel movie will top $700 million at the box office.
-							<br>
+						<p class="section__description section__description_italic">
+
+							Will Conor McGregor return to UFC (official match) in the 1st or 2nd quarter of 2024?<br>
+							Next Marvel movie will top $700 million at the box office. <br>
 							I bet the world that AI-powered cars will go live in 2024.
 						</p>
 						<p class="section__description section__description_uppercase">Your foresight is
@@ -1876,22 +1832,22 @@
 								<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 									class="firstBg bgImage">
 							</picture>
-							<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-							<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-							<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-							<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
 						</div>
 					</div>
-					<div class="section__features_block-text section__features_p-l-40">
-						<h4>Private Bets</h4>
+					<div class="section__features_block-text ">
+						<h4>Private events</h4>
+
 						<p class="section__description">Polybet’s Private Betting feature grants you the freedom to create bets on
-							virtually anything with anyone, letting your imagination run wild.</p>
-						<p class="section__description">Which kart will be the fastest on that Saturday match? Who will win the
-							staring
-							contest tonight?
-							<br>
-							Wanna bet you can’t make that bottle land on its cap in five throws?
+							virtually anything with anyone, letting your imagination run wild. Bet on events in your life, argue with
+							friends or If you are a blogger or a famous person, you can interact with your audience in an interesting
+							and fun way.
 						</p>
+						<p class="section__description section__description_italic">
+							Mа my wife is pregnant will I have a boy?
+							Who can eat 5 burgers faster?
+							Who will receive the best employee of the year award?
+						</p>
+
 						<p class="section__description section__description_uppercase">It’s all your call!</p>
 					</div>
 				</div>
@@ -1902,23 +1858,18 @@
 								<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 									class="firstBg bgImage">
 							</picture>
-							<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-							<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-							<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-							<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
 						</div>
 					</div>
 					<div class="section__features_block-text section__features_p-t-30">
 						<h4>Azuro-Powered <br>
-							Sports Bets</h4>
-						<p class="section__description">By harnessing the power of the partnership with Azuro Protocol, the
-							Polybet
-							platform offers its users the opportunity to bet on sporting events.</p>
-						<p class="section__description">Soccer matches, basketball tournaments, hockey leagues, boxing games,
-							you choose!
+							Sports Events</h4>
+						<p class="section__description">By harnessing the power of the partnership with Azuro Protocol, the Polybet
+							platform offers its users the opportunity to bet on sporting events.
 						</p>
-						<p class="section__description">Web3 smart contracts power bet placement with instant winnings payouts.
-							<br>
+						<p class="section__description"> Soccer matches, basketball tournaments, hockey leagues, boxing games, you
+							choose!
+						</p>
+						<p class="section__description"> Web3 smart contracts power bet placement with instant winnings payouts.
 							Live bets available on your teams and sporting events of choice!
 						</p>
 					</div>
@@ -1932,7 +1883,7 @@
 							</picture>
 						</div>
 					</div>
-					<div class="section__features_block-text section__features_p-t-30 section__features_p-l-40">
+					<div class="section__features_block-text section__features_p-t-30 ">
 						<h4>Oracle</h4>
 						<p class="section__description">The Polybet DAO is more than a governance instrument – it is
 							a decentralized betting oracle acting as the supreme authority
@@ -1946,55 +1897,35 @@
 			</div>
 			<div class="section__features_bg-black-first features_bg">
 				<div class="bg">
-					<!-- <picture><source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt="" class="firstBg bgImage"></picture> -->
 					<picture>
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-					<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-					<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-					<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
-				</div>
+					</div>
 			</div>
 			<div class="section__features_bg-dark-violet features_bg">
 				<div class="bg">
-					<!-- <picture><source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt="" class="firstBg bgImage"></picture> -->
 					<picture>
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-					<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-					<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-					<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
-				</div>
+					</div>
 			</div>
 			<div class="section__features_bg-light-violet features_bg">
 				<div class="bg">
-					<!-- <picture><source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt="" class="firstBg bgImage"></picture> -->
-					<picture>
+				<picture>
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-					<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-					<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-					<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
-				</div>
+						</div>
 			</div>
 			<div class="section__features_bg-black-second features_bg">
 				<div class="bg">
-					<!-- <picture><source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt="" class="firstBg bgImage"></picture> -->
 					<picture>
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-					<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-					<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-					<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
-				</div>
+					</div>
 			</div>
 		</section>
 
@@ -2039,7 +1970,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2068,7 +1999,22 @@
 								</a>
 							</div>
 							<div class="card__info">
-								<button class="button section__button_white card__info_button">join whitelist</button>
+								<div class="card__info_status">
+									<div class="card__info_status-active">Active</div>
+									<div class="card__info_status-price">$1.1mill</div>
+									<div class="card__info_status-author"><svg width="12" height="14" viewBox="0 0 12 14" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M7.88 1.99996H10.6667C11.4 1.99996 12 2.59996 12 3.33329V12.6666C12 13.4 11.4 14 10.6667 14H1.33333C0.6 14 0 13.4 0 12.6666V3.33329C0 2.59996 0.6 1.99996 1.33333 1.99996H4.12C4.4 1.22663 5.13333 0.666626 6 0.666626C6.86667 0.666626 7.6 1.22663 7.88 1.99996ZM6.66634 2.66679C6.66634 2.30012 6.36634 2.00012 5.99967 2.00012C5.63301 2.00012 5.33301 2.30012 5.33301 2.66679C5.33301 3.03346 5.63301 3.33346 5.99967 3.33346C6.36634 3.33346 6.66634 3.03346 6.66634 2.66679ZM6 4.66663C7.10667 4.66663 8 5.55996 8 6.66663C8 7.77329 7.10667 8.66663 6 8.66663C4.89333 8.66663 4 7.77329 4 6.66663C4 5.55996 4.89333 4.66663 6 4.66663ZM2 11.7333V12.6666H10V11.7333C10 10.4 7.33333 9.66663 6 9.66663C4.66667 9.66663 2 10.4 2 11.7333Z"
+												fill="#878787" />
+										</svg>
+										<p>User01322</p>
+									</div>
+								</div>
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
+								<div class="card__info_tags">
+									#sports #football #europe
+								</div>
 							</div>
 						</div>
 						<div class="card">
@@ -2105,7 +2051,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2145,7 +2091,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2185,7 +2131,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2227,7 +2173,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2268,7 +2214,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2308,7 +2254,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2348,7 +2294,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2388,7 +2334,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2430,7 +2376,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2470,7 +2416,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2512,7 +2458,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2552,7 +2498,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2592,7 +2538,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2632,7 +2578,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2675,7 +2621,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2715,7 +2661,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2757,7 +2703,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2797,7 +2743,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2837,7 +2783,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2877,7 +2823,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2917,7 +2863,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2957,7 +2903,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -2997,7 +2943,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -3037,7 +2983,7 @@
 										<p>User01322</p>
 									</div>
 								</div>
-								<!-- <div class="card__info_button button section__button_white">Join whitelist</div> -->
+								<div class="card__info_button button section__button_white" modal-join="#modalJoin">Join whitelist</div>
 								<div class="card__info_tags">
 									#sports #football #europe
 								</div>
@@ -3053,10 +2999,7 @@
 						<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-					<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-					<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-				</div>
+					</div>
 			</div>
 		</section>
 
@@ -3069,13 +3012,9 @@
 								<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 									class="firstBg bgImage">
 							</picture>
-							<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-								<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-								<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-							<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
-						</div>
+							</div>
 					</div>
-					<h4>Public Bet
+					<h4>Public Event
 						Oracle
 						Workflow</h4>
 					<div class="descriptionWrapper">
@@ -3092,10 +3031,6 @@
 								<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 									class="firstBg bgImage">
 							</picture>
-							<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-								<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-								<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-							<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
 						</div>
 					</div>
 					<h4>Community Consensus Through
@@ -3114,10 +3049,6 @@
 								<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 									class="firstBg bgImage">
 							</picture>
-							<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-								<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-								<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-							<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
 						</div>
 					</div>
 					<h4>Oracle-Approved Results Returned <br class="oracleApproved">
@@ -3138,11 +3069,7 @@
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-					<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-					<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-					<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
-				</div>
+					</div>
 			</div>
 			<div class="section__columns_bg-violet section__columns_central">
 				<div class="bg">
@@ -3150,10 +3077,6 @@
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-					<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-					<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-					<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
 				</div>
 			</div>
 			<div class="section__columns_bg-dark-violet section__columns_right">
@@ -3162,11 +3085,7 @@
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-					<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-					<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-					<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
-				</div>
+					</div>
 			</div>
 		</section>
 
@@ -3183,13 +3102,6 @@
 						</p>
 						<p>
 							We distribute 100% of rewards from commissions between users. </p>
-						<!-- <div class="writeEmail">
-							<picture>
-								<source srcset="img/email.svg" type="image/webp"><img src="img/email.svg" alt="" class="emailIcon">
-							</picture>
-							<input type="email" placeholder="write your email">
-							<button class="button section__button_white">join whitelist</button>
-						</div> -->
 						<button class="button section__button_white" modal-join="#modalJoin">join whitelist</button>
 					</div>
 					<div class="section__stake_img">
@@ -3210,10 +3122,7 @@
 						<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-					<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-					<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-				</div>
+					</div>
 			</div>
 		</section>
 
@@ -3226,19 +3135,14 @@
 								<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 									class="firstBg bgImage">
 							</picture>
-							<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-								<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-								<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-							<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
-						</div>
+				</div>
 					</div>
-					<h4>Public Bet
-						Oracle
-						Workflow</h4>
+					<h4>Vote
+						and Earn</h4>
 					<div class="descriptionWrapper">
-						<p class="section__description"><span></span>Public Bet outcomes are submitted to the DAO for review.</p>
-						<p class="section__description"><span></span>The DAO evaluates outcomes based on community consensus.</p>
-						<p class="section__description"><span></span>The bet outcomes are determined and the winner is selected.
+						<p class="section__description">Holders of at least 2 PLBT tokens can vote on the outcomes.
+							A commission of 20% from every bet is distributed as rewards to users who voted for the winning outcome of
+							an event.
 						</p>
 					</div>
 				</div>
@@ -3249,19 +3153,19 @@
 								<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 									class="firstBg bgImage">
 							</picture>
-							<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-								<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-								<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-							<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
 						</div>
 					</div>
-					<h4>Community Consensus Through
-						DAO Voting</h4>
-					<div class="descriptionWrapper">
-						<p class="section__description"><span></span>Token holders participate in DAO voting on bet outcomes.</p>
-						<p class="section__description"><span></span>Integrity is ensured through decentralized consensus.</p>
+					<h4>Stake
+						and Earn</h4>
+					<div>
+						<p class="section__description">The PLBT token can be staked, with 35% of all commissions received by the
+							platform distributed as rewards to PLBT token stakers.
+						</p>
+						<p class="section__description"> A synthetic sPLBT token is issued to stakers for participating in DAO
+							voting on platform development, new functionality proposals, and commission distribution schemes.
+						</p>
 						<p class="section__description"><span></span>The community consensus determines bet outcomes and the
-							winner.</p>
+							winner. *Rewards awarded daily in USDT to staker balance accounts only.
 					</div>
 				</div>
 				<div>
@@ -3271,19 +3175,17 @@
 								<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 									class="firstBg bgImage">
 							</picture>
-							<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-								<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-								<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-							<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
 						</div>
 					</div>
-					<h4>Oracle-Approved Results Returned <br class="oracleApproved">
-						to the Platform</h4>
-					<div class="descriptionWrapper">
-						<p class="section__description"><span></span>DAO voting takes place
-							to determine bet outcomes.</p>
-						<p class="section__description"><span></span>Approved results are returned to Polybet.</p>
-						<p class="section__description"><span></span>Smart contracts distribute winnings in a transparent fashion.
+					<h4>Referral
+						Program </h4>
+					<div>
+						<p class="section__description">Boost your earnings on Polybet with the referral program to get up to 30% of
+							invited user commissions and another 5% from level 2 users.
+						</p>
+						<p class="section__description">The referral program is suitable for news sites, channels, public pages, as
+							well as influencers and affiliates. It will be possible to monetize news traffic by inviting users to
+							place a bet on any news feed in the world.
 						</p>
 					</div>
 				</div>
@@ -3295,11 +3197,7 @@
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-					<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-					<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-					<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
-				</div>
+					</div>
 			</div>
 			<div class="section__columns_bg-violet section__columns_central">
 				<div class="bg">
@@ -3307,11 +3205,7 @@
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-					<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-					<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-					<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
-				</div>
+					</div>
 			</div>
 			<div class="section__columns_bg-black section__columns_right">
 				<div class="bg">
@@ -3319,11 +3213,7 @@
 						<source srcset="img/bg/paperScreen.webp" type="image/webp"><img src="img/bg/paperScreen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-					<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-					<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-					<!-- <picture><source srcset="img/bg/smallBg.webp" type="image/webp"><img src="img/bg/smallBg.png" alt="" class="fourthBg bgImage"></picture> -->
-				</div>
+					</div>
 			</div>
 		</section>
 
@@ -3381,10 +3271,7 @@
 						<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-					<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-					<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-				</div>
+						</div>
 			</div>
 		</section>
 
@@ -3405,10 +3292,10 @@
 									<p class="section__description">Market research</p>
 								</li>
 								<li>
-									<p class="section__description">Team formation</p>
+									<p class="section__description">Team Establishment</p>
 								</li>
 								<li>
-									<p class="section__description">Launch of Web3 core smart contract development phase</p>
+									<p class="section__description">Web 3 core smart contract’s development phase started</p>
 								</li>
 							</ul>
 						</li>
@@ -3418,41 +3305,23 @@
 							<ul class="section__roadmap_items">
 								<div class="section__roadmap_point"></div>
 								<li>
-									<p class="section__description">Launch of Public Events Closed Beta
-										development phase</p>
+									<p class="section__description">Public Events closed beta development phase</p>
 								</li>
 								<li>
-									<p class="section__description">Launch of Oracle functionality Closed
-										Beta development phase</p>
+									<p class="section__description">Private Events closed beta development phase</p>
 								</li>
 								<li>
-									<p class="section__description">Deployment of core logic Web3 smart
-										contract testnet and mainnet</p>
+									<p class="section__description">Oracle functionality closed beta development phase</p>
 								</li>
 								<li>
-									<p class="section__description">Launch of Reward Pool Beta development
-										phase and Open Beta</p>
+									<p class="section__description">
+										Core logic Web 3 smart contracts testnet deployment</p>
 								</li>
 								<li>
-									<p class="section__description">Launch of Sports Events development
-										phase and Open Beta</p>
+									<p class="section__description">Sport Events development phase and closed beta launch</p>
 								</li>
 								<li>
-									<p class="section__description">$PLBT and $sPLBT token emission</p>
-								</li>
-								<li>
-									<p class="section__description">Smart contract vesting</p>
-								</li>
-								<li>
-									<p class="section__description">First sale seed round</p>
-								</li>
-								<li>
-									<p class="section__description">Launch of airdrop and bounty activities
-									</p>
-								</li>
-								<li>
-									<p class="section__description">Establishment of connections with
-										institutions and funds</p>
+									<p class="section__description">Establishing connections with Institutions and funds</p>
 								</li>
 							</ul>
 						</li>
@@ -3462,31 +3331,49 @@
 							<ul class="section__roadmap_items">
 								<div class="section__roadmap_point"></div>
 								<li>
-									<p class="section__description">Launch of Public Events Open Beta phase</p>
+									<p class="section__description">Token emission $PLBT and $sPLBT</p>
 								</li>
 								<li>
-									<p class="section__description">Launch of Oracle functionality Open Beta phase</p>
+									<p class="section__description">Vesting Smart contracts</p>
 								</li>
 								<li>
-									<p class="section__description">Launch of Web3 Games development phase</p>
+									<p class="section__description">First sale seed round</p>
 								</li>
 								<li>
-									<p class="section__description">Launch of Web3 Lottery development phase</p>
+									<p class="section__description">Airdrop and bounty activities</p>
 								</li>
 								<li>
-									<p class="section__description">Launch of collaboration with bloggers and influencers</p>
+									<p class="section__description">Core logic Web 3 smart contracts mainnet deployment</p>
 								</li>
 								<li>
-									<p class="section__description">Launch of Main Sale seed phase</p>
+									<p class="section__description">Public Events closed beta test phase</p>
 								</li>
 								<li>
-									<p class="section__description">Registration of legal entity</p>
+									<p class="section__description">Private Events closed beta test phase</p>
 								</li>
 								<li>
-									<p class="section__description">Establishment of company headquarters</p>
+									<p class="section__description">Sport Events functionality closed beta test phase</p>
 								</li>
 								<li>
-									<p class="section__description">Preparation for listing on exchanges and partnerships</p>
+									<p class="section__description">Reward Pool beta development phase and closed beta test phase</p>
+								</li>
+								<li>
+									<p class="section__description">Bloagers and influencers collaboration</p>
+								</li>
+								<li>
+									<p class="section__description">Main sale seed phase</p>
+								</li>
+								<li>
+									<p class="section__description">Company Registration</p>
+								</li>
+								<li>
+									<p class="section__description">Headquarters office</p>
+								</li>
+								<li>
+									<p class="section__description">Gathering potential exchanges listings and partnerships</p>
+								</li>
+								<li>
+									<p class="section__description">Start marketing company </p>
 								</li>
 							</ul>
 						</li>
@@ -3496,13 +3383,22 @@
 							<ul class="section__roadmap_items">
 								<div class="section__roadmap_point"></div>
 								<li>
-									<p class="section__description">Launch of Web3 Games Open Beta phase</p>
+									<p class="section__description">Oracle functionality open beta test phase</p>
 								</li>
 								<li>
-									<p class="section__description">Launch of Web3 Lottery Open Beta phase</p>
+									<p class="section__description">Sport Events functionality open beta test phase</p>
 								</li>
 								<li>
-									<p class="section__description">PLBT token listing on exchanges</p>
+									<p class="section__description">Private Events open beta test phase</p>
+								</li>
+								<li>
+									<p class="section__description">Public Events open beta test phase</p>
+								</li>
+								<li>
+									<p class="section__description">Cryptocurrency Exchange listings</p>
+								</li>
+								<li>
+									<p class="section__description">Launch platform</p>
 								</li>
 							</ul>
 						</li>
@@ -3512,13 +3408,22 @@
 							<ul class="section__roadmap_items">
 								<div class="section__roadmap_point"></div>
 								<li>
-									<p class="section__description">Expansion to new markets of Asia, Africa, Near East</p>
+									<p class="section__description">Web 3 Games beta developments phase</p>
 								</li>
 								<li>
-									<p class="section__description">White Label offering of Web3 Events, Games, Lottery</p>
+									<p class="section__description">Web 3 Lottery beta development phase</p>
 								</li>
 								<li>
-									<p class="section__description">Search for White Label partnerships for scaling purposes</p>
+									<p class="section__description">Expanding the markets (Asia, Africa, Near East)</p>
+								</li>
+								<li>
+									<p class="section__description">White Label offering’s (Web 3 Events,Games,Lottery)</p>
+								</li>
+								<li>
+									<p class="section__description">Searching White label partnerships and expanding.</p>
+								</li>
+								<li>
+									<p class="section__description">Web 3 casino beta developments phase</p>
 								</li>
 							</ul>
 						</li>
@@ -3528,7 +3433,22 @@
 							<ul class="section__roadmap_items">
 								<div class="section__roadmap_point"></div>
 								<li>
-									<p class="section__description">Launch of public events with influencers</p>
+									<p class="section__description">Web 3 Games closed beta test phase</p>
+								</li>
+								<li>
+									<p class="section__description">Web 3 Lottery closed beta test phase</p>
+								</li>
+								<li>
+									<p class="section__description">Public events with influencers in terms of Polibet project</p>
+								</li>
+								<li>
+									<p class="section__description">Summing and analyzing project work</p>
+								</li>
+								<li>
+									<p class="section__description">Web 3 casino beta test phase</p>
+								</li>
+								<li>
+									<p class="section__description">Future plans development,roadmap update 2026.</p>
 								</li>
 							</ul>
 						</li>
@@ -3548,10 +3468,7 @@
 						<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-					<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-					<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
-				</div>
+					</div>
 			</div>
 		</section>
 
@@ -3567,19 +3484,19 @@
 						<ul class="section__partners_logo">
 							<li>
 								<picture>
-									<source srcset="img/partners/azuro.svg" type="image/webp"><img class="azuro"
+									<source srcset="img/partners/azuro.svg" type="image/svg"><img class="azuro"
 										src="img/partners/azuro.svg" alt="">
 								</picture>
 							</li>
 							<li>
 								<picture>
-									<source srcset="img/partners/fireblocks.svg" type="image/webp"><img class="fireblocks"
+									<source srcset="img/partners/fireblocks.svg" type="image/svg"><img class="fireblocks"
 										src="img/partners/fireblocks.svg" alt="">
 								</picture>
 							</li>
 							<li>
 								<picture>
-									<source srcset="img/partners/polygon.svg" type="image/webp"><img class="polygon"
+									<source srcset="img/partners/polygon.svg" type="image/svg"><img class="polygon"
 										src="img/partners/polygon.svg" alt="">
 								</picture>
 							</li>
@@ -3592,7 +3509,7 @@
 								<picture>
 									<source srcset="img/user.svg" type="image/webp"><img src="img/user.svg" alt="">
 								</picture>
-								<input type="text"  name="name" placeholder="name" form="full-data-send" required>
+								<input type="text" name="name" placeholder="name" form="full-data-send" required>
 								<span>*</span>
 							</div>
 							<div class="input section__partners_input section__partners_email">
@@ -3624,14 +3541,11 @@
 						<source srcset="img/bg/screen.webp" type="image/webp"><img src="img/bg/screen.png" alt=""
 							class="firstBg bgImage">
 					</picture>
-					<!-- <picture><source srcset="img/bg/firstBg.webp" type="image/webp"><img src="img/bg/firstBg.png" alt="" class="firstBg bgImage"></picture>
-					<picture><source srcset="img/bg/secondBg.webp" type="image/webp"><img src="img/bg/secondBg.png" alt="" class="secondBg bgImage"></picture>
-					<picture><source srcset="img/bg/thirdBg.webp" type="image/webp"><img src="img/bg/thirdBg.png" alt="" class="thirdBg bgImage"></picture> -->
 				</div>
 			</div>
 		</section>
 		<footer>
-			<p>© 2023 Polybet. All rights reserved.</p>
+			<p>© 2024 Polybet. All rights reserved.</p>
 			<div><a
 					href="https://app.gitbook.com/o/imvCwRaOnrBSJD52HdjC/s/aLZpQxZlQCFN0Z98XCmC/legal/terms-and-conditions"><span>Terms</span>
 					& <span>Conditions</span></a>,

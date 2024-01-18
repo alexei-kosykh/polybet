@@ -20,6 +20,7 @@
     font-family: 'PoppinsM', sans-serif;
     line-height: 23px;
     margin-bottom: 20px;
+
     &:last-of-type {
       margin-bottom: 30px;
     }
@@ -36,11 +37,11 @@
 
     & > picture:last-child {
       position: absolute;
-      top: 0;
-      left: 18px;
+      top: 5px;
+      left: 22px;
 
       img {
-        width: 510px;
+        width: 500px;
       }
     }
   }
@@ -68,8 +69,10 @@
       padding-left: 20px;
       max-width: 80%;
     }
+
     &_img {
       margin: 0 auto;
+
       img {
         margin-top: 30px;
         width: 92vw;
@@ -77,8 +80,8 @@
       }
 
       & > picture:last-child {
-        left: 25px;
-        top: 5px;
+        left: 30px;
+        top: 7px;
         img {
           width: 96%;
         }
@@ -119,6 +122,7 @@
         display: none;
       }
     }
+    
     &_img {
       margin-bottom: 30px;
     }

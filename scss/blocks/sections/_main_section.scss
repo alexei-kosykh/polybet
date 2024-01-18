@@ -17,7 +17,7 @@
   &__event_main {
     padding-bottom: 60px;
     max-width: 1440px;
-    overflow: hidden;
+    overflow-x: auto;
     position: relative;
     z-index: 100;
 
@@ -26,6 +26,14 @@
       gap: 0 30px;
       padding: 0 15px;
       animation: move calc(16s * 10) linear infinite backwards;
+
+      .card {
+        cursor: unset;
+
+        &__socials > a {
+          cursor: unset;
+        }
+      }
     }
 
     @keyframes move {
@@ -64,7 +72,7 @@
 @include mobile() {
   .section {
     & > &__container_main {
-      padding: 56px 0 87px;
+      padding: 56px 0 50px;
 
       .section__block:last-child {
         max-width: 100%;
@@ -77,6 +85,10 @@
       .section__description {
         margin-bottom: 15px;
       }
+    }
+
+    &__event_main {
+      padding-bottom: 30px;
     }
 
     &__description_mobile {

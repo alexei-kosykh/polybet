@@ -32,6 +32,12 @@
   color: #000;
   background-color: #fff;
   display: inline-block;
+
+  &:hover {
+    background-color: rgba(56, 56, 56, 0.319);
+    border: 1px solid #fff;
+    color: #fff;
+  }
 }
 
 .section__button_transparent {
@@ -40,6 +46,10 @@
   background: rgba(0, 0, 0, 0.2);
   color: #fff;
   margin-left: 24px;
+
+  &:hover {
+    background-color: rgba(56, 56, 56, 0.319);
+  }
 }
 
 @include tablet() {

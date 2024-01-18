@@ -3,7 +3,6 @@
   height: 550px;
   padding: 50px;
   background-color: #2b2b2b;
-
   border-radius: 12px;
   position: relative;
 
@@ -70,7 +69,6 @@
     input {
       width: 100%;
       height: 100%;
-
       background-color: transparent;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -118,6 +116,7 @@
       top: 50%;
       left: 0;
     }
+
     &:after {
       top: 50%;
       right: 0;
@@ -156,6 +155,7 @@
 
     form + div {
       font-size: 14px;
+      
       p {
         padding: 0 20px;
       }

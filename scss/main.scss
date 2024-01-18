@@ -57,6 +57,7 @@ h5 {
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
+
   font-family: 'PoppinsM', sans-serif;
   cursor: url('../img/cursor.png'), pointer;
 
@@ -167,6 +168,7 @@ h5 {
     }
 
     &_button {
+     display: none;
       position: absolute;
       right: 25px;
       bottom: 40px;
@@ -202,8 +204,6 @@ h5 {
   margin-top: 20px;
 }
 
-
-
 @media (max-width: 930px) {
   .oracleApproved {
     display: none;
@@ -211,6 +211,14 @@ h5 {
 }
 
 @include mobile() {
+  .card {
+    &__info {
+      &_button {
+        width: auto;
+      }
+    }
+  }
+
   h4,
   h3 {
     font-size: 32px;
