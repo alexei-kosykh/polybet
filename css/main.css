@@ -1516,6 +1516,9 @@ header .menu_mob {
     width: 25vw;
     height: 112px;
   }
+  .section__partners_email input:invalid + span {
+    left: 256px;
+  }
   .section__partners_bg-text {
     display: none;
   }
@@ -1569,6 +1572,11 @@ header .menu_mob {
   }
   .section__partners_block ul li {
     height: 60px;
+  }
+}
+@media (max-width: 393px) {
+  input {
+    font-size: 10px;
   }
 }
 .button {
@@ -1735,9 +1743,13 @@ header .menu_mob {
   position: relative;
 }
 .input input:invalid + span {
+  display: block;
   position: absolute;
   font-size: 14px;
   color: rgb(255, 115, 123);
+}
+.input input + span {
+  display: none;
 }
 .input input::-moz-placeholder,
 .input textarea::-moz-placeholder {

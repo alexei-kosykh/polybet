@@ -207,6 +207,14 @@
       }
     }
 
+    &_email {
+      input:invalid {
+        & + span {
+          left: 256px;
+        }
+      }
+    }
+
     &_bg-text {
       display: none;
     }
@@ -282,5 +290,11 @@
         }
       }
     }
+  }
+}
+
+@include  mobile-only() {
+  input{
+    font-size: 10px;
   }
 }

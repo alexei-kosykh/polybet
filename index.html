@@ -273,21 +273,21 @@
 					</div>
 					<div>
 
-						<form action="#">
+						<form action="php/send.php" method="post" id="data-send">
 							<h5>Join whitelist</h5>
 							<p>The best betting platform is coming soon</p>
 							<div class="input modal_name">
 								<picture>
 									<source srcset="img/user.svg" type="image/webp"><img src="img/user.svg" alt="">
 								</picture>
-								<input type="text" placeholder="name" required>
+								<input type="text" name="name" placeholder="name" form="data-send" required>
 								<span>*</span>
 							</div>
 							<div class="input modal_email">
 								<picture>
 									<source srcset="img/email.svg" type="image/webp"><img src="img/email.svg" alt="">
 								</picture>
-								<input type="email" placeholder="Email or phone number" required>
+								<input type="email" name='email' placeholder="Email or phone number" form="data-send" required>
 								<span>*</span>
 							</div>
 
@@ -3587,23 +3587,23 @@
 					</div>
 					<div>
 						<h3>contact with us</h3>
-						<form action="#">
+						<form action="/php/send.php" method="post" id="full-data-send">
 							<div class="input section__partners_input section__partners_name">
 								<picture>
 									<source srcset="img/user.svg" type="image/webp"><img src="img/user.svg" alt="">
 								</picture>
-								<input type="text" placeholder="name" required>
+								<input type="text"  name="name" placeholder="name" form="full-data-send" required>
 								<span>*</span>
 							</div>
 							<div class="input section__partners_input section__partners_email">
 								<picture>
 									<source srcset="img/email.svg" type="image/webp"><img src="img/email.svg" alt="">
 								</picture>
-								<input type="email" placeholder="Email or phone number" required>
+								<input type="email" name="email" placeholder="Email or phone number" form="full-data-send" required>
 								<span>*</span>
 							</div>
 							<div class="input section__partners_input section__partners_textarea ">
-								<textarea type="text" placeholder="Type your message"></textarea>
+								<textarea type="text" name="message" placeholder="Type your message" form="full-data-send"></textarea>
 							</div>
 							<button type="submit" class="button section__button_white">send</button>
 						</form>
