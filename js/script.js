@@ -1,5 +1,3 @@
-
-
 function testWebP(callback) {
   var webP = new Image();
   webP.onload = webP.onerror = function () {
@@ -127,6 +125,23 @@ window.onclick = function (event) {
     }
   }
 };
+
+// validation style
+let inputName = document.getElementById('name-modal');
+let inputEmail = document.getElementById('email-modal');
+
+// inputName.setCustomValidity('');
+
+inputName.oninvalid = function (event) {
+  inputName.setCustomValidity('');
+  inputName.parentNode.style.marginBottom = '30px';
+};
+
+inputEmail.oninvalid = function (event) {
+  inputEmail.setCustomValidity('');
+  inputEmail.parentNode.style.marginBottom = '30px';
+};
+
 
 func(plan);
 func(one);

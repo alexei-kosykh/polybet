@@ -1,7 +1,6 @@
 .section__roadmap {
   position: relative;
   z-index: 3;
-  min-height: 1024px;
   padding-top: 162px;
   max-width: 1240px;
 
@@ -91,25 +90,22 @@
 
 @include desktop-only() {
   .section__roadmap {
-    max-width: 1024px;
-  }
-}
-
-@include desktop() {
-  .section__roadmap {
-    max-width: 768px;
+    max-width: 100%;
   }
 }
 
 @include laptop() {
   .section__roadmap {
-    max-width: 576px;
+    padding: 80px 0 60px;
   }
 }
 
 @include tablet() {
+  .section__container:has(.section__roadmap) {
+    padding: 60px 0 30px;
+  }
   .section__roadmap {
-    padding-top: 80px;
+    padding: 0;
 
     h2 {
       margin-bottom: 150px;
@@ -122,23 +118,24 @@
 }
 
 @include mobile() {
+  .section__container:has(.section__roadmap) {
+    max-width: 96%;
+    padding: 30px 10px 0;
+  }
   .section__roadmap {
     min-height: auto;
-    padding-top: 20px;
-    padding-left: 30px;
 
     h2 {
       margin-bottom: 70px;
     }
 
     &_plan {
-      padding: 0 30px 20px;
-      margin: 0 -20px;
+      padding: 0;
+      margin: 0;
       overflow-x: auto;
 
       & > li {
-        min-width: calc(100vw - 45px);
-        max-width: calc(100vw - 45px);
+        min-width: 100%;
         white-space: normal;
         height: auto;
 
@@ -160,5 +157,11 @@
     &_items {
       margin-top: 16px;
     }
+  }
+}
+
+@include mobile-only() {
+  .section__container:has(.section__roadmap) {
+    padding: 30px 10px 0;
   }
 }

@@ -62,11 +62,19 @@
 }
 
 @font-face {
-  font-family: 'PoppinsMI';
+  font-family: 'PoppinsRI';
   font-display: swap;
   src: url('../fonts/Poppins-MediumItalic.woff') format('woff'),
     url('../fonts/Poppins-MediumItalic.woff2') format('woff2');
   font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PoppinsMI';
+  font-display: swap;
+  src: url('../../fonts/Poppins-MediumItalic.ttf');
+  font-weight: 500;
   font-style: italic;
 }
 
@@ -111,6 +119,14 @@
   font-display: swap;
   src: url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
     url('../fonts/HelveticaNeueCyr-Roman.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSansR';
+  font-display: swap;
+  src: url('../fonts/OpenSans-Regular.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
 }

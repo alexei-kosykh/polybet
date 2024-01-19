@@ -104,6 +104,10 @@
 }
 
 @include mobile() {
+  .gridBg {
+    display: none;
+  }
+  
   .mainOne {
     display: none;
   }

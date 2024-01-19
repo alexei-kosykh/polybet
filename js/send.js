@@ -12,7 +12,7 @@ const modal_ok = document.getElementById('data-ok');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  form.setAttribute('modal_join', '#modalJoin');
+  // form.setAttribute('modal_join', '#modalJoin');
 
   let ebody = `
     <h1>Username: </h1>
@@ -23,16 +23,16 @@ form.addEventListener('submit', (e) => {
     `;
 
   Email.send({
-    SecureToken: ' ', // token from https://smtpjs.com/
-    To: 'open@polybet.io', // email that need to registration in https://smtpjs.com/
-    From: 'open@polybet.io', // identical email
+    SecureToken: 'd00c5bdc-91ed-4f47-b9ba-adbb0cb2bfc8', // token from https://smtpjs.com/
+    To: 'open@polibet.io', // email that need to registration in https://smtpjs.com/
+    From: 'open@polibet.io', // identical email
     Subject: 'User data',
     Body: ebody,
   }).then((message) => {
     console.log(message);
-    form.removeAttribute('modal_join');
-    form_modal.style.display = 'none';
-    modal_ok.style.display = 'block';
+    // form.removeAttribute('modal_join');
+    // form_modal.style.display = 'none';
+    // modal_ok.style.display = 'block';
   });
 });
 
@@ -45,9 +45,9 @@ form_modal.addEventListener('submit', (e) => {
     `;
 
   Email.send({
-    SecureToken: '',
-    To: 'open@polybet.io',
-    From: 'open@polybet.io',
+    SecureToken: 'd00c5bdc-91ed-4f47-b9ba-adbb0cb2bfc8',
+    To: 'open@polibet.io',
+    From: 'open@polibet.io',
     Subject: 'User data from modal',
     Body: ebody,
   }).then((message) => {

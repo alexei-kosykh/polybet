@@ -37,17 +37,28 @@
     );
   }
 
-  input:invalid {
-    & + span {
+  input {
+    &:placeholder-shown ~ span {
       display: block;
       position: absolute;
       font-size: 14px;
       color: rgba(255, 115, 123, 1);
     }
   }
-  input {
-    & + span {
+
+  input, input:valid {
+    // border: 1px solid rgba(255, 115, 123, 1);
+    & ~ span {
       display: none;
+    }
+
+    & ~ label {
+      position: absolute;
+      top: 73px;
+      left: 0;
+      display: none;
+      color: rgba(255, 115, 123, 1);
+      font-size: 12px;
     }
   }
 

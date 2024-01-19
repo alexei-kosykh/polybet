@@ -114,7 +114,7 @@
   &_name {
     gap: 13px;
 
-    input:invalid {
+    input:placeholder-shown {
       & + span {
         left: 114px;
       }
@@ -122,7 +122,7 @@
   }
 
   &_email {
-    input:invalid {
+    input:placeholder-shown {
       & + span {
         right: 94px;
       }
@@ -179,7 +179,7 @@
 @include laptop() {
   .section__partners {
     &_container {
-      max-height: 100%;
+      max-height: 96%;
     }
 
     &_block {
@@ -213,7 +213,7 @@
     }
 
     &_email {
-      input:invalid {
+      input:placeholder-shown {
         & + span {
           left: 256px;
         }
@@ -274,11 +274,11 @@
 
 @include mobile() {
   .section__partners {
-    padding-bottom: 171px;
+    padding-bottom: 140px;
 
     &_block {
       padding-top: 0;
-      padding-bottom: 100px;
+      padding-bottom: 0;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -316,6 +316,9 @@
 }
 
 @include  mobile-only() {
+  .section__partners {
+    padding-bottom: 120px;
+  }
   input{
     font-size: 10px;
   }

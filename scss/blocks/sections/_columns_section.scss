@@ -71,7 +71,7 @@
 }
 
 .section__columns_three {
-  padding: 0 70px;
+  padding-left: 70px;
 }
 
 @include desktop-only() {
@@ -80,12 +80,11 @@
       &_central {
         width: 34vw;
       }
+
+      &_three {
+        padding-left: 40px;
+      }
     }
-  }
-}
-@include desktop-only() {
-  .section__columns_three {
-    padding: 0 40px;
   }
 }
 
@@ -97,13 +96,13 @@
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding: 60px 0 0;
+        padding: 60px 0 30px;
         gap: 100px;
 
         & > div {
           width: 100%;
           position: relative;
-          padding-bottom: 60px;
+          // padding-bottom: 60px;
 
           & > div:first-child {
             display: block;
@@ -122,7 +121,7 @@
           }
         }
       }
-      
+
       &_left,
       &_central,
       &_right {
@@ -139,20 +138,30 @@
     &__columns {
       &_container {
         padding: 0;
-        gap: 90px;
+        gap: 0px;
+        max-width: 96%;
+        padding: 35px 25px 25px;
+
+        & > div:nth-child(1) {
+          margin-bottom: 60px;
+        }
+        & > div:nth-child(2) {
+          margin-bottom: 60px;
+        }
 
         & > div {
-          padding-bottom: 80px;
-
           & > div:first-child {
             top: -40px;
           }
         }
 
         h4 {
-          margin-bottom: 0;
-          margin-top: 40px;
+          margin-bottom: 10px;
         }
+      }
+
+      &_three {
+        padding: 0;
       }
     }
   }
@@ -162,8 +171,10 @@
     &__columns {
       &_container {
         gap: 0;
+
+
+
         & > div {
-          padding-bottom: 50px;
 
           h4 {
             margin: 20px 0;
