@@ -46,12 +46,6 @@
           top: 25px;
         }
       }
-
-      input:invalid {
-        & ~ label {
-          display: block;
-        }
-      }
     }
 
     .modal_email {
@@ -60,23 +54,6 @@
           right: 90px;
           top: 25px;
         }
-
-        &:invalid {
-          & ~ label {
-            display: block;
-          }
-        }
-      }
-    }
-  }
-
-  .modal_name,
-  .modal_email {
-    &:has(input:invalid) {
-      border: 1px solid rgba(255, 115, 123, 1);
-
-      input {
-        color: rgba(255, 115, 123, 1);
       }
     }
   }

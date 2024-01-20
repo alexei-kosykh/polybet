@@ -127,21 +127,52 @@ window.onclick = function (event) {
 };
 
 // validation style
-let inputName = document.getElementById('name-modal');
-let inputEmail = document.getElementById('email-modal');
+const inputName = document.getElementById('name-modal');
+const inputEmail = document.getElementById('email-modal');
+const button_mod = document.getElementById('button-modal');
+inputName.nextElementSibling.style.display = 'none';
+inputEmail.nextElementSibling.style.display = 'none';
 
-// inputName.setCustomValidity('');
-
-inputName.oninvalid = function (event) {
-  inputName.setCustomValidity('');
-  inputName.parentNode.style.marginBottom = '30px';
+const eventListener = (input) => {
+  input.addEventListener('input', function (event) {
+    if (input.validity.valid) {
+      input.nextElementSibling.style.display = 'none';
+      input.parentNode.style.marginBottom = '15px';
+      input.parentNode.style.border = 'none';
+      input.style.color = 'white';
+    } else {
+      showError(input);
+    }
+  });
 };
 
-inputEmail.oninvalid = function (event) {
-  inputEmail.setCustomValidity('');
-  inputEmail.parentNode.style.marginBottom = '30px';
-};
+eventListener(inputName);
+eventListener(inputEmail);
 
+button_mod.addEventListener('click', function (event) {
+  event.preventDefault();
+  if (!inputName.value) {
+    showError(inputName);
+  } else if (!inputEmail.value) {
+    showError(inputEmail);
+  } else {
+    inputName.setCustomValidity('');
+  }
+});
+
+function showError(input) {
+  input.nextElementSibling.style.display = 'block';
+  input.parentNode.style.marginBottom = '30px';
+  input.parentNode.style.border = '1px solid rgba(255, 115, 123, 1)';
+  input.style.color = 'rgba(255, 115, 123, 1)';
+}
+
+// inputEmail.oninvalid = function (event) {
+//   inputEmail.setCustomValidity('');
+//   inputEmail.parentNode.style.marginBottom = '30px';
+//   inputEmail.parentNode.style.border = '1px solid rgba(255, 115, 123, 1)';
+//   inputEmail.style.color = 'rgba(255, 115, 123, 1)';
+// };
 
 func(plan);
 func(one);

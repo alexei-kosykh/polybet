@@ -760,6 +760,9 @@ header .menu_mob {
   }
 }
 @media (max-width: 768px) {
+  .section__event_cases {
+    padding-right: 25px;
+  }
   .case {
     padding-top: 80px;
     padding-bottom: 72px;
@@ -2106,9 +2109,6 @@ footer > div a span {
   left: 114px;
   top: 25px;
 }
-.modal__join form .modal_name input:invalid ~ label {
-  display: block;
-}
 .modal__join form .modal_email input:-moz-placeholder-shown ~ span {
   right: 90px;
   top: 25px;
@@ -2116,17 +2116,6 @@ footer > div a span {
 .modal__join form .modal_email input:placeholder-shown ~ span {
   right: 90px;
   top: 25px;
-}
-.modal__join form .modal_email input:invalid ~ label {
-  display: block;
-}
-.modal__join .modal_name:has(input:invalid),
-.modal__join .modal_email:has(input:invalid) {
-  border: 1px solid rgb(255, 115, 123);
-}
-.modal__join .modal_name:has(input:invalid) input,
-.modal__join .modal_email:has(input:invalid) input {
-  color: rgb(255, 115, 123);
 }
 .modal__join h5 {
   margin-bottom: 8px;

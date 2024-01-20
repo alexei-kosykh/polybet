@@ -12,8 +12,6 @@ const modal_ok = document.getElementById('data-ok');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  // form.setAttribute('modal_join', '#modalJoin');
-
   let ebody = `
     <h1>Username: </h1>
     <p>${userName.value}</p>

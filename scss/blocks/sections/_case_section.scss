@@ -48,6 +48,9 @@
 }
 
 @include tablet() {
+  .section__event_cases {
+    padding-right: 25px;
+  }
   .case {
     padding-top: 80px;
     padding-bottom: 72px;
@@ -62,7 +65,7 @@
   .case {
     padding-bottom: 0;
     padding-top: 0;
-    
+
     .title {
       font-size: 40px;
       line-height: 40px;
