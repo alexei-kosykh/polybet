@@ -167,13 +167,6 @@ function showError(input) {
   input.style.color = 'rgba(255, 115, 123, 1)';
 }
 
-// inputEmail.oninvalid = function (event) {
-//   inputEmail.setCustomValidity('');
-//   inputEmail.parentNode.style.marginBottom = '30px';
-//   inputEmail.parentNode.style.border = '1px solid rgba(255, 115, 123, 1)';
-//   inputEmail.style.color = 'rgba(255, 115, 123, 1)';
-// };
-
 func(plan);
 func(one);
 func(two);

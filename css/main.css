@@ -806,9 +806,6 @@ header .menu_mob {
 .section__features_block-text p {
   margin-bottom: 30px;
 }
-.section__features_block-text p:not(:last-of-type) {
-  font-size: 14px;
-}
 .section__features_p-t-30 {
   padding-top: 30px;
 }
@@ -2210,6 +2207,16 @@ footer > div a span {
   }
   .modal__join form + div p {
     padding: 0 20px;
+  }
+  .modal__join form .modal_email input:-moz-placeholder-shown ~ span {
+    right: 7px;
+    top: 0;
+    position: relative;
+  }
+  .modal__join form .modal_email input:placeholder-shown ~ span {
+    right: 7px;
+    top: 0;
+    position: relative;
   }
 }
 @media (max-width: 393px) {

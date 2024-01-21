@@ -175,6 +175,18 @@
         padding: 0 20px;
       }
     }
+
+    form {
+      .modal_email {
+        input {
+          &:placeholder-shown ~ span {
+            right: 7px;
+            top: 0;
+            position: relative;
+          }
+        }
+      }
+    }
   }
 }
 
