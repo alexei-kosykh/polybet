@@ -82,7 +82,7 @@ class Modal {
   open(selector) {
     this.openedWindow = this._nextWindows;
     this._modalBlock = this.openedWindow.querySelector('.modal__window');
-
+    history.pushState({}, '', '');
     this._bodyScrollControl();
     Modal._shadow.classList.add('modal__shadow--show');
     this.openedWindow.classList.add('modal--active');
@@ -125,10 +125,22 @@ class Modal {
   }
 }
 
+addEventListener(
+  'popstate',
+  function (e) {
+    location.assign(document.URL);
+  },
+  false
+);
+
 const modalDemo = new Modal({
   linkAttributeName: 'modal_demo',
 });
 
-const modalJoin = new Modal({
+export const modalJoin = new Modal({
   linkAttributeName: 'modal_join',
+});
+
+export const modalOk = new Modal({
+  linkAttributeName: 'modal_ok',
 });

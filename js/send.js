@@ -9,9 +9,14 @@ const email_modal = document.getElementById('email-modal');
 
 const modal_ok = document.getElementById('data-ok');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+const inputName = document.getElementById('name-modal');
+const inputEmail = document.getElementById('email-modal');
+const button_mod = document.getElementById('button-modal');
+const button = document.getElementById('submit');
 
+const joinButton = document.querySelector('[ modal_join="#modalJoin"]');
+
+const sendForm = () => {
   let ebody = `
     <h1>Username: </h1>
     <p>${userName.value}</p>
@@ -19,7 +24,6 @@ form.addEventListener('submit', (e) => {
     <h1>Message: </h1>
     <p>${text.value}</p>
     `;
-
   Email.send({
     SecureToken: 'd00c5bdc-91ed-4f47-b9ba-adbb0cb2bfc8', // token from https://smtpjs.com/
     To: 'open@polibet.io', // email that need to registration in https://smtpjs.com/
@@ -28,21 +32,19 @@ form.addEventListener('submit', (e) => {
     Body: ebody,
   }).then((message) => {
     form.reset();
-    location.assign(document.URL);
     console.log(message);
-    // modalJoin.open();
-    // form_modal.style.display = 'none';
-    // modal_ok.style.display = 'block';
+    joinButton.click();
+    form_modal.style.display = 'none';
+    modal_ok.style.display = 'block';
   });
-});
+};
 
-form_modal.addEventListener('submit', (e) => {
-  e.preventDefault();
+const sendModalForm = () => {
   let ebody = `
-    <h1>Username: </h1>
-    <p>${name_modal.value}</p>
-    <h1>Email: </h1>${email_modal.value}</p>
-    `;
+      <h1>Username: </h1>
+      <p>${name_modal.value}</p>
+      <h1>Email: </h1>${email_modal.value}</p>
+      `;
 
   Email.send({
     SecureToken: 'd00c5bdc-91ed-4f47-b9ba-adbb0cb2bfc8',
@@ -55,19 +57,17 @@ form_modal.addEventListener('submit', (e) => {
     form_modal.style.display = 'none';
     modal_ok.style.display = 'block';
   });
-});
-
+};
 
 // validation style
-const inputName = document.getElementById('name-modal');
-const inputEmail = document.getElementById('email-modal');
-const button_mod = document.getElementById('button-modal');
 inputName.nextElementSibling.style.display = 'none';
 inputEmail.nextElementSibling.style.display = 'none';
+userName.nextElementSibling.style.display = 'none';
+email.nextElementSibling.style.display = 'none';
 
-const eventListener = (input) => {
+const eventListener = (input, validity) => {
   input.addEventListener('input', function (event) {
-    if (input.validity.valid) {
+    if (validity) {
       input.nextElementSibling.style.display = 'none';
       input.parentNode.style.marginBottom = '15px';
       input.parentNode.style.border = 'none';
@@ -78,17 +78,47 @@ const eventListener = (input) => {
   });
 };
 
-eventListener(inputName);
-eventListener(inputEmail);
+eventListener(inputName, !ValidEmpty(inputName.value));
+eventListener(
+  inputEmail,
+  !ValidMail(inputEmail.value) && !ValidPhone(inputEmail.value)
+);
+eventListener(userName, !ValidEmpty(userName.value));
+eventListener(email, !ValidMail(email.value) && !ValidPhone(email.value));
 
 button_mod.addEventListener('click', function (event) {
-  // event.preventDefault();
+  event.preventDefault();
   if (!inputName.value) {
+    inputName.setCustomValidity('Please fill the required fields');
+
     showError(inputName);
   } else if (!inputEmail.value) {
+    inputEmail.setCustomValidity('Please fill the required fields');
+    inputEmail.nextElementSibling.textContent =
+      'Please fill the required fields';
+    showError(inputEmail);
+  } else if (!ValidMail(inputEmail.value) && !ValidPhone(inputEmail.value)) {
+    inputEmail.setCustomValidity('Incorrect format');
+    inputEmail.nextElementSibling.textContent = 'Incorrect format';
     showError(inputEmail);
   } else {
-    inputName.setCustomValidity('');
+    sendModalForm();
+  }
+});
+
+button.addEventListener('click', function (event) {
+  event.preventDefault();
+  if (!userName.value) {
+    userName.setCustomValidity('Please fill the required fields');
+    showError(userName);
+  } else if (!email.value) {
+    email.setCustomValidity('Please fill the required fields');
+    showError(email);
+  } else if (!ValidMail(email.value) && !ValidPhone(email.value)) {
+    email.setCustomValidity('Incorrect format');
+    showError(email);
+  } else {
+    sendForm();
   }
 });
 
@@ -97,4 +127,22 @@ function showError(input) {
   input.parentNode.style.marginBottom = '30px';
   input.parentNode.style.border = '1px solid rgba(255, 115, 123, 1)';
   input.style.color = 'rgba(255, 115, 123, 1)';
+}
+
+function ValidMail(text) {
+  var re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+  var valid = re.test(text);
+  return valid;
+}
+
+function ValidPhone(text) {
+  var re = /^[\d\+][\d\(\)\ -]{4,14}\d$/;
+  var valid = re.test(text);
+  return valid;
+}
+
+function ValidEmpty(text) {
+  var re = /^[\d\+][\d\(\)\ -]{4,14}\d$/;
+  var valid = re.test(text);
+  return valid;
 }

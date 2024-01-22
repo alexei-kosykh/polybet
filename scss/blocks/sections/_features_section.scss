@@ -3,15 +3,15 @@
 
   &_block {
     height: 1120px;
-    max-width: 1300px;
+    max-width: 1240px;
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
     margin: 0 auto;
-    gap: 100px;
+    gap: 112px 210px;
     width: 100%;
 
     &-text {
-      padding: 100px 0 0 100px;
+      padding-top: 100px;
       width: 100%;
       max-width: 510px;
       position: relative;
@@ -82,14 +82,11 @@
     &_block {
       height: 1366px;
       max-width: 1024px;
-
-      &-text {
-        padding: 140px 0 0 50px;
-      }
+      gap: 0 204px;
     }
 
     &_p-t-30 {
-      padding-top: 50px;
+      padding-top: 100px;
     }
   }
 }
@@ -128,7 +125,7 @@
 
       &-text {
         height: auto;
-        padding: 62px 80px 30px 40px;
+        padding-top: 50px;
 
         // margin: 10px;
         max-width: 100%;

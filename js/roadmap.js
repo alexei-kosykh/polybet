@@ -3,28 +3,28 @@ const roadmap = document.querySelector('.section__roadmap_plan');
 let lastKnownScrollPosition = 0;
 let ticking = false;
 
-// roadmap.addEventListener('scroll', (event) => {
-
-// window.scrollBy(window.pageYOffset, -100)
-// });
-
-function doSomething(scrollPos) {
-  roadmap.scrollLeft += 1;
-}
+// function doSomething() {
+//   setTimeout(() => {
+//     roadmap.scrollLeft += (roadmap.scrollWidth / 6) * 1;
+//   }, 1000);
+// }
 
 roadmap.addEventListener('scroll', (event) => {
   // lastKnownScrollPosition = window.scrollY;
+  // console.log((window.scrollY / 6) * 2);
   // console.log(roadmap.scrollLeft);
-  // console.log(event.offsetLeft);
+  // console.log(lastKnownScrollPosition);
+  // console.log((roadmap.scrollWidth / 6) * 1);
+  // doSomething();
 
-  lastKnownScrollPosition = window.scrollY;
-
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      doSomething(lastKnownScrollPosition);
-      ticking = false;
-    });
-
-    ticking = true;
-  }
+  // console.log(lastKnownScrollPosition);
+  // console.log(window.scrollY);
+  // console.log(1);
+  // window.requestAnimationFrame(() => {
+  //   doSomething(lastKnownScrollPosition);
+  // });
 });
+
+// roadmap.onscroll = (event) => {
+//   console.log(1);
+// };

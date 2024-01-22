@@ -11,7 +11,7 @@
   }
 
   &__container_main {
-    padding: 162px 50px 70px 0;
+    padding: 162px 0 70px;
   }
 
   &__event_main {
@@ -46,6 +46,14 @@
     }
   }
 }
+
+// @include desktop-only() {
+// .section {
+//   &__container_main {
+//     padding: 162px 0 70px;
+//   }
+// }
+// }
 
 @include laptop() {
   .section {

@@ -1,7 +1,7 @@
 
 .section {
   position: relative;
-  padding: 0 40px;
+  padding: 0 104px;
   overflow: hidden;
 
   &_black {
@@ -87,10 +87,22 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url(../img/bg/grid.svg);
+  background-image: url(../img/bg/grid2.svg);
   background-repeat: repeat;
   z-index: 2;
-  opacity: 0.7;
+  opacity: 1;
+}
+
+@include desktop() {
+  .section {
+    padding: 0 90px;
+  }
+}
+
+@include laptop() {
+  .section {
+    padding: 0 40px;
+  }
 }
 
 @include mobile() {
@@ -115,9 +127,7 @@
       font-size: 14px;
     }
 
-    &__description_uppercase {
-      // text-transform: none;
-    }
+ 
   }
 }
 @include mobile-only() {
