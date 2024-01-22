@@ -27,8 +27,10 @@ form.addEventListener('submit', (e) => {
     Subject: 'User data',
     Body: ebody,
   }).then((message) => {
+    form.reset();
+    location.assign(document.URL);
     console.log(message);
-    // form.removeAttribute('modal_join');
+    // modalJoin.open();
     // form_modal.style.display = 'none';
     // modal_ok.style.display = 'block';
   });
@@ -81,7 +83,6 @@ eventListener(inputEmail);
 
 button_mod.addEventListener('click', function (event) {
   // event.preventDefault();
-  console.log(3)
   if (!inputName.value) {
     showError(inputName);
   } else if (!inputEmail.value) {
