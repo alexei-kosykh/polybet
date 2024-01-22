@@ -21,14 +21,13 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
     cursor: url(../img/cursor.png), pointer;
-    scroll-snap-type: x mandatory;
+
 
     &::-webkit-scrollbar {
       display: none;
     }
 
     & > li {
-      scroll-snap-align: start;
       width: 100%;
       white-space: nowrap;
 
@@ -134,8 +133,10 @@
       padding: 0;
       margin: 0;
       overflow-x: auto;
+      scroll-snap-type: x mandatory;
 
       & > li {
+        scroll-snap-align: start;
         min-width: 100%;
         white-space: normal;
         height: auto;

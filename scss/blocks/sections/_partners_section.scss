@@ -75,7 +75,7 @@
     height: 72px;
     gap: 17px;
     padding: 5px 5px 5px 26px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     input,
     textarea {
@@ -93,6 +93,10 @@
       color: #fff;
       letter-spacing: 0.28px;
       line-height: 17px;
+    }
+
+    & > input ~ label {
+      font-size: 16px;
     }
 
     button {
@@ -163,7 +167,7 @@
 @include desktop() {
   .section__partners {
     &_block {
-       gap: 80px;
+      gap: 80px;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
@@ -177,7 +181,6 @@
 
 @include laptop() {
   .section__partners {
-
     &_block {
       padding: 80px 0 200px;
       -webkit-box-orient: vertical;
@@ -311,11 +314,11 @@
   }
 }
 
-@include  mobile-only() {
+@include mobile-only() {
   .section__partners {
     padding-bottom: 120px;
   }
-  input{
+  input {
     font-size: 10px;
   }
 }

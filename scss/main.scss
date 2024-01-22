@@ -141,7 +141,8 @@ h5 {
 
       &-price {
         font-family: 'HalveticaM', sans-serif;
-        width: 80px;
+        font-size: 13px;
+        width: 65px;
         height: 31px;
         border-radius: 99px;
         background-color: rgba(0, 0, 0, 0.4);
@@ -149,7 +150,7 @@ h5 {
 
       &-author {
         gap: 5px;
-        width: 120px;
+        width: 100px;
         height: 31px;
         border-radius: 99px;
         background-color: #1b1b1b;
@@ -158,6 +159,10 @@ h5 {
 
         svg {
           margin-bottom: 4px;
+        }
+
+        p {
+          font-size: 11px;
         }
       }
     }

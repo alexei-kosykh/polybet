@@ -37,6 +37,10 @@
   form {
     text-align: center;
 
+    input ~ label {
+      font-size: 12px;
+    }
+
     .modal_name {
       gap: 13px;
 

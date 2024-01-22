@@ -112,9 +112,12 @@ button.addEventListener('click', function (event) {
     userName.setCustomValidity('Please fill the required fields');
     showError(userName);
   } else if (!email.value) {
+    email.nextElementSibling.textContent =
+      'Please fill the required fields';
     email.setCustomValidity('Please fill the required fields');
     showError(email);
   } else if (!ValidMail(email.value) && !ValidPhone(email.value)) {
+    email.nextElementSibling.textContent = 'Incorrect format';
     email.setCustomValidity('Incorrect format');
     showError(email);
   } else {
