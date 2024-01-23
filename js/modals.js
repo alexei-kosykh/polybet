@@ -102,6 +102,11 @@ class Modal {
     if (!this.isOpened) {
       return;
     }
+
+    if (stakeImg.classList.contains('zoom')) {
+      stakeImg.classList.toggle('zoom');
+    }
+
     this.openedWindow.classList.remove('modal--active');
     Modal._shadow.classList.remove('modal__shadow--show');
     this.openedWindow.setAttribute('aria-hidden', 'true');
@@ -146,4 +151,11 @@ export const modalOk = new Modal({
 
 export const modalSchema = new Modal({
   linkAttributeName: 'modal_schema',
+});
+
+// doubleclick
+const stakeImg = document.querySelector('.modal__stake_img');
+
+stakeImg.addEventListener('dblclick', (event) => {
+  stakeImg.classList.toggle('zoom');
 });

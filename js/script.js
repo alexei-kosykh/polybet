@@ -127,13 +127,6 @@ window.onclick = function (event) {
   }
 };
 
-// doubleclick
-const stakeImg = document.querySelector('.modal__stake_img');
-
-stakeImg.addEventListener('dblclick', (event) => {
-  stakeImg.classList.toggle('zoom');
-});
-
 func(plan);
 func(one);
 func(two);

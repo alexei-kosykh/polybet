@@ -1358,6 +1358,10 @@ header .menu_mob {
     display: block;
   }
 }
+.grid_roadmap {
+  opacity: 0.7;
+}
+
 .section__roadmap {
   position: relative;
   z-index: 3;
@@ -2309,28 +2313,6 @@ footer > div a span {
   width: 96%;
   height: auto;
 }
-.modal .zoom::-webkit-scrollbar {
-  display: none;
-}
-.modal .zoom {
-  overflow: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.modal .zoom img {
-  width: 196%;
-  height: auto;
-}
-.modal .zoom > picture:last-child {
-  position: absolute;
-  top: 5px;
-  left: 22px;
-}
-.modal .zoom > picture:last-child img {
-  padding: 10px 10px;
-  width: 192%;
-  height: auto;
-}
 
 @media (max-width: 1024px) {
   .modal__stake_img {
@@ -2350,6 +2332,28 @@ footer > div a span {
   .modal__stake_img > picture:last-child img {
     padding: 10px 10px;
     width: 96%;
+    height: auto;
+  }
+  .modal .zoom::-webkit-scrollbar {
+    display: none;
+  }
+  .modal .zoom {
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .modal .zoom img {
+    width: 196%;
+    height: auto;
+  }
+  .modal .zoom > picture:last-child {
+    position: absolute;
+    top: 5px;
+    left: 22px;
+  }
+  .modal .zoom > picture:last-child img {
+    padding: 10px 10px;
+    width: 192%;
     height: auto;
   }
 }

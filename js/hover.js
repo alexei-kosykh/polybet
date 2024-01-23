@@ -19,3 +19,17 @@ function highlightThis() {
   toogleLastHover(this.childNodes[7]);
   this.childNodes[7].classList.toggle('hover');
 }
+
+// button soon hover
+const buttons = document.querySelectorAll('.section__button_transparent');
+
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("mouseover", function() {
+
+    this.textContent = "Soon";
+  })
+
+  buttons[i].addEventListener("mouseout", function() {
+    this.textContent = "Demo";
+  })
+}
