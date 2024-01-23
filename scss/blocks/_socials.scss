@@ -14,6 +14,22 @@
   display: flex;
   justify-content: space-between;
 
+  a:hover {
+    &[title='Soon'] > span {
+      display: block;
+    }
+  }
+
+  a[title='Soon'] > span {
+    font-family: 'PoppinsR', sans-serif;
+    position: absolute;
+    font-size: 8px;
+    color: white;
+    top: 85px;
+    left: 6px;
+    display: none;
+  }
+
   div:not(:empty) {
     position: absolute;
     display: -webkit-box;

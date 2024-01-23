@@ -452,6 +452,18 @@ header .menu_mob {
   display: flex;
   justify-content: space-between;
 }
+.socials a:hover[title=Soon] > span {
+  display: block;
+}
+.socials a[title=Soon] > span {
+  font-family: "PoppinsR", sans-serif;
+  position: absolute;
+  font-size: 8px;
+  color: white;
+  top: 85px;
+  left: 6px;
+  display: none;
+}
 .socials div:not(:empty) {
   position: absolute;
   display: flex;
