@@ -2350,7 +2350,7 @@ footer > div a span {
     scrollbar-width: none;
   }
   .modal .zoom img {
-    width: 196%;
+    width: 184%;
     height: auto;
   }
   .modal .zoom > picture:last-child {
@@ -2360,7 +2360,7 @@ footer > div a span {
   }
   .modal .zoom > picture:last-child img {
     padding: 10px 10px;
-    width: 192%;
+    width: 180%;
     height: auto;
   }
 }
