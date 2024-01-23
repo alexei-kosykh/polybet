@@ -1141,6 +1141,10 @@ header .menu_mob {
     top: -40px;
   }
 }
+.grid_stake {
+  opacity: 0.7;
+}
+
 .section__stake {
   padding-top: 162px;
   display: flex;
@@ -2074,6 +2078,9 @@ footer > div a span {
   right: 0;
   top: -40px;
   cursor: default;
+}
+.modal--active div[data-close]:has(+ .modal__stake_img) {
+  top: -25px;
 }
 .modal--active .modal__wrap > div {
   transform: scale(1);

@@ -24,6 +24,10 @@
       cursor: default;
     }
 
+    div[data-close]:has(+ .modal__stake_img) {
+      top: -25px;
+    }
+
     .modal__wrap > div {
       transform: scale(1);
       opacity: 1;
