@@ -49,6 +49,13 @@ header {
 
     &__item {
       cursor: url('../img/cursor.png'), pointer;
+      &:hover {
+        color: #9e9dfe;
+       .rotate > .left_arrow,
+       .rotate> .right_arrow {
+          background-color: #9e9dfe;
+        }
+      }
 
       a,
       div[data-goto] {
@@ -64,12 +71,12 @@ header {
       &_dropdown {
         position: relative;
 
-        span {
+        .rotate {
           display: inline-block;
           width: 27px;
 
-          &::after,
-          &::before {
+          .left_arrow,
+          .right_arrow {
             content: '';
             position: absolute;
             width: 9px;
@@ -79,28 +86,28 @@ header {
             transition-duration: 0.3s;
           }
 
-          &::after {
+          .right_arrow {
             right: 15px;
             -webkit-transform: rotate(45deg) translateY(-50%);
             -ms-transform: rotate(45deg) translateY(-50%);
             transform: rotate(45deg) translateY(-50%);
           }
 
-          &.active::after {
+          &.active .right_arrow {
             right: 8px;
             -webkit-transform: rotate(45deg) translateY(-50%);
             -ms-transform: rotate(45deg) translateY(-50%);
             transform: rotate(45deg) translateY(-50%);
           }
 
-          &::before {
+          .left_arrow {
             right: 8px;
             -webkit-transform: rotate(-45deg) translateY(-50%);
             -ms-transform: rotate(-45deg) translateY(-50%);
             transform: rotate(-45deg) translateY(-50%);
           }
 
-          &.active::before {
+          &.active .left_arrow {
             right: 13px;
             -webkit-transform: rotate(-45deg) translateY(-50%);
             -ms-transform: rotate(-45deg) translateY(-50%);
@@ -137,6 +144,7 @@ header {
             display: block;
 
             &:hover {
+              color: #9e9dfe;
               text-decoration: underline;
             }
           }
@@ -176,18 +184,18 @@ header {
       transform: translateY(0);
 
       &_mob {
-        span {
+        .rotate {
           width: 0;
         }
 
-        &::before {
+        .left_arrow {
           width: 25px;
           -webkit-transform: rotate(-45deg) translate(5px, -7px);
           -ms-transform: rotate(-45deg) translate(5px, -7px);
           transform: rotate(-45deg) translate(5px, -7px);
         }
 
-        &::after {
+        .right_arrow {
           -webkit-transform: rotate(45deg) translate(5px, 6px);
           -ms-transform: rotate(45deg) translate(5px, 6px);
           transform: rotate(45deg) translate(5px, 6px);
@@ -234,9 +242,10 @@ header {
       align-items: center;
       justify-content: center;
       height: 100vh;
-      gap: 32px;
 
       &__item {
+        height: 45px;
+        justify-content: center;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -244,23 +253,27 @@ header {
         z-index: 100;
         font-size: 20px;
 
+        &_dropdown:has(.show) {
+          height: 130px;
+        }
+
         &_dropdown {
-          span {
+          .rotate {
             width: 25px;
 
-            &::after {
-              right: -22px;
-            }
-            &::before {
+            .right_arrow {
               right: -17px;
             }
-            &.active::after {
+            .left_arrow {
+              right: -24px;
+            }
+            &.active .right_arrow {
+              top: 10px;
+              right: 17px;
+            }
+            &.active .left_arrow {
               top: 10px;
               right: 22px;
-            }
-            &.active::before {
-              top: 10px;
-              right: 15px;
             }
           }
 

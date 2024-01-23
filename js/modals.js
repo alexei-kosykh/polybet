@@ -77,6 +77,13 @@ class Modal {
         this.close();
       }.bind(this)
     );
+
+    addEventListener(
+      'popstate',
+      function (e) {
+        this.close();
+      }.bind(this)
+    );
   }
 
   open(selector) {
@@ -125,14 +132,6 @@ class Modal {
   }
 }
 
-addEventListener(
-  'popstate',
-  function (e) {
-    location.assign(document.URL);
-  },
-  false
-);
-
 const modalDemo = new Modal({
   linkAttributeName: 'modal_demo',
 });
@@ -143,4 +142,8 @@ export const modalJoin = new Modal({
 
 export const modalOk = new Modal({
   linkAttributeName: 'modal_ok',
+});
+
+export const modalSchema = new Modal({
+  linkAttributeName: 'modal_schema',
 });

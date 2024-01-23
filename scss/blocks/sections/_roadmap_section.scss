@@ -16,12 +16,13 @@
     overflow-x: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    margin: 0 -27vw;
-    padding: 0 27vw 112px;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-bottom: 112px;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    cursor: url(../img/cursor.png), pointer;
-
+    // cursor: url(../img/cursor.png), pointer;
+    cursor: default !important ;
 
     &::-webkit-scrollbar {
       display: none;

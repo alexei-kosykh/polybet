@@ -112,10 +112,11 @@ function openDropdown() {
 }
 
 window.onclick = function (event) {
-  if (
+  const checkTarget =
     !event.target.matches('.menu__item_dropdown') &&
-    dropdowns[0].classList.contains('show')
-  ) {
+    !event.target.matches('.left_arrow') &&
+    !event.target.matches('.right_arrow');
+  if (checkTarget && dropdowns[0].classList.contains('show')) {
     for (let i = 0; i < dropdowns.length; i++) {
       let openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('show')) {
@@ -125,11 +126,6 @@ window.onclick = function (event) {
     }
   }
 };
-
-
-
-
-
 
 func(plan);
 func(one);

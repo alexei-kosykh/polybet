@@ -1,0 +1,53 @@
+.modal {
+  &__stake_img {
+    width: 100%;
+    height: auto;
+
+    position: relative;
+
+    img {
+      width: auto;
+      height: 90vh;
+    }
+
+    & > picture:last-child {
+      position: absolute;
+      top: 5px;
+      left: 22px;
+
+      img {
+        padding: 10px 10px;
+        width: 96%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@include laptop() {
+  .modal {
+    &__stake_img {
+      width: 100%;
+      height: auto;
+
+      position: relative;
+
+      img {
+        width: 95vw;
+        height: auto;
+      }
+
+      & > picture:last-child {
+        position: absolute;
+        top: 5px;
+        left: 22px;
+
+        img {
+          padding: 10px 10px;
+          width: 96%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

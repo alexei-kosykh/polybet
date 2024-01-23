@@ -68,7 +68,7 @@
   }
 
   &__description_italic {
-    font-family: 'PoppinsRI', sans-serif;
+    font-style: italic;
   }
 
   &__subtitle {
@@ -89,7 +89,7 @@
   right: 0;
   background-image: url(../img/bg/grid2.svg);
   background-repeat: repeat;
-  z-index: 2;
+  z-index: 0;
   opacity: 1;
 }
 
@@ -127,7 +127,7 @@
       font-size: 14px;
     }
 
- 
+
   }
 }
 @include mobile-only() {

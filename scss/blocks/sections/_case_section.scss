@@ -17,17 +17,30 @@
   overflow-y: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-
-  .card:hover {
-    .card__info_button {
-      display: flex;
-
+  @media (hover: none) {
+    .card .hover {
+      .card__info_button {
+        display: flex;
+      }
+      .card__info_status {
+        display: none;
+      }
+      .card__info_tags {
+        display: none;
+      }
     }
-    .card__info_status {
-      display: none;
-    }
-    .card__info_tags {
-      display: none;
+  }
+  @media (hover: hover) {
+    .card:hover {
+      .card__info_button {
+        display: flex;
+      }
+      .card__info_status {
+        display: none;
+      }
+      .card__info_tags {
+        display: none;
+      }
     }
   }
 
@@ -43,7 +56,7 @@
 
 @include desktop-only() {
   .section__event_cases {
-    max-width: 95vw;
+    max-width: 90vw;
   }
 }
 

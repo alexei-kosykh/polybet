@@ -34,8 +34,8 @@
 				<li class="menu__item" data-goto=".goto-cases">use cases</li>
 				<li class="menu__item" data-goto=".goto-stake">plbt token</li>
 				<li class="menu__item"><a href="https://twitter.com/polybet_app" target="_blank">news</a></li>
-				<li class="menu__item menu__item_dropdown" onclick="openDropdown()">docs <span id="docsRotate"
-						class="rotate"></span>
+				<li class="menu__item menu__item_dropdown" onclick="openDropdown()">docs
+					<div id="docsRotate" class="rotate"><span class="left_arrow"></span><span class="right_arrow"></span></div>
 					<div id="docsDropdown" class="dropdown-content">
 						<a href="https://app.gitbook.com/o/imvCwRaOnrBSJD52HdjC/s/aLZpQxZlQCFN0Z98XCmC/overview/whitepaper"
 							target="_blank">Whitepaper</a>
@@ -297,8 +297,7 @@
 								joined US!</h5>
 							<p>The best betting platform is coming soon</p>
 
-							<button data-close type="button" class="button modal__button_white"
-								onclick="location.assign(document.URL);">ok</button>
+							<button data-close type="button" class="button modal__button_white">ok</button>
 						</div>
 						<div class="modal__join_motivation">
 							<p>Join us on social and get rewards</p>
@@ -470,6 +469,26 @@
 				</div>
 			</div>
 		</div>
+		<div class="modal" id="modalSchema" aria-hidden="true">
+			<div class="modal__wrap">
+				<div aria-modal="true">
+					<div data-close class="modal__close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path d="M18 6L6 18" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M6 6L18 18" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</div>
+					<div class="modal__stake_img" modal_schema="#modalSchema">
+						<picture>
+							<source srcset="img/schema-bg.png" type="image/png"><img src="img/schema-bg.png" alt="">
+						</picture>
+						<picture>
+							<source srcset="img/schema-transparent.png" type="image/png"><img src="img/schema-transparent.png" alt="">
+						</picture>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<section class="section section_black">
 			<div class="gridBg"></div>
@@ -483,7 +502,8 @@
 					<p class="section__description_mobile">Decentralized
 						Transparent
 						Revolutionary</p>
-					<p class="section__description"> Discover a world where you can set own rules Enjoy endless opportunities with
+					<p class="section__description"> Discover a world where you can set own rules <br>
+						Enjoy endless opportunities with
 						your limitless imagination</p>
 
 					<p class="section__description">Create betting events, create your own rule</p>
@@ -1827,10 +1847,10 @@
 							Before
 						</h2>
 
-						<p class="section__description">PolyBet is a holistic WEB3 platform ushering in a new betting epoch where
+						<p class="section__description">Polybet is a holistic WEB3 platform ushering in a new betting epoch where
 							transparency, decentralization, and fairness are secured with the blockchain technology delivering
 							unparalleled user experience. </p>
-						<p class="section__description"> WEB3 allows PolyBet apply: <br>
+						<p class="section__description"> WEB3 allows Polybet apply: <br>
 							No censorship<br>
 							No registration<br>
 							No personal data<br>
@@ -1885,8 +1905,8 @@
 						</p>
 						<p class="section__description section__description_italic">
 							Will Conor McGregor return to UFC (official match) in the 1st or 2nd quarter of 2024?<br>
-							Next Marvel movie will top $700 million at the box office.<br>
-							I bet the world that AI-powered cars will go live in 2024.
+							Will the next Marvel movie gross over $700 within 3 months after its release date?<br>
+							Will the world's population reach 8.2 billion in 2024?
 						</p>
 						<p class="section__description section__description_uppercase">Your foresight is your advantage!</p>
 					</div>
@@ -3176,7 +3196,7 @@
 						<p> 100% of commissions is distributed as rewards to users.</p>
 						<button class="button section__button_white" modal_join="#modalJoin">join whitelist</button>
 					</div>
-					<div class="section__stake_img">
+					<div class="section__stake_img" modal_schema="#modalSchema">
 						<picture>
 							<source srcset="img/schema-bg.png" type="image/png"><img src="img/schema-bg.png" alt="">
 						</picture>
@@ -3211,12 +3231,10 @@
 					</div>
 					<h4>Vote
 						and Earn</h4>
-					<div class="descriptionWrapper">
-						<p class="section__description">Holders of at least 2 PLBT tokens can vote on the outcomes.
-							A commission of 20% from every bet is distributed as rewards to users who voted for the winning outcome of
-							an event.
-						</p>
-					</div>
+					<p class="section__description">Holders of at least 2 PLBT tokens can vote on the outcomes. <br>
+						A commission of 20% from every bet is distributed as rewards to users who voted for the winning outcome of
+						an event.
+					</p>
 				</div>
 				<div>
 					<div class="section__columns_bg-violet section__columns_central">
@@ -3291,16 +3309,12 @@
 			</div>
 		</section>
 
-		<section class="section section_black">
+		<!-- <section class="section section_black">
 			<div class="section__container">
 				<div class="gridBg"></div>
 				<div class="section__tokenomics">
 					<div>
 						<h2 class="section__title">tokenomics</h2>
-						<!-- <p class="section__description">The Polybet DAO is more than a governance instrument – it is a
-							decentralized
-							betting oracle acting as the supreme authority
-							determining bet outcomes, ensuring fairness, transparency, and accuracy.</p> -->
 						<picture>
 							<source srcset="img/piechart.svg" type="image/webp"><img src="img/piechart.svg" alt="">
 						</picture>
@@ -3342,7 +3356,7 @@
 					</picture>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 		<section class="section section_black goto-roadmap">
 			<div class="section__container">
@@ -3508,7 +3522,7 @@
 									<p class="section__description">WEB3 Lottery closed beta test phase</p>
 								</li>
 								<li>
-									<p class="section__description">Public events with influencers in terms of PolyBet project</p>
+									<p class="section__description">Public events with influencers in terms of Polybet project</p>
 								</li>
 								<li>
 									<p class="section__description">Summing and analyzing project work</p>
@@ -3571,7 +3585,7 @@
 						</ul>
 					</div>
 					<div>
-						<h3>contact with us</h3>
+						<h3>contact us</h3>
 						<form action="#" method="post" id="full-data-send">
 							<div class="input section__partners_input section__partners_name">
 								<picture>
@@ -3638,6 +3652,7 @@
 	<script src="js/script.js"></script>
 	<script src="js/modals.js" type="module"></script>
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script src="js/hover.js"></script>
 </body>
 
 </html>
