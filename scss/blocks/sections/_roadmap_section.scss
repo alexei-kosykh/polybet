@@ -21,8 +21,7 @@
     padding-bottom: 112px;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    // cursor: url(../img/cursor.png), pointer;
-    cursor: default !important ;
+    cursor: default;
 
     &::-webkit-scrollbar {
       display: none;

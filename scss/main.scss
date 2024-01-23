@@ -9,6 +9,10 @@
   color: #ffffff;
 }
 
+a[target='_blank'] {
+  cursor: default;
+}
+
 h3 {
   font-size: 48px;
   font-family: 'PoppinsE', sans-serif;
@@ -59,7 +63,7 @@ h5 {
   transition: all 0.2s linear;
 
   font-family: 'PoppinsM', sans-serif;
-  cursor: url('../img/cursor.png'), pointer;
+  cursor: default;
 
   &:hover {
     background: #1b1b1b;
@@ -104,7 +108,7 @@ h5 {
       height: 30px;
       background-color: #1c1c1cc7;
       border-radius: 10px;
-      cursor: url('../img/cursor.png'), pointer;
+      cursor: default;
 
       svg {
         opacity: 1;

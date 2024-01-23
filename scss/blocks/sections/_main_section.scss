@@ -28,10 +28,10 @@
       animation: move calc(16s * 10) linear infinite backwards;
 
       .card {
-        cursor: unset;
+         cursor: default;
 
         &__socials > a {
-          cursor: unset;
+           cursor: default;
         }
       }
     }

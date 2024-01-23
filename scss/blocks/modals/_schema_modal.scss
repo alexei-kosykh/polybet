@@ -22,6 +22,32 @@
       }
     }
   }
+
+  .zoom::-webkit-scrollbar {
+    display: none;
+  }
+
+  .zoom {
+    overflow: auto;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+    img {
+      width: calc(98% * 2);
+      height: auto;
+    }
+
+    & > picture:last-child {
+      position: absolute;
+      top: 5px;
+      left: 22px;
+
+      img {
+        padding: 10px 10px;
+        width: calc(96% * 2);
+        height: auto;
+      }
+    }
+  }
 }
 
 @include laptop() {

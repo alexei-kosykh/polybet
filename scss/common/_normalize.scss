@@ -51,7 +51,7 @@ input::-ms-clear {
 }
 
 button {
-  cursor: url('../img/cursor.png'), pointer;
+  cursor: default;
 }
 
 button::-moz-focus-inner {

@@ -36,7 +36,7 @@ header {
   svg {
     width: 140px;
     height: auto;
-    cursor: url('../img/cursor.png'), pointer;
+     cursor: default;
   }
 
   .menu {
@@ -48,7 +48,7 @@ header {
     font-size: 14px;
 
     &__item {
-      cursor: url('../img/cursor.png'), pointer;
+       cursor: default;
       &:hover {
         color: #9e9dfe;
        .rotate > .left_arrow,
@@ -304,7 +304,7 @@ header {
       position: relative;
       height: 40px;
       width: 40px;
-      cursor: url('../img/cursor.png'), pointer;
+      cursor: default;
 
       span {
         width: 19px;

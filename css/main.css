@@ -155,7 +155,7 @@ input::-ms-clear {
 }
 
 button {
-  cursor: url("../img/cursor.png"), pointer;
+  cursor: default;
 }
 
 button::-moz-focus-inner {
@@ -208,7 +208,7 @@ header.header_bg-grey {
 header svg {
   width: 140px;
   height: auto;
-  cursor: url("../img/cursor.png"), pointer;
+  cursor: default;
 }
 header .menu {
   display: flex;
@@ -217,7 +217,7 @@ header .menu {
   font-size: 14px;
 }
 header .menu__item {
-  cursor: url("../img/cursor.png"), pointer;
+  cursor: default;
 }
 header .menu__item:hover {
   color: #9e9dfe;
@@ -402,7 +402,7 @@ header .menu_mob {
     position: relative;
     height: 40px;
     width: 40px;
-    cursor: url("../img/cursor.png"), pointer;
+    cursor: default;
   }
   header .menu_mob span {
     width: 19px;
@@ -467,7 +467,7 @@ header .menu_mob {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  cursor: url("../img/cursor.png"), pointer;
+  cursor: default;
 }
 .socials svg:hover path {
   fill: #9e9dfe;
@@ -677,10 +677,10 @@ header .menu_mob {
   animation: move 160s linear infinite backwards;
 }
 .section__event_main > div .card {
-  cursor: unset;
+  cursor: default;
 }
 .section__event_main > div .card__socials > a {
-  cursor: unset;
+  cursor: default;
 }
 @keyframes move {
   0% {
@@ -1366,7 +1366,7 @@ header .menu_mob {
   padding-bottom: 112px;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  cursor: default !important;
+  cursor: default;
 }
 .section__roadmap_plan::-webkit-scrollbar {
   display: none;
@@ -2057,7 +2057,7 @@ footer > div a span {
   position: absolute;
   right: 0;
   top: -40px;
-  cursor: url("../img/cursor.png"), pointer;
+  cursor: default;
 }
 .modal--active .modal__wrap > div {
   transform: scale(1);
@@ -2243,7 +2243,7 @@ footer > div a span {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  cursor: url("../img/cursor.png"), pointer;
+  cursor: default;
 }
 .modal__join .modal__socials svg:hover path {
   fill: #9e9dfe;
@@ -2297,6 +2297,28 @@ footer > div a span {
   width: 96%;
   height: auto;
 }
+.modal .zoom::-webkit-scrollbar {
+  display: none;
+}
+.modal .zoom {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.modal .zoom img {
+  width: 196%;
+  height: auto;
+}
+.modal .zoom > picture:last-child {
+  position: absolute;
+  top: 5px;
+  left: 22px;
+}
+.modal .zoom > picture:last-child img {
+  padding: 10px 10px;
+  width: 192%;
+  height: auto;
+}
 
 @media (max-width: 1024px) {
   .modal__stake_img {
@@ -2325,6 +2347,10 @@ footer > div a span {
   overflow: hidden;
   position: relative;
   color: #ffffff;
+}
+
+a[target=_blank] {
+  cursor: default;
 }
 
 h3 {
@@ -2371,7 +2397,7 @@ h5 {
   box-shadow: 15px 19px 20px 0px rgba(0, 0, 0, 0.3);
   transition: all 0.2s linear;
   font-family: "PoppinsM", sans-serif;
-  cursor: url("../img/cursor.png"), pointer;
+  cursor: default;
 }
 .card:hover {
   background: #1b1b1b;
@@ -2412,7 +2438,7 @@ h5 {
   height: 30px;
   background-color: rgba(28, 28, 28, 0.7803921569);
   border-radius: 10px;
-  cursor: url("../img/cursor.png"), pointer;
+  cursor: default;
 }
 .card__socials a svg {
   opacity: 1;
