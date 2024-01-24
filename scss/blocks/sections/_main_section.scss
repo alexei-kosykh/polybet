@@ -16,9 +16,10 @@
 
   &__event_main {
     padding-bottom: 60px;
-    max-width: 1440px;
+    // max-width: 1440px;
     overflow-x: auto;
     position: relative;
+    left: -104px;
     z-index: 100;
 
     & > div {
@@ -28,10 +29,10 @@
       animation: move calc(16s * 10) linear infinite backwards;
 
       .card {
-         cursor: default;
+        cursor: default;
 
         &__socials > a {
-           cursor: default;
+          cursor: default;
         }
       }
     }
@@ -55,6 +56,14 @@
 // }
 // }
 
+@include desktop() {
+  .section {
+    &__event_main {
+      left: -90px;
+    }
+  }
+}
+
 @include laptop() {
   .section {
     & > &__container_main {
@@ -70,12 +79,17 @@
       }
     }
 
+    &__event_main {
+      left: -40px;
+    }
+
     &__description_mobile {
       display: block;
       margin-bottom: 20px;
     }
   }
 }
+
 
 @include mobile() {
   .section {
@@ -97,7 +111,8 @@
 
     &__event_main {
       padding-bottom: 30px;
-      max-width: 96%;
+
+      left: -22px;
     }
 
     &__description_mobile {

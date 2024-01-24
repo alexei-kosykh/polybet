@@ -108,6 +108,10 @@
     height: 210px;
     padding: 18px 18px;
     margin-bottom: 16px;
+
+    textarea::placeholder {
+      opacity: 0.6;
+    }
   }
 
   &_name {
@@ -123,7 +127,16 @@
   &_email {
     input:placeholder-shown {
       & ~ span {
-        right: 94px;
+        right: 125px;
+      }
+    }
+  }
+
+  &_email,
+  &_name {
+    input {
+      &::placeholder {
+        opacity: 0.6;
       }
     }
   }
@@ -178,7 +191,6 @@
     }
 
     &_email {
-
       input:placeholder-shown {
         & ~ span {
           right: 20px;

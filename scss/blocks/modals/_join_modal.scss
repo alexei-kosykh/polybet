@@ -52,10 +52,18 @@
       }
     }
 
+    .modal_email, .modal_name {
+      input {
+        &::placeholder {
+          opacity: 0.6;
+        }
+      }
+    }
+
     .modal_email {
       input {
         &:placeholder-shown ~ span {
-          right: 90px;
+          right: 125px;
           top: 25px;
         }
       }

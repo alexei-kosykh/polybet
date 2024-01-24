@@ -154,7 +154,7 @@ export const modalSchema = new Modal({
 });
 
 // doubleclick
-const stakeImg = document.querySelector('.modal__stake_img');
+let stakeImg = document.querySelector('.modal__stake_img');
 
 stakeImg.addEventListener('dblclick', (event) => {
   stakeImg.classList.toggle('zoom');

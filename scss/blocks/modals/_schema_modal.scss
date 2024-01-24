@@ -6,18 +6,18 @@
     position: relative;
 
     img {
-      width: auto;
-      height: 90vh;
+      width: 80vw;
+      height: auto;
     }
 
     & > picture:last-child {
       position: absolute;
       top: 5px;
-      left: 22px;
+      left: 10vw;
 
       img {
         padding: 10px 10px;
-        width: 96%;
+        width: 62vw;
         height: auto;
       }
     }
@@ -40,11 +40,11 @@
       & > picture:last-child {
         position: absolute;
         top: 5px;
-        left: 22px;
+        left: 10vw;
 
         img {
           padding: 10px 10px;
-          width: 96%;
+          width: 75vw;
           height: auto;
         }
       }
@@ -59,18 +59,18 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
       img {
-        width: calc(92% * 2);
+        width: calc(120% * 2);
         height: auto;
       }
 
       & > picture:last-child {
         position: absolute;
         top: 5px;
-        left: 22px;
+        left: 20vw;
 
         img {
           padding: 10px 10px;
-          width: calc(90% * 2);
+          width: calc(62vw * 2);
           height: auto;
         }
       }

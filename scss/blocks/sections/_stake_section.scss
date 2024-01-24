@@ -41,10 +41,10 @@
     & > picture:last-child {
       position: absolute;
       top: 5px;
-      left: 22px;
+      left: 60px;
 
       img {
-        width: 500px;
+        width: 425px;
       }
     }
   }
@@ -82,10 +82,11 @@
       }
 
       & > picture:last-child {
-        left: 30px;
+        left: 100px;
         top: 7px;
         img {
-          width: 96%;
+          width: 70vw;
+          height: auto;
         }
       }
     }
@@ -99,6 +100,9 @@
     }
 
     &_img {
+      & > picture:last-child {
+        left: 70px;
+      }
       img {
         width: 90vw;
       }
@@ -126,6 +130,10 @@
     }
 
     &_img {
+      & > picture:last-child {
+        left: 10vw;
+      }
+
       margin-bottom: 30px;
     }
   }

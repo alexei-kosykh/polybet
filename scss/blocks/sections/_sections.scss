@@ -10,11 +10,21 @@
   }
 
   &_violet {
-    background-color: #6868a1;
+    // background-color: #6868a1;
+    background-image: url(../img/bg/violetBg.webp);
+    background-size: no-repeat;
+    background-position: center;
+
+    background-size: cover;
   }
 
   &_green {
-    background-color: #1d8d63;
+    // background-color: #1d8d63;
+    background-image: url(../img/bg/greenBg.webp);
+    background-size: no-repeat;
+    background-position: center;
+
+    background-size: cover;
   }
 
   &__container {
