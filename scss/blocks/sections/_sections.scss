@@ -117,6 +117,16 @@
   }
 }
 
+@include tablet() {
+  &_violet {
+    background-image: url(../img/bg/mobile/violetBg.png);
+  }
+
+  &_green {
+    background-image: url(../img/bg/mobile/greenBg.png);
+  }
+}
+
 @include mobile() {
   .section {
     max-height: 100%;
