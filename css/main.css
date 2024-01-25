@@ -2413,7 +2413,9 @@ footer > div a span {
 }
 .modal__stake_img img {
   width: 80vw;
+  max-width: 1240px;
   height: auto;
+  max-height: 90vh;
 }
 .modal__stake_img > picture:last-child {
   position: absolute;
@@ -2423,7 +2425,9 @@ footer > div a span {
 .modal__stake_img > picture:last-child img {
   padding: 10px 10px;
   width: 62vw;
+  max-width: 950px;
   height: auto;
+  max-height: 82vh;
 }
 
 @media (max-width: 1024px) {

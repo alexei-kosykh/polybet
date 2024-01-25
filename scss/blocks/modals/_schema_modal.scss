@@ -7,7 +7,9 @@
 
     img {
       width: 80vw;
+      max-width: 1240px;
       height: auto;
+      max-height: 90vh;
     }
 
     & > picture:last-child {
@@ -18,7 +20,9 @@
       img {
         padding: 10px 10px;
         width: 62vw;
+        max-width: 950px;
         height: auto;
+        max-height: 82vh;
       }
     }
   }

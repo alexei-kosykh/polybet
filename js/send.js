@@ -81,17 +81,10 @@ const eventListener = (input, validity) => {
 eventListener(inputName, !ValidEmpty(inputName.value));
 eventListener(
   inputEmail,
-  !ValidMail(inputEmail.value) &&
-    !ValidPhone(inputEmail.value) &&
-    !ValidTelegram(email.value)
+  !ValidPhone(inputEmail.value) && !ValidTelegram(email.value)
 );
 eventListener(userName, !ValidEmpty(userName.value));
-eventListener(
-  email,
-  !ValidMail(email.value) &&
-    !ValidPhone(email.value) &&
-    !ValidTelegram(email.value)
-);
+eventListener(email, !ValidPhone(email.value) && !ValidTelegram(email.value));
 
 button_mod.addEventListener('click', function (event) {
   event.preventDefault();
@@ -104,11 +97,7 @@ button_mod.addEventListener('click', function (event) {
     inputEmail.nextElementSibling.textContent =
       'Please fill the required fields';
     showError(inputEmail);
-  } else if (
-    !ValidMail(inputEmail.value) &&
-    !ValidPhone(inputEmail.value) &&
-    !ValidTelegram(email.value)
-  ) {
+  } else if (!ValidPhone(inputEmail.value) && !ValidTelegram(inputEmail.value)) {
     inputEmail.setCustomValidity('Incorrect format');
     inputEmail.nextElementSibling.textContent = 'Incorrect format';
     showError(inputEmail);
@@ -126,11 +115,7 @@ button.addEventListener('click', function (event) {
     email.nextElementSibling.textContent = 'Please fill the required fields';
     email.setCustomValidity('Please fill the required fields');
     showError(email);
-  } else if (
-    !ValidMail(email.value) &&
-    !ValidPhone(email.value) &&
-    !ValidTelegram(email.value)
-  ) {
+  } else if (!ValidPhone(email.value) && !ValidTelegram(email.value)) {
     email.nextElementSibling.textContent = 'Incorrect format';
     email.setCustomValidity('Incorrect format');
     showError(email);
@@ -164,8 +149,16 @@ function ValidEmpty(text) {
   return valid;
 }
 
+// function ValidTelegram(text) {
+//   var re = /^[A-Za-z\d_]{2,32}$/;
+//   console.log(re.test(text), `${text}`)
+//   console.log(re.test('icfd'))
+//   var valid = re.test(text);
+//   return valid;
+// }
+
 function ValidTelegram(text) {
-  var re = /^[A-Za-z\d_]{5,32}$/;
+  var re = /^[a-zA-Z][a-zA-Z0-9-_\.]{1,32}$/;
   var valid = re.test(text);
   return valid;
 }
