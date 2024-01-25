@@ -16,7 +16,7 @@ header {
   padding: 0 20px;
 
   &.header_bg-grey {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -36,7 +36,7 @@ header {
   svg {
     width: 140px;
     height: auto;
-     cursor: default;
+    cursor: default;
   }
 
   .menu {
@@ -52,11 +52,11 @@ header {
     }
 
     &__item {
-       cursor: default;
+      cursor: default;
       &:hover {
         color: #9e9dfe;
-       .rotate > .left_arrow,
-       .rotate> .right_arrow {
+        .rotate > .left_arrow,
+        .rotate > .right_arrow {
           background-color: #9e9dfe;
         }
       }
@@ -308,16 +308,37 @@ header {
         display: -ms-flexbox;
         display: flex;
         position: absolute;
-        bottom: 20px;
+        bottom: 12vh;
         justify-content: center;
         gap: 10px;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        & > a:hover {
+          &[title='Soon'] > span {
+            display: block;
+          }
+        }
+
+        & > a[title='Soon'] > span {
+          font-family: 'PoppinsR', sans-serif;
+          position: absolute;
+          font-size: 14px;
+          color: rgb(246, 246, 246);
+          top: 37px;
+          left: 46px;
+          display: none;
+        }
 
         svg {
           -webkit-backdrop-filter: blur(4.1049365997px);
           backdrop-filter: blur(4.1049365997px);
           width: 40px;
           height: 40px;
-          border-radius: 50%;
           cursor: default;
 
           &:hover {

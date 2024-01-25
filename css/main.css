@@ -196,7 +196,7 @@ header {
   padding: 0 20px;
 }
 header.header_bg-grey {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -403,16 +403,32 @@ header .menu_mob {
   header .menu__socials_mob {
     display: flex;
     position: absolute;
-    bottom: 20px;
+    bottom: 12vh;
     justify-content: center;
     gap: 10px;
+  }
+  header .menu__socials_mob a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .menu__socials_mob > a:hover[title=Soon] > span {
+    display: block;
+  }
+  header .menu__socials_mob > a[title=Soon] > span {
+    font-family: "PoppinsR", sans-serif;
+    position: absolute;
+    font-size: 14px;
+    color: rgb(246, 246, 246);
+    top: 37px;
+    left: 46px;
+    display: none;
   }
   header .menu__socials_mob svg {
     -webkit-backdrop-filter: blur(4.1049365997px);
     backdrop-filter: blur(4.1049365997px);
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     cursor: default;
   }
   header .menu__socials_mob svg:hover path {
@@ -495,8 +511,8 @@ header .menu_mob {
   padding-right: 30px;
 }
 .socials svg {
-  -webkit-backdrop-filter: blur(4.1049365997px);
-  backdrop-filter: blur(4.1049365997px);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -1412,44 +1428,54 @@ header .menu_mob {
   opacity: 0.7;
 }
 
-.section__roadmap {
-  position: relative;
-  z-index: 3;
-  padding-top: 162px;
-  max-width: 1240px;
-}
-.section__roadmap h2 {
-  margin-bottom: 235px;
-}
 .section__roadmap_plan {
   display: flex;
   gap: 40px;
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  max-width: 1240px;
-  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+  margin: 0 -7vw;
   padding-bottom: 112px;
   -ms-overflow-style: none;
   scrollbar-width: none;
   cursor: default;
 }
-.section__roadmap_plan::-webkit-scrollbar {
+.section__roadmap_plan::-webkit-scrollbar, .section__roadmap_plan > div::-webkit-scrollbar {
   display: none;
 }
-.section__roadmap_plan > li {
+@media (hover: hover) {
+  .section__roadmap_plan:hover div {
+    animation-play-state: paused;
+  }
+}
+@media (hover: none) {
+  .section__roadmap_plan:active div {
+    animation-play-state: paused;
+  }
+}
+.section__roadmap_plan > div {
+  display: flex;
+  gap: 0 30px;
+  animation: move 80s linear infinite backwards;
+  position: relative;
+}
+.section__roadmap_plan > div > li {
   width: 100%;
   white-space: nowrap;
 }
-.section__roadmap_plan > li h4 {
+.section__roadmap_plan > div > li h4 {
   margin-bottom: 70px;
 }
-.section__roadmap_plan > li:last-child > span {
+.section__roadmap_plan > div > li:last-child > span {
   display: none;
 }
+
 .section__roadmap_block {
   position: relative;
 }
+
 .section__roadmap_line {
   position: absolute;
   top: 80px;
@@ -1458,6 +1484,7 @@ header .menu_mob {
   height: 2px;
   background-color: rgb(29, 141, 99);
 }
+
 .section__roadmap_point {
   position: absolute;
   top: -40px;
@@ -1467,6 +1494,7 @@ header .menu_mob {
   border-radius: 50%;
   background-color: rgb(29, 141, 99);
 }
+
 .section__roadmap_items {
   margin-top: 40px;
   position: relative;
@@ -1486,6 +1514,15 @@ header .menu_mob {
   border-radius: 50%;
   top: 10px;
   left: 10px;
+}
+
+.section__roadmap {
+  position: relative;
+  z-index: 3;
+  padding-top: 162px;
+}
+.section__roadmap h2 {
+  margin-bottom: 235px;
 }
 
 @media (max-width: 1440px) {
@@ -1695,10 +1732,10 @@ header .menu_mob {
     width: 33%;
   }
   .section__partners_email input:-moz-placeholder-shown ~ span {
-    right: 20px;
+    right: 4vw;
   }
   .section__partners_email input:placeholder-shown ~ span {
-    right: 20px;
+    right: 4vw;
   }
 }
 @media (max-width: 1024px) {
@@ -1723,10 +1760,10 @@ header .menu_mob {
     height: 112px;
   }
   .section__partners_email input:-moz-placeholder-shown ~ span {
-    left: 256px;
+    left: 225px;
   }
   .section__partners_email input:placeholder-shown ~ span {
-    left: 256px;
+    left: 225px;
   }
   .section__partners_bg-text {
     display: none;
@@ -2418,7 +2455,7 @@ footer > div a span {
     scrollbar-width: none;
   }
   .modal .zoom img {
-    width: 240%;
+    width: 200%;
     height: auto;
   }
   .modal .zoom > picture:last-child {
@@ -2428,7 +2465,7 @@ footer > div a span {
   }
   .modal .zoom > picture:last-child img {
     padding: 10px 10px;
-    width: 124vw;
+    width: 200%;
     height: auto;
   }
 }
