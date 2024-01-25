@@ -618,6 +618,14 @@ header .menu_mob {
     padding: 0 40px;
   }
 }
+@media (max-width: 768px) {
+  .section_violet {
+    background-image: url(../img/bg/mobile/violetBg.png);
+  }
+  .section_green {
+    background-image: url(../img/bg/mobile/greenBg.png);
+  }
+}
 @media (max-width: 576px) {
   .section {
     max-height: 100%;

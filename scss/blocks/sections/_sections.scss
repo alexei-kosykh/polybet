@@ -1,4 +1,3 @@
-
 .section {
   position: relative;
   padding: 0 104px;
@@ -103,8 +102,6 @@
   opacity: 1;
 }
 
-
-
 @include desktop() {
   .section {
     padding: 0 90px;
@@ -118,12 +115,14 @@
 }
 
 @include tablet() {
-  &_violet {
-    background-image: url(../img/bg/mobile/violetBg.png);
-  }
+  .section {
+    &_violet {
+      background-image: url(../img/bg/mobile/violetBg.png);
+    }
 
-  &_green {
-    background-image: url(../img/bg/mobile/greenBg.png);
+    &_green {
+      background-image: url(../img/bg/mobile/greenBg.png);
+    }
   }
 }
 
@@ -148,8 +147,6 @@
     &__description {
       font-size: 14px;
     }
-
-
   }
 }
 @include mobile-only() {
