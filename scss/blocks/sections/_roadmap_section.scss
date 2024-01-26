@@ -2,53 +2,40 @@
   opacity: 0.7;
 }
 
-.section__roadmap_plan {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 40px;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  // max-width: 1240px;
-  // width: 100vw;
+.section__roadmap {
   position: relative;
-  z-index: 100;
-  // margin: 0 auto;
-  margin: 0 -7vw;
-  padding-bottom: 112px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  cursor: default;
+  z-index: 3;
+  padding-top: 162px;
+  max-width: 1240px;
 
-  &::-webkit-scrollbar,
-  & > div::-webkit-scrollbar {
-    display: none;
+  h2 {
+    margin-bottom: 235px;
   }
 
-  @media (hover: hover) {
-    &:hover div {
-      animation-play-state: paused;
-    }
-  }
-
-  @media (hover: none) {
-    &:active div {
-      animation-play-state: paused;
-    }
-  }
-
-  & > div {
+  &_plan {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    gap: 0 30px;
-    animation: move 80s linear infinite backwards;
-    // overflow-x: auto;
+    gap: 40px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-bottom: 112px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     position: relative;
+    z-index: 100;
+    cursor: default;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     & > li {
       width: 100%;
       white-space: nowrap;
-      // animation: move 16s linear infinite backwards;
 
       h4 {
         margin-bottom: 70px;
@@ -59,62 +46,51 @@
       }
     }
   }
-}
 
-.section__roadmap_block {
-  position: relative;
-}
-
-.section__roadmap_line {
-  position: absolute;
-  top: 80px;
-  left: 0;
-  width: calc(100% * 6 + 100px);
-  height: 2px;
-  background-color: rgba(29, 141, 99, 1);
-}
-
-.section__roadmap_point {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background-color: rgba(29, 141, 99, 1);
-}
-
-.section__roadmap_items {
-  margin-top: 40px;
-  position: relative;
-
-  p {
-    font-size: 13px;
+  &_block {
     position: relative;
-    display: inline-block;
-    padding-left: 20px;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background-color: #fff;
-      border-radius: 50%;
-      top: 10px;
-      left: 10px;
-    }
   }
-}
 
-.section__roadmap {
-  position: relative;
-  z-index: 3;
-  padding-top: 162px;
-  // max-width: 1240px;
+  &_line {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: calc(100% * 6 + 100px);
+    height: 2px;
+    background-color: rgba(29, 141, 99, 1);
+  }
 
-  h2 {
-    margin-bottom: 235px;
+  &_point {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: rgba(29, 141, 99, 1);
+  }
+
+  &_items {
+    margin-top: 40px;
+    position: relative;
+
+    p {
+      font-size: 13px;
+      position: relative;
+      display: inline-block;
+      padding-left: 20px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 50%;
+        top: 10px;
+        left: 10px;
+      }
+    }
   }
 }
 
@@ -140,10 +116,10 @@
     h2 {
       margin-bottom: 150px;
     }
-  }
 
-  .section__roadmap_plan {
-    padding-bottom: 70px;
+    &_plan {
+      padding-bottom: 70px;
+    }
   }
 }
 
@@ -158,36 +134,37 @@
     h2 {
       margin-bottom: 70px;
     }
-  }
-  .section__roadmap_plan {
-    padding: 0;
-    margin: 0;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
 
-    & > li {
-      scroll-snap-align: start;
-      min-width: 100%;
-      white-space: normal;
-      height: auto;
+    &_plan {
+      padding: 0;
+      margin: 0;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
 
-      & > span::before {
-        bottom: -7px;
-      }
-      & > span::after {
-        bottom: -13px;
-      }
-      &::before {
-        bottom: -10px;
+      & > li {
+        scroll-snap-align: start;
+        min-width: 100%;
+        white-space: normal;
+        height: auto;
+
+        & > span::before {
+          bottom: -7px;
+        }
+        & > span::after {
+          bottom: -13px;
+        }
+        &::before {
+          bottom: -10px;
+        }
       }
     }
-  }
-  .section__roadmap_point {
-    top: -34px;
-  }
+    &_point {
+      top: -34px;
+    }
 
-  .section__roadmap_items {
-    margin-top: 16px;
+    &_items {
+      margin-top: 16px;
+    }
   }
 }
 

@@ -16,7 +16,7 @@ header {
   padding: 0 20px;
 
   &.header_bg-grey {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -327,10 +327,11 @@ header {
         & > a[title='Soon'] > span {
           font-family: 'PoppinsR', sans-serif;
           position: absolute;
+          text-transform: lowercase;
           font-size: 14px;
           color: rgb(246, 246, 246);
           top: 37px;
-          left: 46px;
+          left: 49px;
           display: none;
         }
 

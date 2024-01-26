@@ -196,7 +196,7 @@ header {
   padding: 0 20px;
 }
 header.header_bg-grey {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -418,10 +418,11 @@ header .menu_mob {
   header .menu__socials_mob > a[title=Soon] > span {
     font-family: "PoppinsR", sans-serif;
     position: absolute;
+    text-transform: lowercase;
     font-size: 14px;
     color: rgb(246, 246, 246);
     top: 37px;
-    left: 46px;
+    left: 49px;
     display: none;
   }
   header .menu__socials_mob svg {
@@ -1436,54 +1437,46 @@ header .menu_mob {
   opacity: 0.7;
 }
 
+.section__roadmap {
+  position: relative;
+  z-index: 3;
+  padding-top: 162px;
+  max-width: 1240px;
+}
+.section__roadmap h2 {
+  margin-bottom: 235px;
+}
 .section__roadmap_plan {
   display: flex;
   gap: 40px;
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  position: relative;
-  z-index: 100;
-  margin: 0 -7vw;
+  max-width: 1240px;
+  margin: 0 auto;
   padding-bottom: 112px;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  position: relative;
+  z-index: 100;
   cursor: default;
 }
-.section__roadmap_plan::-webkit-scrollbar, .section__roadmap_plan > div::-webkit-scrollbar {
+.section__roadmap_plan::-webkit-scrollbar {
   display: none;
 }
-@media (hover: hover) {
-  .section__roadmap_plan:hover div {
-    animation-play-state: paused;
-  }
-}
-@media (hover: none) {
-  .section__roadmap_plan:active div {
-    animation-play-state: paused;
-  }
-}
-.section__roadmap_plan > div {
-  display: flex;
-  gap: 0 30px;
-  animation: move 80s linear infinite backwards;
-  position: relative;
-}
-.section__roadmap_plan > div > li {
+.section__roadmap_plan > li {
   width: 100%;
   white-space: nowrap;
 }
-.section__roadmap_plan > div > li h4 {
+.section__roadmap_plan > li h4 {
   margin-bottom: 70px;
 }
-.section__roadmap_plan > div > li:last-child > span {
+.section__roadmap_plan > li:last-child > span {
   display: none;
 }
-
 .section__roadmap_block {
   position: relative;
 }
-
 .section__roadmap_line {
   position: absolute;
   top: 80px;
@@ -1492,7 +1485,6 @@ header .menu_mob {
   height: 2px;
   background-color: rgb(29, 141, 99);
 }
-
 .section__roadmap_point {
   position: absolute;
   top: -40px;
@@ -1502,7 +1494,6 @@ header .menu_mob {
   border-radius: 50%;
   background-color: rgb(29, 141, 99);
 }
-
 .section__roadmap_items {
   margin-top: 40px;
   position: relative;
@@ -1522,15 +1513,6 @@ header .menu_mob {
   border-radius: 50%;
   top: 10px;
   left: 10px;
-}
-
-.section__roadmap {
-  position: relative;
-  z-index: 3;
-  padding-top: 162px;
-}
-.section__roadmap h2 {
-  margin-bottom: 235px;
 }
 
 @media (max-width: 1440px) {
@@ -2372,6 +2354,19 @@ footer > div a span {
   display: flex;
   justify-content: center;
   gap: 10px;
+  position: relative;
+}
+.modal__join .modal__socials > a:hover[title=Soon] > span {
+  display: block;
+}
+.modal__join .modal__socials > a[title=Soon] > span {
+  font-family: "PoppinsR", sans-serif;
+  position: absolute;
+  font-size: 14px;
+  color: rgb(246, 246, 246);
+  top: 37px;
+  left: 106px;
+  display: none;
 }
 .modal__join .modal__socials svg {
   -webkit-backdrop-filter: blur(4.1049365997px);
@@ -2421,7 +2416,7 @@ footer > div a span {
 }
 .modal__stake_img img {
   width: 80vw;
-  max-width: 1240px;
+  max-width: 1000px;
   height: auto;
   max-height: 90vh;
 }
@@ -2433,7 +2428,7 @@ footer > div a span {
 .modal__stake_img > picture:last-child img {
   padding: 10px 10px;
   width: 62vw;
-  max-width: 950px;
+  max-width: 760px;
   height: auto;
   max-height: 82vh;
 }

@@ -156,6 +156,23 @@
     display: flex;
     justify-content: center;
     gap: 10px;
+    position: relative;
+
+    & > a:hover {
+      &[title='Soon'] > span {
+        display: block;
+      }
+    }
+
+    & > a[title='Soon'] > span {
+      font-family: 'PoppinsR', sans-serif;
+      position: absolute;
+      font-size: 14px;
+      color: rgb(246, 246, 246);
+      top: 37px;
+      left: 106px;
+      display: none;
+    }
 
     svg {
       -webkit-backdrop-filter: blur(4.1049365997px);
