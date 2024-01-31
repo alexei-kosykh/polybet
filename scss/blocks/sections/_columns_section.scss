@@ -1,6 +1,24 @@
 .section {
   z-index: 10;
   &__columns {
+    &-one,
+    &-two {
+      background-position: left, center, right;
+      background-size: calc(100% / 3 + (100% / 3 - 480px) / 2) 100%,
+        max(480px) 100%, calc(100% / 3 + (100% / 3 - 480px) / 2) 100%;
+      background-repeat: no-repeat;
+    }
+    &-one {
+      background-image: url(/img/bg/1024/black-paper-bg.png),
+        url(/img/bg/1024/violet-paper-bg.png),
+        url(/img/bg/1024/blue-paper-bg.png);
+    }
+    &-two {
+      background-image: url(/img/bg/1024/blue-paper-bg.png),
+        url(/img/bg/1024/violet-paper-bg.png),
+        url(/img/bg/1024/black-paper-bg.png);
+    }
+
     &_container {
       display: flex;
       justify-content: space-between;
@@ -28,37 +46,6 @@
       }
     }
 
-    &_bg-black,
-    &_bg-violet,
-    &_bg-dark-violet {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
-    }
-
-    &_bg-black {
-      background: linear-gradient(
-        180deg,
-        rgb(24, 24, 24) 0%,
-        rgb(43, 43, 43) 66%,
-        rgba(67, 67, 67, 0.961) 100%
-      );
-    }
-
-    &_bg-violet {
-      background-color: #6868a1;
-    }
-
-    &_bg-dark-violet {
-      left: 80%;
-      right: -50%;
-      background-color: #25255b;
-      z-index: -3;
-    }
-
     &_left {
       right: 0;
       left: 0;
@@ -83,13 +70,11 @@
 @include desktop-only() {
   .section {
     &__columns {
-      &_central {
-        width: calc(100vw / 3);
+      &-one,
+      &-two {
+        background-size: calc(100% / 3 + (100% / 3 - 400px) / 2) 100%,
+          max(400px) 100%, calc(100% / 3 + (100% / 3 - 400px) / 2) 100%;
       }
-
-      // &_three {
-      //   padding-left: 40px;
-      // }
     }
   }
 }
@@ -101,6 +86,20 @@
     .section__columns_container {
       justify-content: start;
       gap: calc(100vw / 3 - 270px);
+    }
+  }
+
+  .section {
+    &__columns {
+      &-one,
+      &-two {
+        background-size: calc(100% / 3 + (100% / 3 - 350px) / 2) 100%,
+          max(350px) 100%, calc(100% / 3 + (100% / 3 - 350px) / 2) 100%;
+      }
+
+      &_container {
+        gap: 8%;
+      }
     }
   }
 }
@@ -116,12 +115,36 @@
   }
   .section {
     &__columns {
+      &-one,
+      &-two {
+        background-position: top, center, bottom;
+        background-size: 100% calc(100% / 3);
+      }
+      &-one {
+        background-image: url(/img/bg/768/black-paper-bg.png),
+          url(/img/bg/768/violet-paper-bg.png),
+          url(/img/bg/768/blue-paper-bg.png);
+      }
+      &-two {
+        background-image: url(/img/bg/768/blue-paper-bg.png),
+          url(/img/bg/768/violet-paper-bg.png),
+          url(/img/bg/768/black-paper-bg.png);
+          background-size: 100% 30%, 100% 54%, 100% 40%;
+          background-position: 0% 0%, 0% 25%, 0% 100%;
+        // .section__columns_container {
+        //   gap:60px;
+        //    &> div:nth-child(2) {
+        //     padding-top: 30px;
+        //   }
+        // }
+      }
       &_container {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
         padding: 60px 0 30px;
+        gap: 70px;
 
         & > div {
           width: 100%;
@@ -161,6 +184,20 @@
   }
 }
 
+@include tablet() {
+  .section {
+    &__columns {
+      &-two {
+        .section__columns_container {
+          //   &> div:nth-child(2) {
+          //    padding-top: 70px;
+          //  }
+        }
+      }
+    }
+  }
+}
+
 @include mobile() {
   .section:has(.section__columns_right) {
     padding: 0;
@@ -171,11 +208,28 @@
   }
   .section {
     &__columns {
+      &-one,
+      &-two {
+        background-size: 100% calc(100% / 3);
+      }
+      &-one {
+        background-image: url(/img/bg/400/black-paper-bg.png),
+          url(/img/bg/400/violet-paper-bg.png),
+          url(/img/bg/400/blue-paper-bg.png);
+      }
+      &-two {
+        background-image: url(/img/bg/400/blue-paper-bg.png),
+          url(/img/bg/400/violet-paper-bg.png),
+          url(/img/bg/400/black-paper-bg.png);
+            background-size: 100% 25%, 100% 50%, 100% 40%;
+        background-position: 0% 0%, 0% 25%, 0% 100%;
+      }
+
       &_container {
-        padding: 0;
+        // padding: 0;
         gap: 0px;
         max-width: 96%;
-        padding: 35px 25px 25px;
+        padding: 15px 0 0;
 
         & > div:nth-child(1) {
           margin-bottom: 60px;
@@ -206,8 +260,6 @@
   .section {
     &__columns {
       &_container {
-
-
         & > div {
           h4 {
             margin: 20px 0;

@@ -61,9 +61,9 @@ const sendModalForm = () => {
 
 // validation style
 inputName.nextElementSibling.style.display = 'none';
-inputEmail.nextElementSibling.style.display = 'none';
+inputEmail.nextElementSibling.style.display = 'none'; // modal
 userName.nextElementSibling.style.display = 'none';
-email.nextElementSibling.style.display = 'none';
+email.nextElementSibling.style.display = 'none'; // form desktop
 
 const eventListener = (input, validity) => {
   input.addEventListener('input', function (event) {
@@ -78,26 +78,22 @@ const eventListener = (input, validity) => {
   });
 };
 
-eventListener(inputName, !ValidEmpty(inputName.value));
-eventListener(
-  inputEmail,
-  !ValidPhone(inputEmail.value) && !ValidTelegram(email.value)
-);
-eventListener(userName, !ValidEmpty(userName.value));
-eventListener(email, !ValidPhone(email.value) && !ValidTelegram(email.value));
+eventListener(inputName, ValidEmpty(inputName.value));
+eventListener(inputEmail, !ValidAllInOne(inputEmail.value));
+eventListener(userName, ValidEmpty(userName.value));
+eventListener(email, !ValidAllInOne(email.value));
 
 button_mod.addEventListener('click', function (event) {
   event.preventDefault();
   if (!inputName.value) {
     inputName.setCustomValidity('Please fill the required fields');
-
     showError(inputName);
   } else if (!inputEmail.value) {
     inputEmail.setCustomValidity('Please fill the required fields');
     inputEmail.nextElementSibling.textContent =
       'Please fill the required fields';
     showError(inputEmail);
-  } else if (!ValidPhone(inputEmail.value) && !ValidTelegram(inputEmail.value)) {
+  } else if (!ValidAllInOne(inputEmail.value)) {
     inputEmail.setCustomValidity('Incorrect format');
     inputEmail.nextElementSibling.textContent = 'Incorrect format';
     showError(inputEmail);
@@ -115,7 +111,7 @@ button.addEventListener('click', function (event) {
     email.nextElementSibling.textContent = 'Please fill the required fields';
     email.setCustomValidity('Please fill the required fields');
     showError(email);
-  } else if (!ValidPhone(email.value) && !ValidTelegram(email.value)) {
+  } else if (!ValidAllInOne(email.value)) {
     email.nextElementSibling.textContent = 'Incorrect format';
     email.setCustomValidity('Incorrect format');
     showError(email);
@@ -144,7 +140,7 @@ function ValidPhone(text) {
 }
 
 function ValidEmpty(text) {
-  var re = /^[\d\+][\d\(\)\ -]{4,14}\d$/;
+  var re = /^\s*$/;
   var valid = re.test(text);
   return valid;
 }
@@ -159,6 +155,14 @@ function ValidEmpty(text) {
 
 function ValidTelegram(text) {
   var re = /^[a-zA-Z][a-zA-Z0-9-_\.]{1,32}$/;
+  var valid = re.test(text);
+  return valid;
+}
+
+function ValidAllInOne(text) {
+  var re =
+    /(^[\d\+][\d\(\)\ -]{4,10}$)|(^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$)|(^\@?[a-zA-Z0-9-_\.]{2,32}$)/i;
+    // phone | email | telegram
   var valid = re.test(text);
   return valid;
 }

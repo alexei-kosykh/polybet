@@ -1,6 +1,13 @@
 .section__features {
   z-index: 10;
 
+  background-image: url(/img/bg/1920/black-paper-bg.png),
+    url(/img/bg/1920/blue-paper-bg.png), url(/img/bg/1920/violet-paper-bg.png),
+    url(/img/bg/1920/black-paper-bg.png);
+  background-position: left top, right top, left bottom, right bottom;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+
   &_block {
     height: 1120px;
     max-width: 1240px;
@@ -28,54 +35,6 @@
   &_p-t-30 {
     padding-top: 30px;
   }
-
-  &_bg-black-first {
-    position: absolute;
-    top: 0;
-    bottom: 50%;
-    left: 0;
-    right: 50%;
-  }
-
-  &_bg-black-first .bg {
-    background-color: #413f3f;
-  }
-
-  &_bg-dark-violet {
-    position: absolute;
-    top: 0;
-    bottom: 50%;
-    left: 50%;
-    right: 0;
-  }
-
-  &_bg-dark-violet .bg {
-    background-color: #25255b;
-  }
-
-  &_bg-light-violet {
-    position: absolute;
-    top: 50%;
-    bottom: 0;
-    left: 0;
-    right: 50%;
-  }
-
-  &_bg-light-violet .bg {
-    background-color: #6868a1;
-  }
-
-  &_bg-black-second {
-    position: absolute;
-    top: 50%;
-    bottom: 0;
-    left: 50%;
-    right: 0;
-  }
-
-  &_bg-black-second .bg {
-    background-color: #2b2b2b;
-  }
 }
 
 @include desktop() {
@@ -95,6 +54,11 @@
 @include laptop() {
   .section__features {
     padding: 0 20px;
+    background-image: url(/img/bg/1024/black-paper-bg.png),
+    url(/img/bg/1024/blue-paper-bg.png), url(/img/bg/1024/violet-paper-bg.png),
+    url(/img/bg/1024/black-paper-bg.png);
+  background-position: left top;
+  background-size: 100% 25%, 100% 55%, 100% 80%, 100% 100%;
 
     &_block {
       height: auto;
@@ -169,6 +133,7 @@
 
 @include tablet() {
   .section__features {
+    background-size: 100% 28%, 100% 55%, 100% 79%, 100% 100%;
     &_block {
       &-text {
         padding: 30px 5px 0px 10px;
@@ -180,6 +145,10 @@
 @include mobile() {
   .section__features {
     padding-top: 20px;
+    background-image: url(/img/bg/400/black-paper-bg.png),
+    url(/img/bg/400/blue-paper-bg.png), url(/img/bg/400/violet-paper-bg.png),
+    url(/img/bg/400/black-paper-bg.png);
+    background-size: 100% 26%, 100% 54%, 100% 79%, 100% 100%;
 
     &_block {
       padding-top: 10px;

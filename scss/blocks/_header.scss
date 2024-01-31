@@ -14,6 +14,7 @@ header {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+  transition: transform 0.5s linear;
 
   &.header_bg-grey {
     position: fixed;
@@ -31,6 +32,10 @@ header {
     );
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
+  }
+
+  &.hide {
+    transform: translateY(-64px);
   }
 
   svg {

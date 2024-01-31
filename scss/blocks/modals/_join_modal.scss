@@ -185,6 +185,7 @@
       &:hover {
         path {
           fill: #9e9dfe;
+          transition: all 0.5s ease-in-out;
         }
       }
     }

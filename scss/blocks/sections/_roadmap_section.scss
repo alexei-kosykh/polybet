@@ -126,7 +126,7 @@
 @include mobile() {
   .section__container:has(.section__roadmap) {
     max-width: 96%;
-    padding: 30px 10px 0;
+    padding: 30px 0 0;
   }
   .section__roadmap {
     min-height: auto;
@@ -134,6 +134,7 @@
     h2 {
       margin-bottom: 70px;
     }
+
 
     &_plan {
       padding: 0;
@@ -147,6 +148,10 @@
         white-space: normal;
         height: auto;
 
+        h4{
+          padding-left: 8px;
+        }
+
         & > span::before {
           bottom: -7px;
         }
@@ -158,18 +163,18 @@
         }
       }
     }
+
+    &_line {
+      left: 8px;
+    }
+
     &_point {
       top: -34px;
+      left: 8px;
     }
 
     &_items {
       margin-top: 16px;
     }
-  }
-}
-
-@include mobile-only() {
-  .section__container:has(.section__roadmap) {
-    padding: 30px 10px 0;
   }
 }
