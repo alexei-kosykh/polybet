@@ -2586,7 +2586,6 @@ h5 {
   object-fit: cover;
   position: relative;
   z-index: 9;
-  filter: brightness(0.5);
 }
 .card__title {
   position: absolute;
