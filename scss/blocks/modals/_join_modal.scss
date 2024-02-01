@@ -8,10 +8,10 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-    background-image: url(/img/bg/1024/blackBg.png);
+    background-image: url(/img/bg/1024/blackBg.webp);
 
     & .button {
-      transition: none;
+      transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out;
     }
 
   .form_ok {
@@ -169,6 +169,9 @@
     & > a:hover {
       &[title='Soon'] > span {
         display: block;
+        animation-name: slide;
+        animation-duration: 1.2s;
+        animation-iteration-count: 1;
       }
     }
 
@@ -193,7 +196,7 @@
       &:hover {
         path {
           fill: #9e9dfe;
-          transition: all 0.5s ease-in-out;
+          transition: all 0.2s ease-in-out;
         }
       }
     }

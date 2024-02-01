@@ -2,7 +2,8 @@
 const container = document.getElementById('plan');
 const middle = container.children[2];
 
-middle.scrollIntoView();
+
+container.scrollTo(middle.offsetLeft, 0);
 
 // Scroll height
 
@@ -135,21 +136,21 @@ const arrayInfo = [
 <p class="section__description">Future plans development, roadmap update 2026.</p>
 </li></div>`,
 ];
+
 let lastIndex = 0;
-let middleWidth = container.scrollLeft / 2;
+let middleWidth = middle.offsetLeft / 2;
+
 let mobile = window.innerWidth <= 576;
 container.addEventListener('scroll', onScroll);
 
 window.addEventListener('resize', (e) => {
   mobile = window.innerWidth <= 576;
-  // console.log(!mobile);
   if (!mobile) {
     removeAllElements();
     addAllElements();
   } else {
-    middleWidth = (container.scrollLeft / 2);
-    console.log(lastIndex, 'lastindex')
-    middle.scrollIntoView();
+    middleWidth = container.scrollLeft / 2;
+    container.scrollTo(middle.offsetLeft, 0);
     removeAllElements();
     onScroll();
   }
@@ -174,12 +175,7 @@ function removeAllElements() {
 }
 
 function onScroll() {
-
   const indexItem = container.scrollLeft / middleWidth;
-  console.log(indexItem, 'indexItem');
-  console.log(container.scrollLeft , 'container.scrollLeft ');
-  console.log(middleWidth, 'middleWidth');
-  console.log(container.scrollLeft / 2, 'result');
   if (Number.isInteger(indexItem) && mobile) {
     const item = container.children[indexItem]?.getElementsByClassName(
       'section__roadmap_items'
@@ -187,14 +183,11 @@ function onScroll() {
     const previousItem = container.children[lastIndex]?.getElementsByClassName(
       'section__roadmap_items'
     )[0];
-    console.log(!!item.children[1], 'item');
-    console.log(!!previousItem.children[1], 'item');
-      previousItem?.children[1]?.remove();
-      item?.children[1]?.remove();
+    previousItem?.children[1]?.remove();
+    item?.children[1]?.remove();
     item?.insertAdjacentHTML('beforeEnd', arrayInfo[indexItem]);
     lastIndex = indexItem;
   }
-
 }
 
 addAllElements();

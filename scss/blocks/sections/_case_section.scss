@@ -38,6 +38,9 @@
 
   @media (hover: hover) {
     .card:hover {
+      animation-name: card;
+      animation-duration: 0.6s;
+      animation-iteration-count: 1;
       .card__info_button {
         display: flex;
       }

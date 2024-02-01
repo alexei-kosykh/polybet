@@ -14,7 +14,7 @@ header {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
-  transition: transform 0.5s linear;
+  transition: transform 0.3s linear;
 
   &.header_bg-grey {
     position: fixed;
@@ -60,6 +60,7 @@ header {
       cursor: default;
       &:hover {
         color: #9e9dfe;
+        transition: all 0.2s ease-in-out;
         .rotate > .left_arrow,
         .rotate > .right_arrow {
           background-color: #9e9dfe;
@@ -153,6 +154,7 @@ header {
             display: block;
 
             &:hover {
+              transition: all 0.2s ease-in-out;
               color: #9e9dfe;
               text-decoration: underline;
             }
@@ -326,6 +328,9 @@ header {
         & > a:hover {
           &[title='Soon'] > span {
             display: block;
+            animation-name: slide;
+        animation-duration: 1.2s;
+        animation-iteration-count: 1;
           }
         }
 
@@ -350,6 +355,7 @@ header {
           &:hover {
             path {
               fill: #9e9dfe;
+              transition: all 0.2s ease-in-out;
             }
           }
         }

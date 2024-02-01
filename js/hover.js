@@ -25,7 +25,6 @@ const buttons = document.querySelectorAll('.section__button_transparent');
 
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("mouseover", function() {
-
     this.textContent = "Soon";
   })
 

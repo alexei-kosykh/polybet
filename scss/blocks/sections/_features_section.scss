@@ -55,10 +55,10 @@
   .section__features {
     padding: 0 20px;
     background-image: url(/img/bg/1024/black-paper-bg.png),
-    url(/img/bg/1024/blue-paper-bg.png), url(/img/bg/1024/violet-paper-bg.png),
-    url(/img/bg/1024/black-paper-bg.png);
-  background-position: left top;
-  background-size: 100% 25%, 100% 55%, 100% 80%, 100% 100%;
+      url(/img/bg/1024/blue-paper-bg.png), url(/img/bg/1024/violet-paper-bg.png),
+      url(/img/bg/1024/black-paper-bg.png);
+    background-position: left top;
+    background-size: 100% 25%, 100% 55%, 100% 80%, 100% 100%;
 
     &_block {
       height: auto;
@@ -145,10 +145,8 @@
 @include mobile() {
   .section__features {
     padding-top: 20px;
-    background-image: url(/img/bg/400/black-paper-bg.png),
-    url(/img/bg/400/blue-paper-bg.png), url(/img/bg/400/violet-paper-bg.png),
-    url(/img/bg/400/black-paper-bg.png);
-    background-size: 100% 26%, 100% 54%, 100% 79%, 100% 100%;
+
+    background-size: 165% 26%, 165% 54%, 165% 79%, 165% 100%;
 
     &_block {
       padding-top: 10px;
@@ -177,6 +175,7 @@
 
 @include mobile-only() {
   .section__features {
+    background-size: 100% 26%, 100% 54%, 100% 79%, 100% 100%;
     &_bg-black-first,
     &_bg-dark-violet,
     &_bg-light-violet,

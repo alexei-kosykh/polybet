@@ -5,3 +5,5 @@ tokens-smtp.txt
 /scss/blocks/sections/features
 
 /img/events/last
+
+/img/**/big

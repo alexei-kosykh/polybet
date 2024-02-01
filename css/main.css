@@ -194,7 +194,7 @@ header {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
-  transition: transform 0.5s linear;
+  transition: transform 0.3s linear;
 }
 header.header_bg-grey {
   position: fixed;
@@ -228,6 +228,7 @@ header .menu__item {
 }
 header .menu__item:hover {
   color: #9e9dfe;
+  transition: all 0.2s ease-in-out;
 }
 header .menu__item:hover .rotate > .left_arrow,
 header .menu__item:hover .rotate > .right_arrow {
@@ -297,6 +298,7 @@ header .menu__item_dropdown .dropdown-content div {
 }
 header .menu__item_dropdown .dropdown-content a:hover,
 header .menu__item_dropdown .dropdown-content div:hover {
+  transition: all 0.2s ease-in-out;
   color: #9e9dfe;
   text-decoration: underline;
 }
@@ -418,6 +420,9 @@ header .menu_mob {
   }
   header .menu__socials_mob > a:hover[title=Soon] > span {
     display: block;
+    animation-name: slide;
+    animation-duration: 1.2s;
+    animation-iteration-count: 1;
   }
   header .menu__socials_mob > a[title=Soon] > span {
     font-family: "PoppinsR", sans-serif;
@@ -438,6 +443,7 @@ header .menu_mob {
   }
   header .menu__socials_mob svg:hover path {
     fill: #9e9dfe;
+    transition: all 0.2s ease-in-out;
   }
   header .menu_mob {
     display: block;
@@ -496,6 +502,9 @@ header .menu_mob {
 }
 .socials a:hover[title=Soon] > span {
   display: block;
+  animation-name: slide;
+  animation-duration: 1.2s;
+  animation-iteration-count: 1;
 }
 .socials a[title=Soon] > span {
   font-family: "PoppinsR", sans-serif;
@@ -525,7 +534,7 @@ header .menu_mob {
 }
 .socials svg:hover path {
   fill: #9e9dfe;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 @media (max-width: 768px) {
@@ -542,22 +551,19 @@ header .menu_mob {
   background-size: cover;
 }
 .section_black {
-  background-image: url(/img/bg/1920/blackBg.png);
+  background-image: url(/img/bg/1920/blackBg.webp);
 }
 .section_violet {
-  background-image: url(/img/bg/1920/violetBg.png);
+  background-image: url(/img/bg/1920/violetBg.webp);
 }
 .section_green {
-  background-image: url(/img/bg/1920/greenBg.png);
+  background-image: url(/img/bg/1920/greenBg.webp);
 }
 .section_blue {
-  background-image: url(/img/bg/1920/blueBg.png);
+  background-image: url(/img/bg/1920/blueBg.webp);
 }
 .section_gray {
-  background-image: url(/img/bg/1920/grayBg.png);
-}
-.section_paper {
-  background-image: url(/img/bg/1920/paperScreen.png);
+  background-image: url(/img/bg/1920/grayBg.webp);
 }
 .section__container {
   position: relative;
@@ -621,19 +627,19 @@ header .menu_mob {
 
 @media (max-width: 1440px) {
   .section_black {
-    background-image: url(/img/bg/1440/blackBg.png);
+    background-image: url(/img/bg/1440/blackBg.webp);
   }
   .section_violet {
-    background-image: url(/img/bg/1440/violetBg.png);
+    background-image: url(/img/bg/1440/violetBg.webp);
   }
   .section_green {
-    background-image: url(/img/bg/1440/greenBg.png);
+    background-image: url(/img/bg/1440/greenBg.webp);
   }
   .section_blue {
-    background-image: url(/img/bg/1440/blueBg.png);
+    background-image: url(/img/bg/1440/blueBg.webp);
   }
   .section_gray {
-    background-image: url(/img/bg/1440/grayBg.png);
+    background-image: url(/img/bg/1440/grayBg.webp);
   }
 }
 @media (max-width: 1240px) {
@@ -641,19 +647,19 @@ header .menu_mob {
     padding: 0 90px;
   }
   .section_black {
-    background-image: url(/img/bg/1024/blackBg.png);
+    background-image: url(/img/bg/1024/blackBg.webp);
   }
   .section_violet {
-    background-image: url(/img/bg/1024/violetBg.png);
+    background-image: url(/img/bg/1024/violetBg.webp);
   }
   .section_green {
-    background-image: url(/img/bg/1024/greenBg.png);
+    background-image: url(/img/bg/1024/greenBg.webp);
   }
   .section_blue {
-    background-image: url(/img/bg/1024/blueBg.png);
+    background-image: url(/img/bg/1024/blueBg.webp);
   }
   .section_gray {
-    background-image: url(/img/bg/1024/grayBg.png);
+    background-image: url(/img/bg/1024/grayBg.webp);
   }
 }
 @media (max-width: 1024px) {
@@ -661,19 +667,19 @@ header .menu_mob {
     padding: 0 40px;
   }
   .section_black {
-    background-image: url(/img/bg/768/blackBg.png);
+    background-image: url(/img/bg/768/blackBg.webp);
   }
   .section_violet {
-    background-image: url(/img/bg/768/violetBg.png);
+    background-image: url(/img/bg/768/violetBg.webp);
   }
   .section_green {
-    background-image: url(/img/bg/768/greenBg.png);
+    background-image: url(/img/bg/768/greenBg.webp);
   }
   .section_blue {
-    background-image: url(/img/bg/768/blueBg.png);
+    background-image: url(/img/bg/768/blueBg.webp);
   }
   .section_gray {
-    background-image: url(/img/bg/768/grayBg.png);
+    background-image: url(/img/bg/768/grayBg.webp);
   }
 }
 @media (max-width: 576px) {
@@ -697,19 +703,19 @@ header .menu_mob {
     font-size: 14px;
   }
   .section_black {
-    background-image: url(/img/bg/400/blackBg.png);
+    background-image: url(/img/bg/400/blackBg.webp);
   }
   .section_violet {
-    background-image: url(/img/bg/400/violetBg.png);
+    background-image: url(/img/bg/400/violetBg.webp);
   }
   .section_green {
-    background-image: url(/img/bg/400/greenBg.png);
+    background-image: url(/img/bg/400/greenBg.webp);
   }
   .section_blue {
-    background-image: url(/img/bg/400/blueBg.png);
+    background-image: url(/img/bg/400/blueBg.webp);
   }
   .section_gray {
-    background-image: url(/img/bg/400/grayBg.png);
+    background-image: url(/img/bg/400/grayBg.webp);
   }
 }
 @media (max-width: 393px) {
@@ -912,6 +918,11 @@ header .menu_mob {
   }
 }
 @media (hover: hover) {
+  .section__event_cases .card:hover {
+    animation-name: card;
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+  }
   .section__event_cases .card:hover .card__info_button {
     display: flex;
   }
@@ -1067,8 +1078,7 @@ header .menu_mob {
 @media (max-width: 576px) {
   .section__features {
     padding-top: 20px;
-    background-image: url(/img/bg/400/black-paper-bg.png), url(/img/bg/400/blue-paper-bg.png), url(/img/bg/400/violet-paper-bg.png), url(/img/bg/400/black-paper-bg.png);
-    background-size: 100% 26%, 100% 54%, 100% 79%, 100% 100%;
+    background-size: 165% 26%, 165% 54%, 165% 79%, 165% 100%;
   }
   .section__features_block {
     padding-top: 10px;
@@ -1088,6 +1098,9 @@ header .menu_mob {
   }
 }
 @media (max-width: 393px) {
+  .section__features {
+    background-size: 100% 26%, 100% 54%, 100% 79%, 100% 100%;
+  }
   .section__features_bg-black-first, .section__features_bg-dark-violet, .section__features_bg-light-violet, .section__features_bg-black-second {
     top: -40px;
     bottom: -100px;
@@ -1897,7 +1910,7 @@ header .menu_mob {
 }
 
 .button {
-  transition: all 0.5s ease-in-out;
+  transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .section__button-group {
@@ -1925,6 +1938,9 @@ header .menu_mob {
   margin-left: 24px;
 }
 .section__button_transparent:hover {
+  animation-name: demo;
+  animation-duration: 1.2s;
+  animation-iteration-count: 1;
   background-color: rgba(56, 56, 56, 0.319);
 }
 
@@ -1972,11 +1988,6 @@ header .menu_mob {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-}
-
-.firstBg,
-.thirdBg {
-  z-index: 2;
 }
 
 .mainOne,
@@ -2268,10 +2279,10 @@ footer > div a span {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(/img/bg/1024/blackBg.png);
+  background-image: url(/img/bg/1024/blackBg.webp);
 }
 .modal__join .button {
-  transition: none;
+  transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 .modal__join .form_ok {
   display: none;
@@ -2401,6 +2412,9 @@ footer > div a span {
 }
 .modal__join .modal__socials > a:hover[title=Soon] > span {
   display: block;
+  animation-name: slide;
+  animation-duration: 1.2s;
+  animation-iteration-count: 1;
 }
 .modal__join .modal__socials > a[title=Soon] > span {
   font-family: "PoppinsR", sans-serif;
@@ -2421,7 +2435,7 @@ footer > div a span {
 }
 .modal__join .modal__socials svg:hover path {
   fill: #9e9dfe;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 @media (max-width: 576px) {
@@ -2577,7 +2591,6 @@ h5 {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 15px 19px 20px 0px rgba(0, 0, 0, 0.3);
-  transition: all 0.2s linear;
   font-family: "PoppinsM", sans-serif;
   cursor: default;
 }
@@ -2709,6 +2722,35 @@ h5 {
   margin-top: 14px;
 }
 
+@keyframes slide {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes demo {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes card {
+  0% {
+    opacity: 0.8;
+  }
+  20% {
+    transform: scale(0.99);
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 @media (max-width: 930px) {
   .oracleApproved {
     display: none;

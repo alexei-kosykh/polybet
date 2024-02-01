@@ -7,22 +7,19 @@
   background-size: cover;
 
   &_black {
-    background-image: url(/img/bg/1920/blackBg.png);
+    background-image: url(/img/bg/1920/blackBg.webp);
   }
   &_violet {
-    background-image: url(/img/bg/1920/violetBg.png);
+    background-image: url(/img/bg/1920/violetBg.webp);
   }
   &_green {
-    background-image: url(/img/bg/1920/greenBg.png);
+    background-image: url(/img/bg/1920/greenBg.webp);
   }
   &_blue {
-    background-image: url(/img/bg/1920/blueBg.png);
+    background-image: url(/img/bg/1920/blueBg.webp);
   }
   &_gray {
-    background-image: url(/img/bg/1920/grayBg.png);
-  }
-  &_paper {
-    background-image: url(/img/bg/1920/paperScreen.png);
+    background-image: url(/img/bg/1920/grayBg.webp);
   }
 
   &__container {
@@ -104,41 +101,41 @@
 @include desktop-only() {
   .section {
     &_black {
-      background-image: url(/img/bg/1440/blackBg.png);
+      background-image: url(/img/bg/1440/blackBg.webp);
     }
     &_violet {
-      background-image: url(/img/bg/1440/violetBg.png);
+      background-image: url(/img/bg/1440/violetBg.webp);
     }
     &_green {
-      background-image: url(/img/bg/1440/greenBg.png);
+      background-image: url(/img/bg/1440/greenBg.webp);
     }
     &_blue {
-      background-image: url(/img/bg/1440/blueBg.png);
+      background-image: url(/img/bg/1440/blueBg.webp);
     }
     &_gray {
-      background-image: url(/img/bg/1440/grayBg.png);
+      background-image: url(/img/bg/1440/grayBg.webp);
     }
   }
- }
+}
 
 @include desktop() {
   .section {
     padding: 0 90px;
 
     &_black {
-      background-image: url(/img/bg/1024/blackBg.png);
+      background-image: url(/img/bg/1024/blackBg.webp);
     }
     &_violet {
-      background-image: url(/img/bg/1024/violetBg.png);
+      background-image: url(/img/bg/1024/violetBg.webp);
     }
     &_green {
-      background-image: url(/img/bg/1024/greenBg.png);
+      background-image: url(/img/bg/1024/greenBg.webp);
     }
     &_blue {
-      background-image: url(/img/bg/1024/blueBg.png);
+      background-image: url(/img/bg/1024/blueBg.webp);
     }
     &_gray {
-      background-image: url(/img/bg/1024/grayBg.png);
+      background-image: url(/img/bg/1024/grayBg.webp);
     }
   }
 }
@@ -148,22 +145,21 @@
     padding: 0 40px;
 
     &_black {
-      background-image: url(/img/bg/768/blackBg.png);
+      background-image: url(/img/bg/768/blackBg.webp);
     }
     &_violet {
-      background-image: url(/img/bg/768/violetBg.png);
+      background-image: url(/img/bg/768/violetBg.webp);
     }
     &_green {
-      background-image: url(/img/bg/768/greenBg.png);
+      background-image: url(/img/bg/768/greenBg.webp);
     }
     &_blue {
-      background-image: url(/img/bg/768/blueBg.png);
+      background-image: url(/img/bg/768/blueBg.webp);
     }
     &_gray {
-      background-image: url(/img/bg/768/grayBg.png);
+      background-image: url(/img/bg/768/grayBg.webp);
     }
   }
-
 }
 
 @include mobile() {
@@ -189,19 +185,19 @@
     }
 
     &_black {
-      background-image: url(/img/bg/400/blackBg.png);
+      background-image: url(/img/bg/400/blackBg.webp);
     }
     &_violet {
-      background-image: url(/img/bg/400/violetBg.png);
+      background-image: url(/img/bg/400/violetBg.webp);
     }
     &_green {
-      background-image: url(/img/bg/400/greenBg.png);
+      background-image: url(/img/bg/400/greenBg.webp);
     }
     &_blue {
-      background-image: url(/img/bg/400/blueBg.png);
+      background-image: url(/img/bg/400/blueBg.webp);
     }
     &_gray {
-      background-image: url(/img/bg/400/grayBg.png);
+      background-image: url(/img/bg/400/grayBg.webp);
     }
   }
 }
