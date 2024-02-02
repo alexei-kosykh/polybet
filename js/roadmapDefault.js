@@ -142,8 +142,6 @@ let middleWidth = middle.offsetLeft / 2;
 let scrolled = true;
 let mobile = window.innerWidth <= 576;
 
-
-
 container.addEventListener('scroll', onScroll);
 
 window.addEventListener('resize', (e) => {
@@ -178,20 +176,35 @@ function removeAllElements() {
 }
 
 function onScroll() {
-  const indexItem = container.scrollLeft / middleWidth;
-  if (Number.isInteger(indexItem) && mobile) {
-    const item = container.children[indexItem]?.getElementsByClassName(
-      'section__roadmap_items'
-    )[0];
-    const previousItem = container.children[lastIndex]?.getElementsByClassName(
-      'section__roadmap_items'
-    )[0];
-    previousItem?.children[1]?.remove();
-    item?.children[1]?.remove();
-    item?.insertAdjacentHTML('beforeEnd', arrayInfo[indexItem]);
-    lastIndex = indexItem;
-  }}
+  indexItem = container.scrollLeft / middleWidth;
 
+  if (scrolled) {
+    scrolled = false;
 
+    if (indexItem - lastIndex > 0) {
+      indexItem =
+        lastIndex === arrayInfo.length ? arrayInfo.length : lastIndex + 1;
+    } else if (indexItem - lastIndex < 0) {
+      indexItem = lastIndex === 0 ? 0 : lastIndex - 1;
+    }
+
+    if (Number.isInteger(indexItem) && mobile) {
+      const item = container.children[indexItem]?.getElementsByClassName(
+        'section__roadmap_items'
+      )[0];
+      const previousItem = container.children[
+        lastIndex
+      ]?.getElementsByClassName('section__roadmap_items')[0];
+      previousItem?.children[1]?.remove();
+      item?.children[1]?.remove();
+      item?.insertAdjacentHTML('beforeEnd', arrayInfo[indexItem]);
+      lastIndex = indexItem;
+    }
+  }
+
+  Number.isInteger(container.scrollLeft / middleWidth)
+    ? (scrolled = true)
+    : (scrolled = false);
+}
 
 addAllElements();

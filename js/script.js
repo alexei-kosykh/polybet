@@ -77,7 +77,7 @@ const func = (box) => {
     startY = e.pageY - box.offsetTop;
     scrollLeft = box.scrollLeft;
     scrollTop = box.scrollTop;
-    box.style.cursor = 'grabbing';
+    box.style.cursor = 'default';
   });
 
   box.addEventListener('mouseleave', () => {
