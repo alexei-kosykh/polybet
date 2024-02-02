@@ -192,7 +192,6 @@ function generateContent() {
 
 function onScroll() {
   indexItem = container.scrollLeft / middleWidth;
-  console.log(scrolled);
   if (scrolled) {
     scrolled = false;
 
