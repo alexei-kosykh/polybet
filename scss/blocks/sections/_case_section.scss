@@ -38,11 +38,11 @@
 
   @media (hover: hover) {
     .card:hover {
-      animation-name: card;
-      animation-duration: 0.6s;
-      animation-iteration-count: 1;
       .card__info_button {
         display: flex;
+        animation-name: slide-card-hover;
+        animation-duration: 0.5s;
+        animation-iteration-count: 1;
       }
       .card__info_status {
         display: none;

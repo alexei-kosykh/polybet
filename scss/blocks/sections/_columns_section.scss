@@ -9,14 +9,14 @@
       background-repeat: no-repeat;
     }
     &-one {
-      background-image: url(/img/bg/1024/black-paper-bg.png),
-        url(/img/bg/1024/violet-paper-bg.png),
-        url(/img/bg/1024/blue-paper-bg.png);
+      background-image: url(/img/bg/1920/black-paper-bg.webp),
+        url(/img/bg/1920/violet-paper-bg.webp),
+        url(/img/bg/1920/blue-paper-bg.webp);
     }
     &-two {
-      background-image: url(/img/bg/1024/blue-paper-bg.png),
-        url(/img/bg/1024/violet-paper-bg.png),
-        url(/img/bg/1024/black-paper-bg.png);
+      background-image: url(/img/bg/1920/blue-paper-bg.webp),
+        url(/img/bg/1920/violet-paper-bg.webp),
+        url(/img/bg/1920/black-paper-bg.webp);
     }
 
     &_container {
@@ -121,16 +121,16 @@
         background-size: 100% calc(100% / 3);
       }
       &-one {
-        background-image: url(/img/bg/768/black-paper-bg.png),
-          url(/img/bg/768/violet-paper-bg.png),
-          url(/img/bg/768/blue-paper-bg.png);
+        background-image: url(/img/bg/1024/black-paper-bg.png),
+          url(/img/bg/1024/violet-paper-bg.png),
+          url(/img/bg/1024/blue-paper-bg.png);
       }
       &-two {
-        background-image: url(/img/bg/768/blue-paper-bg.png),
-          url(/img/bg/768/violet-paper-bg.png),
-          url(/img/bg/768/black-paper-bg.png);
-          background-size: 100% 30%, 100% 54%, 100% 40%;
-          background-position: 0% 0%, 0% 25%, 0% 100%;
+        background-image: url(/img/bg/1024/blue-paper-bg.png),
+          url(/img/bg/1024/violet-paper-bg.png),
+          url(/img/bg/1024/black-paper-bg.png);
+        background-size: 100% 30%, 100% 54%, 100% 40%;
+        background-position: 0% 0%, 0% 25%, 0% 100%;
         // .section__columns_container {
         //   gap:60px;
         //    &> div:nth-child(2) {
@@ -194,6 +194,19 @@
           //  }
         }
       }
+
+      &-one {
+        background-image: url(/img/bg/768/black-paper-bg.png),
+          url(/img/bg/768/violet-paper-bg.png),
+          url(/img/bg/768/blue-paper-bg.png);
+      }
+      &-two {
+        background-image: url(/img/bg/768/blue-paper-bg.png),
+          url(/img/bg/768/violet-paper-bg.png),
+          url(/img/bg/768/black-paper-bg.png);
+        background-size: 100% 26%, 100% 52%, 100% 40% !important;
+        background-position: 0% 0%, 0% 25%, 0% 100%;
+      }
     }
   }
 }
@@ -211,18 +224,6 @@
       &-one,
       &-two {
         background-size: 100% calc(100% / 3);
-      }
-      &-one {
-        background-image: url(/img/bg/400/black-paper-bg.png),
-          url(/img/bg/400/violet-paper-bg.png),
-          url(/img/bg/400/blue-paper-bg.png);
-      }
-      &-two {
-        background-image: url(/img/bg/400/blue-paper-bg.png),
-          url(/img/bg/400/violet-paper-bg.png),
-          url(/img/bg/400/black-paper-bg.png);
-            background-size: 100% 25%, 100% 50%, 100% 40%;
-        background-position: 0% 0%, 0% 25%, 0% 100%;
       }
 
       &_container {
@@ -259,6 +260,17 @@
 @include mobile-only() {
   .section {
     &__columns {
+      &-one {
+        background-image: url(/img/bg/400/black-paper-bg.png),
+          url(/img/bg/400/violet-paper-bg.png),
+          url(/img/bg/400/blue-paper-bg.png);
+      }
+      &-two {
+        background-image: url(/img/bg/400/blue-paper-bg.png),
+          url(/img/bg/400/violet-paper-bg.png),
+          url(/img/bg/400/black-paper-bg.png);
+      }
+
       &_container {
         & > div {
           h4 {

@@ -144,6 +144,7 @@
 
       & > li {
         scroll-snap-align: start;
+        scroll-snap-stop: always;
         min-width: 100%;
         white-space: normal;
         height: auto;

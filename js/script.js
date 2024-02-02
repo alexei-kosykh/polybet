@@ -82,12 +82,12 @@ const func = (box) => {
 
   box.addEventListener('mouseleave', () => {
     isDown = false;
-    box.style.cursor = 'grab';
+    box.style.cursor = 'default';
   });
 
   box.addEventListener('mouseup', () => {
     isDown = false;
-    box.style.cursor = 'grab';
+    box.style.cursor = 'default';
   });
 
   document.addEventListener('mousemove', (e) => {

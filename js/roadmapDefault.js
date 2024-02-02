@@ -2,7 +2,6 @@
 const container = document.getElementById('plan');
 const middle = container.children[2];
 
-
 container.scrollTo(middle.offsetLeft, 0);
 
 // Scroll height
@@ -137,10 +136,14 @@ const arrayInfo = [
 </li></div>`,
 ];
 
-let lastIndex = 0;
+let lastIndex = 2;
+let indexItem = 0;
 let middleWidth = middle.offsetLeft / 2;
-
+let scrolled = true;
 let mobile = window.innerWidth <= 576;
+
+
+
 container.addEventListener('scroll', onScroll);
 
 window.addEventListener('resize', (e) => {
@@ -187,7 +190,8 @@ function onScroll() {
     item?.children[1]?.remove();
     item?.insertAdjacentHTML('beforeEnd', arrayInfo[indexItem]);
     lastIndex = indexItem;
-  }
-}
+  }}
+
+
 
 addAllElements();

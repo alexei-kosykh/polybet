@@ -194,7 +194,7 @@ header {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
-  transition: transform 0.3s linear;
+  transition: transform 0.2s linear;
 }
 header.header_bg-grey {
   position: fixed;
@@ -918,13 +918,11 @@ header .menu_mob {
   }
 }
 @media (hover: hover) {
-  .section__event_cases .card:hover {
-    animation-name: card;
-    animation-duration: 0.6s;
-    animation-iteration-count: 1;
-  }
   .section__event_cases .card:hover .card__info_button {
     display: flex;
+    animation-name: slide-card-hover;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
   }
   .section__event_cases .card:hover .card__info_status {
     display: none;
@@ -969,7 +967,7 @@ header .menu_mob {
 }
 .section__features {
   z-index: 10;
-  background-image: url(/img/bg/1920/black-paper-bg.png), url(/img/bg/1920/blue-paper-bg.png), url(/img/bg/1920/violet-paper-bg.png), url(/img/bg/1920/black-paper-bg.png);
+  background-image: url(/img/bg/1920/black-paper-bg.webp), url(/img/bg/1920/blue-paper-bg.webp), url(/img/bg/1920/violet-paper-bg.webp), url(/img/bg/1920/black-paper-bg.webp);
   background-position: left top, right top, left bottom, right bottom;
   background-size: 50% 50%;
   background-repeat: no-repeat;
@@ -1115,10 +1113,10 @@ header .menu_mob {
   background-repeat: no-repeat;
 }
 .section__columns-one {
-  background-image: url(/img/bg/1024/black-paper-bg.png), url(/img/bg/1024/violet-paper-bg.png), url(/img/bg/1024/blue-paper-bg.png);
+  background-image: url(/img/bg/1920/black-paper-bg.webp), url(/img/bg/1920/violet-paper-bg.webp), url(/img/bg/1920/blue-paper-bg.webp);
 }
 .section__columns-two {
-  background-image: url(/img/bg/1024/blue-paper-bg.png), url(/img/bg/1024/violet-paper-bg.png), url(/img/bg/1024/black-paper-bg.png);
+  background-image: url(/img/bg/1920/blue-paper-bg.webp), url(/img/bg/1920/violet-paper-bg.webp), url(/img/bg/1920/black-paper-bg.webp);
 }
 .section__columns_container {
   display: flex;
@@ -1190,10 +1188,10 @@ header .menu_mob {
     background-size: 100% 33.3333333333%;
   }
   .section__columns-one {
-    background-image: url(/img/bg/768/black-paper-bg.png), url(/img/bg/768/violet-paper-bg.png), url(/img/bg/768/blue-paper-bg.png);
+    background-image: url(/img/bg/1024/black-paper-bg.png), url(/img/bg/1024/violet-paper-bg.png), url(/img/bg/1024/blue-paper-bg.png);
   }
   .section__columns-two {
-    background-image: url(/img/bg/768/blue-paper-bg.png), url(/img/bg/768/violet-paper-bg.png), url(/img/bg/768/black-paper-bg.png);
+    background-image: url(/img/bg/1024/blue-paper-bg.png), url(/img/bg/1024/violet-paper-bg.png), url(/img/bg/1024/black-paper-bg.png);
     background-size: 100% 30%, 100% 54%, 100% 40%;
     background-position: 0% 0%, 0% 25%, 0% 100%;
   }
@@ -1227,6 +1225,16 @@ header .menu_mob {
     right: 0;
   }
 }
+@media (max-width: 768px) {
+  .section__columns-one {
+    background-image: url(/img/bg/768/black-paper-bg.png), url(/img/bg/768/violet-paper-bg.png), url(/img/bg/768/blue-paper-bg.png);
+  }
+  .section__columns-two {
+    background-image: url(/img/bg/768/blue-paper-bg.png), url(/img/bg/768/violet-paper-bg.png), url(/img/bg/768/black-paper-bg.png);
+    background-size: 100% 26%, 100% 52%, 100% 40% !important;
+    background-position: 0% 0%, 0% 25%, 0% 100%;
+  }
+}
 @media (max-width: 576px) {
   .section:has(.section__columns_right) {
     padding: 0;
@@ -1236,14 +1244,6 @@ header .menu_mob {
   }
   .section__columns-one, .section__columns-two {
     background-size: 100% 33.3333333333%;
-  }
-  .section__columns-one {
-    background-image: url(/img/bg/400/black-paper-bg.png), url(/img/bg/400/violet-paper-bg.png), url(/img/bg/400/blue-paper-bg.png);
-  }
-  .section__columns-two {
-    background-image: url(/img/bg/400/blue-paper-bg.png), url(/img/bg/400/violet-paper-bg.png), url(/img/bg/400/black-paper-bg.png);
-    background-size: 100% 25%, 100% 50%, 100% 40%;
-    background-position: 0% 0%, 0% 25%, 0% 100%;
   }
   .section__columns_container {
     gap: 0px;
@@ -1265,6 +1265,12 @@ header .menu_mob {
   }
 }
 @media (max-width: 393px) {
+  .section__columns-one {
+    background-image: url(/img/bg/400/black-paper-bg.png), url(/img/bg/400/violet-paper-bg.png), url(/img/bg/400/blue-paper-bg.png);
+  }
+  .section__columns-two {
+    background-image: url(/img/bg/400/blue-paper-bg.png), url(/img/bg/400/violet-paper-bg.png), url(/img/bg/400/black-paper-bg.png);
+  }
   .section__columns_container > div h4 {
     margin: 20px 0;
   }
@@ -1619,6 +1625,7 @@ header .menu_mob {
   }
   .section__roadmap_plan > li {
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     min-width: 100%;
     white-space: normal;
     height: auto;
@@ -1928,6 +1935,7 @@ header .menu_mob {
   background-color: rgba(56, 56, 56, 0.319);
   border: 1px solid #fff;
   color: #fff;
+  transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .section__button_transparent {
@@ -1938,10 +1946,11 @@ header .menu_mob {
   margin-left: 24px;
 }
 .section__button_transparent:hover {
-  animation-name: demo;
-  animation-duration: 1.2s;
+  animation-name: demo-hover;
+  animation-duration: 10.5s;
   animation-iteration-count: 1;
   background-color: rgba(56, 56, 56, 0.319);
+  transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 @media (max-width: 768px) {
@@ -2255,7 +2264,7 @@ footer > div a span {
   pointer-events: none;
   z-index: 98;
   opacity: 0;
-  transition: opacity 0.15s ease;
+  transition: opacity 0.2s ease;
   background-color: black;
 }
 .modal__shadow--show {
@@ -2474,19 +2483,19 @@ footer > div a span {
 }
 .modal__stake_img img {
   width: 80vw;
-  max-width: 1000px;
+  max-width: 1030px;
   height: auto;
   max-height: 90vh;
 }
 .modal__stake_img > picture:last-child {
   position: absolute;
   top: 5px;
-  left: 10vw;
+  left: 9vw;
 }
 .modal__stake_img > picture:last-child img {
   padding: 10px 10px;
   width: 62vw;
-  max-width: 760px;
+  max-width: 770px;
   height: auto;
   max-height: 82vh;
 }
@@ -2696,6 +2705,11 @@ h5 {
   min-width: 108px;
   font-size: 10px;
 }
+.card__info_button, .card__info_tags, .card__info_status {
+  animation-name: slide-card-hover;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
 
 .descriptionWrapper p {
   position: relative;
@@ -2730,25 +2744,34 @@ h5 {
     opacity: 1;
   }
 }
-@keyframes demo {
+@keyframes slide-card-hover {
   0% {
-    opacity: 0.6;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
   }
   100% {
     opacity: 1;
   }
 }
-@keyframes card {
+@keyframes slide-card {
   0% {
-    opacity: 0.8;
+    opacity: 1;
   }
-  20% {
-    transform: scale(0.99);
-    opacity: 0.7;
+  90% {
+    opacity: 0;
   }
   100% {
-    opacity: 1;
-    transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes demo-hover {
+  0% {
+    color: rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    color: white;
   }
 }
 @media (max-width: 930px) {
