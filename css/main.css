@@ -421,7 +421,7 @@ header .menu_mob {
   header .menu__socials_mob > a:hover[title=Soon] > span {
     display: block;
     animation-name: slide;
-    animation-duration: 1.2s;
+    animation-duration: 0.5s;
     animation-iteration-count: 1;
   }
   header .menu__socials_mob > a[title=Soon] > span {
@@ -503,7 +503,7 @@ header .menu_mob {
 .socials a:hover[title=Soon] > span {
   display: block;
   animation-name: slide;
-  animation-duration: 1.2s;
+  animation-duration: 0.5s;
   animation-iteration-count: 1;
 }
 .socials a[title=Soon] > span {
@@ -1947,7 +1947,7 @@ header .menu_mob {
 }
 .section__button_transparent:hover {
   animation-name: demo-hover;
-  animation-duration: 10.5s;
+  animation-duration: 0.5s;
   animation-iteration-count: 1;
   background-color: rgba(56, 56, 56, 0.319);
   transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out;
@@ -2422,7 +2422,7 @@ footer > div a span {
 .modal__join .modal__socials > a:hover[title=Soon] > span {
   display: block;
   animation-name: slide;
-  animation-duration: 1.2s;
+  animation-duration: 0.5s;
   animation-iteration-count: 1;
 }
 .modal__join .modal__socials > a[title=Soon] > span {

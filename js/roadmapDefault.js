@@ -175,9 +175,24 @@ function removeAllElements() {
   }
 }
 
+function generateContent() {
+  if (Number.isInteger(indexItem) && mobile) {
+    const item = container.children[indexItem]?.getElementsByClassName(
+      'section__roadmap_items'
+    )[0];
+    const previousItem = container.children[lastIndex]?.getElementsByClassName(
+      'section__roadmap_items'
+    )[0];
+    previousItem?.children[1]?.remove();
+    item?.children[1]?.remove();
+    item?.insertAdjacentHTML('beforeEnd', arrayInfo[indexItem]);
+    lastIndex = indexItem;
+  }
+}
+
 function onScroll() {
   indexItem = container.scrollLeft / middleWidth;
-
+  console.log(scrolled);
   if (scrolled) {
     scrolled = false;
 
@@ -188,23 +203,14 @@ function onScroll() {
       indexItem = lastIndex === 0 ? 0 : lastIndex - 1;
     }
 
-    if (Number.isInteger(indexItem) && mobile) {
-      const item = container.children[indexItem]?.getElementsByClassName(
-        'section__roadmap_items'
-      )[0];
-      const previousItem = container.children[
-        lastIndex
-      ]?.getElementsByClassName('section__roadmap_items')[0];
-      previousItem?.children[1]?.remove();
-      item?.children[1]?.remove();
-      item?.insertAdjacentHTML('beforeEnd', arrayInfo[indexItem]);
-      lastIndex = indexItem;
-    }
+    generateContent();
   }
 
-  Number.isInteger(container.scrollLeft / middleWidth)
-    ? (scrolled = true)
-    : (scrolled = false);
+  if (Number.isInteger(container.scrollLeft / middleWidth)) {
+    scrolled = true;
+    container.scrollTo(indexItem * middleWidth, 0);
+    generateContent()
+  }
 }
 
 addAllElements();
