@@ -197,8 +197,8 @@ function onScroll() {
   const round =
     +((indexItem % container.scrollLeft).toFixed(1) + '').split('.')[1] || 0;
 
-  if (scrolled && ((round  > 4 && round <6 )|| round === 0)) {
-    console.log(round, 'r')
+  if (scrolled && ((round > 9 && round < 1) || round === 0)) {
+    console.log(round, 'r');
     if (indexItem - lastIndex > 0) {
       indexItem =
         lastIndex === arrayInfo.length ? arrayInfo.length : lastIndex + 1;
@@ -213,7 +213,7 @@ function onScroll() {
 
   if (Number.isInteger(container.scrollLeft / middleWidth)) {
     scrolled = true;
-    generateContent()
+    generateContent();
     //   console.log('Tick 3');
     //   container.scrollTo(indexItem * middleWidth, 0);
 
