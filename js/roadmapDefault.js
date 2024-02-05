@@ -193,26 +193,27 @@ function generateContent() {
 function onScroll() {
   indexItem = container.scrollLeft / middleWidth;
   var start = performance.now();
-  console.log(
-    +((indexItem % container.scrollLeft).toFixed(1) + '').split('.')[1] || 0
-  );
+
   const round =
     +((indexItem % container.scrollLeft).toFixed(1) + '').split('.')[1] || 0;
-  if (scrolled && (round > 4 || round < 6)) {
-    scrolled = false;
-    
+
+  if (scrolled && ((round  > 4 && round <6 )|| round === 0)) {
+    console.log(round, 'r')
     if (indexItem - lastIndex > 0) {
       indexItem =
         lastIndex === arrayInfo.length ? arrayInfo.length : lastIndex + 1;
     } else if (indexItem - lastIndex < 0) {
       indexItem = lastIndex === 0 ? 0 : lastIndex - 1;
     }
+    console.log(indexItem);
+    scrolled = false;
 
     generateContent();
   }
 
   if (Number.isInteger(container.scrollLeft / middleWidth)) {
     scrolled = true;
+    generateContent()
     //   console.log('Tick 3');
     //   container.scrollTo(indexItem * middleWidth, 0);
 
