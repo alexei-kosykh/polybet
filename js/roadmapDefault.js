@@ -176,7 +176,7 @@ function removeAllElements() {
 }
 
 function generateContent() {
-  if (Number.isInteger(indexItem) && mobile) {
+  if (mobile) {
     const item = container.children[indexItem]?.getElementsByClassName(
       'section__roadmap_items'
     )[0];
@@ -192,9 +192,15 @@ function generateContent() {
 
 function onScroll() {
   indexItem = container.scrollLeft / middleWidth;
-  if (scrolled) {
+  var start = performance.now();
+  console.log(
+    +((indexItem % container.scrollLeft).toFixed(1) + '').split('.')[1] || 0
+  );
+  const round =
+    +((indexItem % container.scrollLeft).toFixed(1) + '').split('.')[1] || 0;
+  if (scrolled && (round > 4 || round < 6)) {
     scrolled = false;
-
+    
     if (indexItem - lastIndex > 0) {
       indexItem =
         lastIndex === arrayInfo.length ? arrayInfo.length : lastIndex + 1;
@@ -207,9 +213,16 @@ function onScroll() {
 
   if (Number.isInteger(container.scrollLeft / middleWidth)) {
     scrolled = true;
-    container.scrollTo(indexItem * middleWidth, 0);
-    generateContent()
+    //   console.log('Tick 3');
+    //   container.scrollTo(indexItem * middleWidth, 0);
+
+    //   generateContent();
   }
+  var end = performance.now();
+
+  var time = end - start;
+
+  console.log('Время выполнения = ' + time);
 }
 
 addAllElements();
