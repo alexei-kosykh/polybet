@@ -100,5 +100,12 @@
     &_block:nth-child(4) {
       background-image: url(/img/bg/400/black-paper-bg.webp);
     }
+
+    .section__features {
+      &_text {
+        padding-right: 20px;
+        margin-left: 20px;
+      }
+    }
   }
 }
