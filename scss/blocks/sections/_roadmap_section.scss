@@ -51,11 +51,23 @@
     position: relative;
   }
 
-  &_line {
+  &_line-desk {
+    display: block;
     position: absolute;
-    top: 80px;
+    // top: -31.5px;
+    top: -37px;
     left: 0;
-    width: calc(100% * 6 + 100px);
+    width: calc(6 * 111%);
+    height: 2px;
+    background-color: rgba(29, 141, 99, 1);
+  }
+  &_line {
+    display: none;
+    position: absolute;
+    // top: -31.5px;
+    top: -37px;
+    left: 0;
+    width: 100%;
     height: 2px;
     background-color: rgba(29, 141, 99, 1);
   }
@@ -168,6 +180,23 @@
       left: 8px;
     }
 
+    &_line-desk {
+      display: none;
+    }
+    &_line {
+      display: block;
+      position: absolute;
+      top: -30.5px;
+      left: 0;
+      width: 113%;
+      height: 2px;
+      background-color: rgba(29, 141, 99, 1);
+    }
+
+    &_block:last-of-type &_line {
+      width: 98%;
+    }
+
     &_point {
       top: -34px;
       left: 8px;
@@ -175,6 +204,14 @@
 
     &_items {
       margin-top: 16px;
+    }
+  }
+}
+
+@include mobile-only() {
+  .section__roadmap {
+    &_line {
+      width: 120%;
     }
   }
 }

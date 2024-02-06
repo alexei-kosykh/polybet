@@ -3,7 +3,7 @@
   grid-template: auto auto / 1fr 1fr;
 
   &_block {
-    background-size: no-repeat;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     display: flex;
