@@ -4,6 +4,42 @@ const middle = container.children[2];
 
 container.scrollTo(middle.offsetLeft, 0);
 
+// navigation circles
+let middleWidth = middle.offsetLeft / 2;
+let indexItem = 2;
+const navCircles = document.querySelectorAll('.section__roadmap_nav span');
+
+const addOneActive = (el) => {
+  el.classList.add('active');
+};
+
+const removeAllActive = () => {
+  navCircles.forEach((el) => {
+    if (el.classList.contains('active')) {
+      el.classList.remove('active');
+    }
+  });
+};
+
+const toggler = (e, i) => {
+  removeAllActive();
+  addOneActive(e.target);
+  container.scrollTo(i * middleWidth, 0);
+};
+
+navCircles.forEach((el, index) => {
+  el.addEventListener('click', (e)=>toggler(e, index));
+});
+
+container.addEventListener('scroll', () => {
+  indexItem = container.scrollLeft / middleWidth;
+
+  if (Number.isInteger(indexItem)) {
+    removeAllActive();
+    addOneActive(navCircles[indexItem]);
+  }
+});
+
 // Scroll height
 
 // const arrayInfo = [

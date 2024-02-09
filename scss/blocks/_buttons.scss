@@ -53,9 +53,6 @@
   margin-left: 24px;
 
   &:hover {
-    animation-name: demo-hover;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
     background-color: rgba(108, 108, 108, 0.319);
     transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   }

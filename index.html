@@ -6,8 +6,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/main.min.css">
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 	<title>Polybet</title>
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-K4V82F8FN4"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-K4V82F8FN4');
+	</script>
 </head>
 
 <body>
@@ -397,7 +406,10 @@
 							<path d="M6 6L18 18" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
 						</svg>
 					</div>
-					<div><img src="img/video-default.webp" loading="lazy" alt="image in window" /></div>
+					<div><iframe src="https://www.youtube.com/embed/3TAhwOiJkDA?si=cycb4WMVRQLTkdig" title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe></div>
 				</div>
 			</div>
 		</div>
@@ -665,7 +677,7 @@
 					</div>
 					<div class="section__button-group">
 						<button class="button section__button_white" modal_join="#modalJoin">join whitelist</button>
-						<button class="button section__button_transparent">demo</button>
+						<button class="button section__button_transparent" modal_demo="#modalDemo">demo</button>
 					</div>
 				</div>
 			</div>
@@ -2009,7 +2021,7 @@
 						</div>
 						<div class="section__button-group">
 							<button class="button section__button_white" modal_join="#modalJoin">join whitelist</button>
-							<button class="button section__button_transparent">demo</button>
+							<button class="button section__button_transparent" modal_demo="#modalDemo">demo</button>
 						</div>
 					</div>
 				</div>
@@ -3542,9 +3554,9 @@
 						</div>
 					</ul>
 				</li>
-
-
 			</ul>
+			<div class="section__roadmap_nav"><span></span><span></span><span></span><span></span><span></span><span></span>
+			</div>
 			<div class="bgText">
 				Stake
 				<br>
@@ -3638,7 +3650,7 @@
 	<script src="js/header.js"></script>
 	<script src="js/script.min.js"></script>
 	<script src="js/modals.js" type="module" async></script>
-	<script src="js/hover.min.js"></script>
+	<script src="js/hover.js"></script>
 	<script src="https://smtpjs.com/v3/smtp.js" async></script>
 
 </body>

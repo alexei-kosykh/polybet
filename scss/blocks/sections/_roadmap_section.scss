@@ -205,6 +205,33 @@
     &_items {
       margin-top: 16px;
     }
+
+    &_nav {
+      display: flex;
+      position: relative;
+      bottom: -30px;
+      left: calc(50% - 6 * 8px);
+      width: 100px;
+      height: 50px;
+
+      span {
+        width: 8px;
+        height: 8px;
+        background-color: #d9d9d933;
+        border-radius: 50%;
+
+        &:not(:last-of-type) {
+          margin-right: 8px;
+        }
+
+        &.active {
+          background-color: #1d8d63;
+        }
+
+
+
+      }
+    }
   }
 }
 
