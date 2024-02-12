@@ -103,6 +103,10 @@ class Modal {
       return;
     }
 
+    if (this.openedWindow === demoModal) {
+      stopVideos();
+    }
+
     if (stakeImg.classList.contains('zoom')) {
       stakeImg.classList.toggle('zoom');
     }
@@ -156,6 +160,18 @@ export const modalSchema = new Modal({
 // doubleclick
 let stakeImg = document.querySelector('.modal__stake_img');
 
+const demoModal = document.getElementById('modalDemo');
+
 stakeImg.addEventListener('dblclick', (event) => {
   stakeImg.classList.toggle('zoom');
 });
+
+const stopVideos = () => {
+  const iframes = document.querySelectorAll('iframe');
+  iframes.forEach((v) => {
+    v.src = v.src;
+  });
+  document.querySelectorAll('video').forEach((v) => {
+    v.pause();
+  });
+};
