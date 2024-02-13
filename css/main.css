@@ -1280,8 +1280,9 @@ header .menu_mob {
 }
 .section__tokenomics {
   position: relative;
+  width: 100%;
   z-index: 3;
-  padding: 162px 0 190px;
+  padding: 162px 0 20px;
   display: flex;
   flex-direction: column;
 }
@@ -1297,16 +1298,38 @@ header .menu_mob {
 }
 .section__tokenomics_images {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 .section__tokenomics_images img {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
 }
-.section__tokenomics_images picture:last-of-type img {
-  max-width: 110%;
+.section__tokenomics_images picture {
+  display: flex;
+  justify-content: center;
+}
+.section__tokenomics_images-desk {
+  margin-bottom: 50px;
+}
+.section__tokenomics_images-desk img {
+  max-width: 70%;
+}
+.section__tokenomics_images-mob {
+  display: none;
+}
+.section__tokenomics_images-vesting-desk {
+  position: relative;
+  z-index: 5;
+  max-width: 1240px;
+  margin: 0 auto 100px;
+  width: 100%;
+}
+.section__tokenomics_images-vesting-desk img {
+  max-width: 90%;
+}
+.section__tokenomics_images-vesting-mob {
+  display: none;
 }
 @media (max-width: 1024px) {
   .section__tokenomics {
@@ -1319,18 +1342,48 @@ header .menu_mob {
     margin-bottom: 70px;
   }
   .section__tokenomics_images {
-    flex-direction: column-reverse;
     width: 100%;
+    align-items: center;
   }
   .section__tokenomics_images img {
-    max-width: 100%;
     height: auto;
   }
-  .section__tokenomics_images picture:last-of-type {
-    margin-bottom: 120px;
+  .section__tokenomics_images-desk {
+    display: none;
   }
-  .section__tokenomics_images picture:last-of-type img {
+  .section__tokenomics_images-mob {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .section__tokenomics_images-mob picture:first-of-type {
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .section__tokenomics_images-mob picture:first-of-type img {
+    max-width: 70%;
+  }
+  .section__tokenomics_images-mob picture:last-of-type {
+    align-self: flex-start;
+    margin-bottom: 60px;
+  }
+  .section__tokenomics_images-mob picture:last-of-type img {
     max-width: 100%;
+  }
+  .section__tokenomics_images-vesting-desk {
+    display: none;
+  }
+  .section__tokenomics_images-vesting-mob {
+    display: flex;
+    width: 100%;
+  }
+  .section__tokenomics_images-vesting-mob picture {
+    justify-content: flex-start;
+  }
+  .section__tokenomics_images-vesting-mob picture img {
+    max-width: 100%;
+    width: 100%;
   }
 }
 @media (max-width: 768px) {
@@ -1339,6 +1392,9 @@ header .menu_mob {
   }
   .section__tokenomics h2 {
     font-size: 70px;
+  }
+  .section__tokenomics-mob picture:last-of-type img {
+    max-width: 100%;
   }
 }
 @media (max-width: 576px) {
@@ -1353,8 +1409,32 @@ header .menu_mob {
     line-height: 40px;
     margin-bottom: 40px;
   }
-  .section__tokenomics picture:last-of-type {
-    margin-bottom: 60px;
+  .section__tokenomics_images {
+    align-items: flex-start;
+  }
+  .section__tokenomics_images picture {
+    justify-content: flex-start;
+  }
+  .section__tokenomics_images-mob picture:first-of-type img {
+    max-width: 60%;
+  }
+  .section__tokenomics_images-mob picture:last-of-type {
+    margin-bottom: 30px;
+  }
+  .section__tokenomics_images-vesting-mob {
+    display: none;
+  }
+  .section__tokenomics_images-vesting-desk {
+    display: flex;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-bottom: 20px;
+  }
+  .section__tokenomics_images-vesting-desk img {
+    width: 758px;
+    max-width: none;
+    height: auto;
   }
 }
 

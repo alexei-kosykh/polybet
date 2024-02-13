@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/main.min.css">
-	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
 	<title>Polybet</title>
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-K4V82F8FN4"></script>
@@ -406,8 +406,8 @@
 							<path d="M6 6L18 18" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
 						</svg>
 					</div>
-					<div><iframe id="demo-video" src="https://www.youtube.com/embed/3TAhwOiJkDA?si=cycb4WMVRQLTkdi?enablejsapi=1" title="YouTube video player"
-							frameborder="0"
+					<div><iframe id="demo-video" src="https://www.youtube.com/embed/3TAhwOiJkDA?si=cycb4WMVRQLTkdi?enablejsapi=1"
+							title="YouTube video player" frameborder="0"
 							allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 							allowfullscreen></iframe></div>
 				</div>
@@ -3308,16 +3308,35 @@
 						</h4>
 					</div>
 					<div class="section__tokenomics_images">
-						<picture>
-							<source srcset="img/tokenomics/vesting-period.png" type="image/png"><img
-								src="img/tokenomics/vesting-period.png" alt="Vesting period">
-						</picture>
-						<picture>
-							<source srcset="img/tokenomics/tokenomics.png" type="image/png"><img src="img/tokenomics/tokenomics.png"
-								alt="tokenomics">
-						</picture>
+						<div class="section__tokenomics_images-desk">
+							<picture>
+								<source srcset="img/tokenomics/tokenomics.png" type="image/png"><img src="img/tokenomics/tokenomics.png"
+									alt="tokenomics">
+							</picture>
+						</div>
+						<div class="section__tokenomics_images-mob">
+							<picture>
+								<source srcset="img/tokenomics/circle-tokenomics.png" type="image/png"><img
+									src="img/tokenomics/circle-tokenomics.png" alt="tokenomics">
+							</picture>
+							<picture>
+								<source srcset="img/tokenomics/color-for-circle.png" type="image/png"><img
+									src="img/tokenomics/color-for-circle.png" alt="info tokenomics">
+							</picture>
+						</div>
+
+						<div class="section__tokenomics_images-vesting-mob">
+							<picture>
+								<source srcset="img/tokenomics/vesting-period-mob.png" type="image/png"><img
+									src="img/tokenomics/vesting-period-mob.png" alt="Vesting period">
+							</picture>
+						</div>
 					</div>
 				</div>
+			</div>
+			<div class="section__tokenomics_images-vesting-desk">
+				<img src="img/tokenomics/vesting-period.png" alt="Vesting period">
+			</div>
 		</section>
 
 		<section class="section section_black goto-roadmap">
@@ -3527,7 +3546,8 @@
 					</ul>
 				</li>
 			</ul>
-			<div class="section__roadmap_nav"><span></span><span></span><span class="active"></span><span></span><span></span><span></span>
+			<div class="section__roadmap_nav"><span></span><span></span><span
+					class="active"></span><span></span><span></span><span></span>
 			</div>
 			<div class="bgText">
 				Stake
