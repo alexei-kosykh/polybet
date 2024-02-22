@@ -1328,9 +1328,6 @@ header .menu_mob {
 .section__tokenomics_images-vesting-desk img {
   max-width: 90%;
 }
-.section__tokenomics_images-vesting-mob {
-  display: none;
-}
 @media (max-width: 1024px) {
   .section__tokenomics {
     padding: 120px 0 100px;
@@ -1372,18 +1369,16 @@ header .menu_mob {
     max-width: 100%;
   }
   .section__tokenomics_images-vesting-desk {
-    display: none;
-  }
-  .section__tokenomics_images-vesting-mob {
     display: flex;
-    width: 100%;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-bottom: 20px;
   }
-  .section__tokenomics_images-vesting-mob picture {
-    justify-content: flex-start;
-  }
-  .section__tokenomics_images-vesting-mob picture img {
-    max-width: 100%;
-    width: 100%;
+  .section__tokenomics_images-vesting-desk img {
+    width: 758px;
+    max-width: none;
+    height: auto;
   }
 }
 @media (max-width: 768px) {
@@ -1421,21 +1416,6 @@ header .menu_mob {
   }
   .section__tokenomics_images-mob picture:last-of-type {
     margin-bottom: 30px;
-  }
-  .section__tokenomics_images-vesting-mob {
-    display: none;
-  }
-  .section__tokenomics_images-vesting-desk {
-    display: flex;
-    overflow: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    margin-bottom: 20px;
-  }
-  .section__tokenomics_images-vesting-desk img {
-    width: 758px;
-    max-width: none;
-    height: auto;
   }
 }
 

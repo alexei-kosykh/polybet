@@ -56,9 +56,9 @@
         max-width: 90%;
       }
     }
-    &-vesting-mob {
-      display: none;
-    }
+    // &-vesting-mob {
+    //   display: none;
+    // }
   }
 
   @include laptop() {
@@ -106,18 +106,30 @@
         }
       }
 
+      // &-vesting-desk {
+      //   display: none;
+      // }
+      // &-vesting-mob {
+      //   display: flex;
+      //   width: 100%;
+      //   picture {
+      //     justify-content: flex-start;
+      //     img {
+      //       max-width: 100%;
+      //       width: 100%;
+      //     }
+      //   }
+      // }
       &-vesting-desk {
-        display: none;
-      }
-      &-vesting-mob {
         display: flex;
-        width: 100%;
-        picture {
-          justify-content: flex-start;
-          img {
-            max-width: 100%;
-            width: 100%;
-          }
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        margin-bottom: 20px;
+        img {
+          width: 758px;
+          max-width: none;
+          height: auto;
         }
       }
     }
@@ -171,21 +183,10 @@
         }
       }
 
-      &-vesting-mob {
-        display: none;
-      }
-      &-vesting-desk {
-        display: flex;
-        overflow: auto;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        margin-bottom: 20px;
-        img {
-          width: 758px;
-          max-width: none;
-          height: auto;
-        }
-      }
+      // &-vesting-mob {
+      //   display: none;
+      // }
+
     }
   }
 }
