@@ -193,7 +193,7 @@ header > div {
   height: 64px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 32px;
 }
 header.hide {
   transform: translateY(-64px);
@@ -312,6 +312,9 @@ header .menu_mob {
 @media (max-width: 1024px) {
   header.header_bg-grey {
     background: none;
+  }
+  header > div {
+    padding: 0 20px;
   }
   header .menu {
     gap: 15px;

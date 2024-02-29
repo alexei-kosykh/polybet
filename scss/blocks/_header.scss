@@ -14,7 +14,7 @@ header {
     height: 64px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 32px;
   }
   &.hide {
     transform: translateY(-64px);
@@ -177,6 +177,10 @@ header {
   header {
     &.header_bg-grey {
       background: none;
+    }
+
+    & > div {
+      padding: 0 20px;
     }
 
     .menu {
