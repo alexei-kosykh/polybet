@@ -1645,9 +1645,22 @@ header .menu_mob {
 .section__partners_block .section__description {
   margin-bottom: 48px;
 }
-.section__partners_block ul {
+.section__partners_block ul div {
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+}
+.section__partners_block ul div:first-child {
+  margin-bottom: 20px;
+}
+.section__partners_block ul div:first-child li:not(:last-child) {
+  margin-right: 20px;
+}
+.section__partners_block ul div:last-child {
+  justify-content: center;
+}
+.section__partners_block ul div:last-child li:first-child {
+  margin-right: 20px;
 }
 .section__partners_block ul li {
   width: 180px;
@@ -1746,8 +1759,16 @@ header .menu_mob {
   width: 160px;
   height: auto;
 }
-.section__partners_logo .fireblocks {
-  width: 160px;
+.section__partners_logo .dmail {
+  width: 150px;
+  height: auto;
+}
+.section__partners_logo .polysport {
+  width: 190px;
+  height: auto;
+}
+.section__partners_logo .alpha {
+  width: 190px;
   height: auto;
 }
 .section__partners_logo .polygon {
@@ -1804,8 +1825,16 @@ header .menu_mob {
     width: 190px;
     height: auto;
   }
-  .section__partners_logo .fireblocks {
-    width: 190px;
+  .section__partners_logo .dmail {
+    width: 170px;
+    height: auto;
+  }
+  .section__partners_logo .polysport {
+    width: 240px;
+    height: auto;
+  }
+  .section__partners_logo .alpha {
+    width: 240px;
     height: auto;
   }
   .section__partners_logo .polygon {
@@ -1824,8 +1853,14 @@ header .menu_mob {
   .section__partners_logo .azuro {
     width: 25vw;
   }
-  .section__partners_logo .fireblocks {
-    width: 25vw;
+  .section__partners_logo .dmail {
+    width: 22vw;
+  }
+  .section__partners_logo .polysport {
+    width: 26vw;
+  }
+  .section__partners_logo .alpha {
+    width: 26vw;
   }
   .section__partners_logo .polygon {
     width: 23vw;
