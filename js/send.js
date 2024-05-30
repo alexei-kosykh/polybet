@@ -25,10 +25,10 @@ const sendForm = () => {
     <p>${text.value}</p>
     `;
   Email.send({
-    SecureToken: 'd00c5bdc-91ed-4f47-b9ba-adbb0cb2bfc8', // token from https://smtpjs.com/
-    To: 'open@polibet.io', // email that need to registration in https://smtpjs.com/
-    From: 'open@polibet.io', // identical email
-    Subject: 'User data',
+    SecureToken: 'ea731bce-512f-4e4e-9ca2-ad9ebff7d6b7', // token from https://smtpjs.com/
+    To: 'info@polyway.investments', // email that need to registration in https://smtpjs.com/
+    From: 'info@polyway.investments', // identical email
+    Subject: 'User data from polybet app',
     Body: ebody,
   }).then((message) => {
     form.reset();
@@ -47,10 +47,10 @@ const sendModalForm = () => {
       `;
 
   Email.send({
-    SecureToken: 'd00c5bdc-91ed-4f47-b9ba-adbb0cb2bfc8',
-    To: 'open@polibet.io',
-    From: 'open@polibet.io',
-    Subject: 'User data from modal',
+    SecureToken: 'ea731bce-512f-4e4e-9ca2-ad9ebff7d6b7',
+    To: 'info@polyway.investments',
+    From: 'info@polyway.investments',
+    Subject: 'User data from polybet app',
     Body: ebody,
   }).then((message) => {
     console.log(message);
@@ -162,7 +162,7 @@ function ValidTelegram(text) {
 function ValidAllInOne(text) {
   var re =
     /(^[\d\+][\d\(\)\ -]{4,10}$)|(^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$)|(^\@?[a-zA-Z0-9-_\.]{2,32}$)/i;
-    // phone | email | telegram
+  // phone | email | telegram
   var valid = re.test(text);
   return valid;
 }
